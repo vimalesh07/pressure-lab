@@ -1,0 +1,436 @@
+{
+ "tiers": [
+  {
+   "id": "death-finishers",
+   "label": "Death finishers",
+   "description": "74 Elite/Strong batters by shrunk SR, boundary % and dot % in overs 16-20 (min 60 balls)"
+  },
+  {
+   "id": "powerplay-hitters",
+   "label": "Powerplay hitters",
+   "description": "73 Elite/Strong batters by shrunk SR, boundary % and dot % in overs 1-6 (min 60 balls)"
+  }
+ ],
+ "leagueAverage": {
+  "death-finishers": {
+   "deathClampRate": 46.0,
+   "threatAdjEcon": 10.1,
+   "setBatterWickets": 459,
+   "dotPct": 25.8,
+   "boundaryPct": 25.9,
+   "overs": 2173
+  },
+  "powerplay-hitters": {
+   "deathClampRate": 58.7,
+   "threatAdjEcon": 8.5,
+   "setBatterWickets": 32,
+   "dotPct": 42.4,
+   "boundaryPct": 24.3,
+   "overs": 5069
+  }
+ },
+ "eliteBenchmark": {
+  "death-finishers": {
+   "deathClampRate": 68.1,
+   "threatAdjEcon": 8.0,
+   "setBatterWickets": 40,
+   "dotPct": 28.8,
+   "boundaryPct": 17.9,
+   "overs": 166
+  },
+  "powerplay-hitters": {
+   "deathClampRate": 79.6,
+   "threatAdjEcon": 6.68,
+   "setBatterWickets": 0,
+   "dotPct": 45.5,
+   "boundaryPct": 17.7,
+   "overs": 250
+  }
+ },
+ "bowlers": [
+  {
+   "id": "sunil-narine-781",
+   "name": "Sunil Narine",
+   "team": "KKR",
+   "style": "Right-arm offbreak",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 75.0,
+     "threatAdjEcon": 5.8,
+     "setBatterWickets": 4,
+     "dotPct": 34.2,
+     "boundaryPct": 10.3,
+     "overs": 16
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 56.5,
+     "threatAdjEcon": 8.13,
+     "setBatterWickets": 0,
+     "dotPct": 46.0,
+     "boundaryPct": 24.7,
+     "overs": 23
+    }
+   }
+  },
+  {
+   "id": "jasprit-bumrah-2933",
+   "name": "Jasprit Bumrah",
+   "team": "IND",
+   "style": "Right-arm Fast",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 73.8,
+     "threatAdjEcon": 7.24,
+     "setBatterWickets": 8,
+     "dotPct": 28.4,
+     "boundaryPct": 15.1,
+     "overs": 42
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 67.5,
+     "threatAdjEcon": 7.1,
+     "setBatterWickets": 1,
+     "dotPct": 49.7,
+     "boundaryPct": 18.7,
+     "overs": 77
+    }
+   }
+  },
+  {
+   "id": "krunal-pandya-4219",
+   "name": "Krunal Pandya",
+   "team": "RCB",
+   "style": "Slow left-arm orthodox",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 57.1,
+     "threatAdjEcon": 10.41,
+     "setBatterWickets": 1,
+     "dotPct": 24.5,
+     "boundaryPct": 24.5,
+     "overs": 7
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 60.0,
+     "threatAdjEcon": 7.8,
+     "setBatterWickets": 0,
+     "dotPct": 29.9,
+     "boundaryPct": 19.5,
+     "overs": 25
+    }
+   }
+  },
+  {
+   "id": "varun-chakravarthy-6256",
+   "name": "Varun Chakravarthy",
+   "team": "IND",
+   "style": "Right-arm Leg-Break",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 37.5,
+     "threatAdjEcon": 9.5,
+     "setBatterWickets": 1,
+     "dotPct": 29.4,
+     "boundaryPct": 24.4,
+     "overs": 16
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 70.6,
+     "threatAdjEcon": 7.33,
+     "setBatterWickets": 0,
+     "dotPct": 44.4,
+     "boundaryPct": 20.2,
+     "overs": 34
+    }
+   }
+  },
+  {
+   "id": "akeal-hosein-2417",
+   "name": "Akeal Hosein",
+   "team": "WI",
+   "style": "Slow left-arm orthodox",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 50.0,
+     "threatAdjEcon": 7.29,
+     "setBatterWickets": 4,
+     "dotPct": 35.5,
+     "boundaryPct": 9.7,
+     "overs": 2
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 67.8,
+     "threatAdjEcon": 7.83,
+     "setBatterWickets": 0,
+     "dotPct": 44.0,
+     "boundaryPct": 21.8,
+     "overs": 90
+    }
+   }
+  },
+  {
+   "id": "rashid-khan-4722",
+   "name": "Rashid Khan",
+   "team": "AFG",
+   "style": "Right-arm Leg-Break",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 42.9,
+     "threatAdjEcon": 9.17,
+     "setBatterWickets": 10,
+     "dotPct": 27.9,
+     "boundaryPct": 22.1,
+     "overs": 28
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 75.0,
+     "threatAdjEcon": 6.22,
+     "setBatterWickets": 0,
+     "dotPct": 39.0,
+     "boundaryPct": 13.0,
+     "overs": 16
+    }
+   }
+  },
+  {
+   "id": "josh-hazlewood-830",
+   "name": "Josh Hazlewood",
+   "team": "RCB",
+   "style": "Right-arm fast-medium",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 52.6,
+     "threatAdjEcon": 9.5,
+     "setBatterWickets": 5,
+     "dotPct": 29.5,
+     "boundaryPct": 26.3,
+     "overs": 19
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 64.6,
+     "threatAdjEcon": 7.41,
+     "setBatterWickets": 0,
+     "dotPct": 50.6,
+     "boundaryPct": 22.2,
+     "overs": 82
+    }
+   }
+  },
+  {
+   "id": "mohsin-khan-6669",
+   "name": "Mohsin Khan",
+   "team": "LSG",
+   "style": "Left-arm medium-fast",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 46.7,
+     "threatAdjEcon": 9.94,
+     "setBatterWickets": 2,
+     "dotPct": 26.7,
+     "boundaryPct": 23.8,
+     "overs": 15
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 71.4,
+     "threatAdjEcon": 7.75,
+     "setBatterWickets": 0,
+     "dotPct": 49.3,
+     "boundaryPct": 22.4,
+     "overs": 35
+    }
+   }
+  },
+  {
+   "id": "maheesh-theekshana-19316",
+   "name": "Maheesh Theekshana",
+   "team": "SL",
+   "style": "Right-arm offbreak",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 64.7,
+     "threatAdjEcon": 8.11,
+     "setBatterWickets": 3,
+     "dotPct": 22.5,
+     "boundaryPct": 16.2,
+     "overs": 17
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 61.3,
+     "threatAdjEcon": 7.84,
+     "setBatterWickets": 0,
+     "dotPct": 34.7,
+     "boundaryPct": 20.7,
+     "overs": 62
+    }
+   }
+  },
+  {
+   "id": "prince-yadav-58246",
+   "name": "Prince Yadav",
+   "team": "IND",
+   "style": "Right-arm Fast",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 66.7,
+     "threatAdjEcon": 9.43,
+     "setBatterWickets": 1,
+     "dotPct": 19.6,
+     "boundaryPct": 24.3,
+     "overs": 15
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 53.8,
+     "threatAdjEcon": 8.89,
+     "setBatterWickets": 1,
+     "dotPct": 39.5,
+     "boundaryPct": 22.8,
+     "overs": 26
+    }
+   }
+  },
+  {
+   "id": "mitchell-santner-4101",
+   "name": "Mitchell Santner",
+   "team": "NZ",
+   "style": "Slow left-arm orthodox",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 62.5,
+     "threatAdjEcon": 10.44,
+     "setBatterWickets": 0,
+     "dotPct": 18.8,
+     "boundaryPct": 24.6,
+     "overs": 8
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 73.1,
+     "threatAdjEcon": 6.88,
+     "setBatterWickets": 0,
+     "dotPct": 52.1,
+     "boundaryPct": 21.3,
+     "overs": 26
+    }
+   }
+  },
+  {
+   "id": "adil-rashid-479",
+   "name": "Adil Rashid",
+   "team": "ENG",
+   "style": "Right-arm Leg-Break",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 50.0,
+     "threatAdjEcon": 10.23,
+     "setBatterWickets": 2,
+     "dotPct": 29.1,
+     "boundaryPct": 25.5,
+     "overs": 10
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 66.7,
+     "threatAdjEcon": 5.91,
+     "setBatterWickets": 0,
+     "dotPct": 46.7,
+     "boundaryPct": 13.3,
+     "overs": 3
+    }
+   }
+  },
+  {
+   "id": "noor-ahmad-7967",
+   "name": "Noor Ahmad",
+   "team": "AFG",
+   "style": "Left-arm Chinaman",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 58.3,
+     "threatAdjEcon": 7.79,
+     "setBatterWickets": 1,
+     "dotPct": 36.5,
+     "boundaryPct": 18.8,
+     "overs": 12
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 66.7,
+     "threatAdjEcon": 8.75,
+     "setBatterWickets": 0,
+     "dotPct": 28.9,
+     "boundaryPct": 23.7,
+     "overs": 6
+    }
+   }
+  },
+  {
+   "id": "axar-patel-2876",
+   "name": "Axar Patel",
+   "team": "IND",
+   "style": "Slow left-arm orthodox",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 33.3,
+     "threatAdjEcon": 10.75,
+     "setBatterWickets": 1,
+     "dotPct": 17.8,
+     "boundaryPct": 25.6,
+     "overs": 12
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 60.6,
+     "threatAdjEcon": 8.46,
+     "setBatterWickets": 0,
+     "dotPct": 40.0,
+     "boundaryPct": 23.6,
+     "overs": 66
+    }
+   }
+  },
+  {
+   "id": "trent-boult-2320",
+   "name": "Trent Boult",
+   "team": "MI",
+   "style": "Left-arm fast-medium",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 47.6,
+     "threatAdjEcon": 9.05,
+     "setBatterWickets": 4,
+     "dotPct": 28.6,
+     "boundaryPct": 22.4,
+     "overs": 21
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 63.2,
+     "threatAdjEcon": 7.51,
+     "setBatterWickets": 0,
+     "dotPct": 48.1,
+     "boundaryPct": 21.8,
+     "overs": 106
+    }
+   }
+  },
+  {
+   "id": "harpreet-brar-7325",
+   "name": "Harpreet Brar",
+   "team": "PK",
+   "style": "Slow left-arm orthodox",
+   "byTier": {
+    "death-finishers": {
+     "deathClampRate": 60.0,
+     "threatAdjEcon": 7.89,
+     "setBatterWickets": 2,
+     "dotPct": 23.7,
+     "boundaryPct": 18.4,
+     "overs": 5
+    },
+    "powerplay-hitters": {
+     "deathClampRate": 57.9,
+     "threatAdjEcon": 8.72,
+     "setBatterWickets": 0,
+     "dotPct": 40.0,
+     "boundaryPct": 27.0,
+     "overs": 19
+    }
+   }
+  }
+ ]
+}

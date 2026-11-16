@@ -1,0 +1,337 @@
+{
+ "pipeline": [
+  {
+   "id": "situation",
+   "title": "Situation",
+   "detail": "Pre-ball state for 192,412 legal balls; par model (test MAE 18 runs) and logistic WP model (test AUC 0.80, Brier 0.184).",
+   "output": "Win probability, WPA and leverage per ball"
+  },
+  {
+   "id": "stakes",
+   "title": "Stakes",
+   "detail": "Knockout x1.4, must-win x1.15, series decider x1.25, dead rubber x0.85, IPL NRR race x1.2.",
+   "output": "Stakes multiplier 0.8-1.8"
+  },
+  {
+   "id": "threat",
+   "title": "Opponent threat",
+   "detail": "Leave-one-out tiers per phase (Elite top 15%, Strong next 25%). Batter facing Elite x1.43; bowler facing Elite x2.0.",
+   "output": "Threat-adjusted pressure weight"
+  },
+  {
+   "id": "performance",
+   "title": "Performance vs expected",
+   "detail": "Top 20% of balls by leverage x stakes x threat; runs, wickets (worth 7.6 runs) and WPA vs the state's expectation.",
+   "output": "Per-ball residuals, pressure vs normal"
+  },
+  {
+   "id": "rank",
+   "title": "Shrink & rank",
+   "detail": "Empirical-Bayes shrinkage, eligibility, 1,000 bootstrap resamples by match.",
+   "output": "Pressure Rating 0-100 with 5-95% interval"
+  }
+ ],
+ "calibration": [
+  {
+   "predicted": 2.4,
+   "observed": 3.5,
+   "n": 7837
+  },
+  {
+   "predicted": 10.4,
+   "observed": 16.9,
+   "n": 7849
+  },
+  {
+   "predicted": 24.8,
+   "observed": 31.1,
+   "n": 7825
+  },
+  {
+   "predicted": 39.4,
+   "observed": 39.6,
+   "n": 7835
+  },
+  {
+   "predicted": 49.8,
+   "observed": 45.5,
+   "n": 7836
+  },
+  {
+   "predicted": 57.3,
+   "observed": 50.4,
+   "n": 7837
+  },
+  {
+   "predicted": 66.3,
+   "observed": 58.9,
+   "n": 7836
+  },
+  {
+   "predicted": 76.8,
+   "observed": 69.4,
+   "n": 7836
+  },
+  {
+   "predicted": 88.5,
+   "observed": 75.8,
+   "n": 7836
+  },
+  {
+   "predicted": 97.7,
+   "observed": 96.8,
+   "n": 7837
+  }
+ ],
+ "phaseImpact": [
+  {
+   "phase": "Powerplay",
+   "batting": 1.289,
+   "bowling": 1.242
+  },
+  {
+   "phase": "Middle",
+   "batting": 0.816,
+   "bowling": 0.834
+  },
+  {
+   "phase": "Death",
+   "batting": 0.967,
+   "bowling": 0.996
+  }
+ ],
+ "sensitivity": [
+  {
+   "test": "Threshold 10% (batters)",
+   "change": "Pressure balls = top 10% instead of 20%",
+   "rankCorrelation": 0.837,
+   "top10Overlap": 7
+  },
+  {
+   "test": "Threshold 10% (bowlers)",
+   "change": "Pressure balls = top 10% instead of 20%",
+   "rankCorrelation": 0.948,
+   "top10Overlap": 7
+  },
+  {
+   "test": "Threshold 30% (batters)",
+   "change": "Pressure balls = top 30% instead of 20%",
+   "rankCorrelation": 0.871,
+   "top10Overlap": 8
+  },
+  {
+   "test": "Threshold 30% (bowlers)",
+   "change": "Pressure balls = top 30% instead of 20%",
+   "rankCorrelation": 0.953,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F3 (batters)",
+   "change": "Remove matchup threat",
+   "rankCorrelation": 0.884,
+   "top10Overlap": 7
+  },
+  {
+   "test": "Without F3 (bowlers)",
+   "change": "Remove matchup threat",
+   "rankCorrelation": 0.927,
+   "top10Overlap": 6
+  },
+  {
+   "test": "Without F6 (batters)",
+   "change": "Remove match stakes",
+   "rankCorrelation": 0.94,
+   "top10Overlap": 8
+  },
+  {
+   "test": "Without F6 (bowlers)",
+   "change": "Remove match stakes",
+   "rankCorrelation": 0.985,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F7 (batters)",
+   "change": "Remove death clamp",
+   "rankCorrelation": 1.0,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F7 (bowlers)",
+   "change": "Remove death clamp",
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F8 (batters)",
+   "change": "Remove powerplay control",
+   "rankCorrelation": 0.98,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F8 (bowlers)",
+   "change": "Remove powerplay control",
+   "rankCorrelation": 0.998,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F9 (batters)",
+   "change": "Remove control vs teammates",
+   "rankCorrelation": 1.0,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F9 (bowlers)",
+   "change": "Remove control vs teammates",
+   "rankCorrelation": 0.732,
+   "top10Overlap": 7
+  },
+  {
+   "test": "Without F10 (batters)",
+   "change": "Remove opposition Elo",
+   "rankCorrelation": 0.998,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F10 (bowlers)",
+   "change": "Remove opposition Elo",
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F11 (batters)",
+   "change": "Remove rescue / heist",
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F11 (bowlers)",
+   "change": "Remove rescue / heist",
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F12 (batters)",
+   "change": "Remove NRR race",
+   "rankCorrelation": 0.983,
+   "top10Overlap": 8
+  },
+  {
+   "test": "Without F12 (bowlers)",
+   "change": "Remove NRR race",
+   "rankCorrelation": 0.994,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F13 (batters)",
+   "change": "Remove pair-breaker",
+   "rankCorrelation": 1.0,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F13 (bowlers)",
+   "change": "Remove pair-breaker",
+   "rankCorrelation": 0.973,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F14 (batters)",
+   "change": "Remove collapse entry",
+   "rankCorrelation": 0.99,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F14 (bowlers)",
+   "change": "Remove collapse entry",
+   "rankCorrelation": 1.0,
+   "top10Overlap": 10
+  },
+  {
+   "test": "Without F18 (batters)",
+   "change": "Favourite-under-threat bonus off",
+   "rankCorrelation": 0.977,
+   "top10Overlap": 9
+  },
+  {
+   "test": "Without F18 (bowlers)",
+   "change": "Favourite-under-threat bonus off",
+   "rankCorrelation": 0.989,
+   "top10Overlap": 10
+  },
+  {
+   "test": "IPL only (batters)",
+   "change": "Rate on IPL balls only",
+   "rankCorrelation": 0.894,
+   "top10Overlap": 6
+  },
+  {
+   "test": "IPL only (bowlers)",
+   "change": "Rate on IPL balls only",
+   "rankCorrelation": 0.909,
+   "top10Overlap": 6
+  },
+  {
+   "test": "T20I only (batters)",
+   "change": "Rate on international balls only",
+   "rankCorrelation": 0.847,
+   "top10Overlap": 4
+  },
+  {
+   "test": "T20I only (bowlers)",
+   "change": "Rate on international balls only",
+   "rankCorrelation": 0.849,
+   "top10Overlap": 4
+  },
+  {
+   "test": "Rule-based pressure (batters)",
+   "change": "Death overs / RRR >= 9 / collapse instead of leverage",
+   "rankCorrelation": 0.645,
+   "top10Overlap": 6
+  },
+  {
+   "test": "Rule-based pressure (bowlers)",
+   "change": "Death overs / RRR >= 9 / collapse instead of leverage",
+   "rankCorrelation": 0.738,
+   "top10Overlap": 4
+  }
+ ],
+ "limitations": [
+  {
+   "title": "Small pressure samples",
+   "detail": "Even eligible players have 120-650 pressure balls; bootstrap rank intervals are wide, so read P(top 10) alongside the rank."
+  },
+  {
+   "title": "First-innings win probability is uncertain",
+   "detail": "Without a target the WP model is weaker in innings 1 (test AUC 0.68) than in the chase."
+  },
+  {
+   "title": "Early wickets carry real leverage",
+   "detail": "In this data an early wicket moves win probability as much as many death-over balls, so powerplay balls are often pressure balls. The rule-based sensitivity test shows how rankings change without this."
+  },
+  {
+   "title": "Tiers use the full period",
+   "detail": "Threat tiers are descriptive and built on all seasons, so an opponent's tier reflects the whole 2022-2026 window, not form on the day."
+  },
+  {
+   "title": "Mixed competition strength",
+   "detail": "International matches include associate and A-team sides. Opposition Elo down-weights weaker opponents but cannot remove the difference."
+  },
+  {
+   "title": "No fielding, venue or ball-tracking data",
+   "detail": "Fielding, pitch and venue effects are only partly absorbed by state expectations; bowl_speed was dropped (about 39% zeros)."
+  }
+ ],
+ "eligibility": {
+  "batters": 84,
+  "bowlers": 97,
+  "rules": {
+   "bat": "batters: 84 eligible of 888 with any balls (>= 150 pressure balls and >= 15 matches with pressure balls); 84 pass the ball rule, 133 the match rule",
+   "bowl": "bowlers: 97 eligible of 647 with any balls (>= 120 pressure balls and >= 15 matches with pressure balls); 98 pass the ball rule, 133 the match rule"
+  }
+ },
+ "wpModel": {
+  "model": "logreg",
+  "testAuc": 0.799,
+  "testBrier": 0.1845,
+  "testLogLoss": 0.5384
+ }
+}

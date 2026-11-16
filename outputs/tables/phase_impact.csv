@@ -1,0 +1,10 @@
+format,phase,share_abs_wpa,share_balls,abs_wpa_per_ball_vs_mean,batting_gain_vs_mean,bowling_gain_vs_mean
+IPL,PP,0.3694,0.3118,1.184,1.199,1.17
+IPL,Middle,0.3726,0.4596,0.811,0.799,0.823
+IPL,Death,0.258,0.2286,1.129,1.133,1.125
+T20I,PP,0.3961,0.3239,1.223,1.221,1.224
+T20I,Middle,0.3729,0.4609,0.809,0.801,0.817
+T20I,Death,0.231,0.2153,1.073,1.093,1.054
+All,PP,0.3837,0.3184,1.205,1.21,1.2
+All,Middle,0.3728,0.4603,0.81,0.8,0.82
+All,Death,0.2435,0.2213,1.1,1.113,1.088

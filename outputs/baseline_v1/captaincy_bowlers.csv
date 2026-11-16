@@ -1,0 +1,13 @@
+player_id,name,captain_per_ball,captain_matches,not_captain_per_ball,not_captain_matches,captaincy_effect
+499,Shakib Al Hasan,0.8125,5.0,0.5534,5.0,0.2591
+1758,Patrick Cummins,-0.111,27.0,0.0531,13.0,-0.1641
+2436,Dasun Shanaka,0.2865,7.0,0.0555,9.0,0.231
+2876,Axar Patel,-0.2361,22.0,-0.19,69.0,-0.0461
+2984,Sikandar Raza,-0.4275,18.0,-0.3767,6.0,-0.0509
+3330,Hardik Pandya,-0.0291,46.0,-0.2754,25.0,0.2463
+3605,Aiden Markram,-0.6027,12.0,-0.6908,10.0,0.0882
+4101,Mitchell Santner,0.2726,16.0,0.0645,29.0,0.2081
+4219,Krunal Pandya,0.3229,5.0,0.2265,44.0,0.0964
+4409,Sam Curran,-0.1073,11.0,-0.405,45.0,0.2976
+4722,Rashid Khan,0.3868,10.0,0.0726,56.0,0.3143
+6423,Riyan Parag,-0.4707,5.0,-0.0304,7.0,-0.4403

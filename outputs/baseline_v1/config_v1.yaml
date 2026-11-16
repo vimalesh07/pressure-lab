@@ -1,0 +1,183 @@
+# =====================================================================
+# Pressure Lab: pipeline configuration
+# Every threshold, weight and multiplier used by the pipeline lives here.
+# The run log (outputs/logs/run_log.txt) records the data-based evidence
+# behind each value.
+# =====================================================================
+
+seed: 42
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  outputs: outputs
+  public_data: public/data
+
+data:
+  # Patterns used to map raw files (files may carry ID prefixes).
+  file_patterns:
+    ball_by_ball: "ball_by_ball"
+    matches: "matches"
+    competitions: "competitions"
+    teams: "teams"
+    mapping: "competition_team_player_mapping"
+    playing_eleven: "playing_eleven"
+  # extras_type values that make a delivery illegal (do not count as a ball).
+  # "other" behaves exactly like a no-ball (1 extra, runs off the bat allowed,
+  # and counting it as legal gives 7-ball overs), so it is treated as a no-ball.
+  illegal_extras: ["wide", "Overstep", "other"]
+  noball_extras: ["Overstep", "other"]
+  # Dismissals not credited to the bowler.
+  non_bowler_dismissals: ["RunOut", "Retire Out", "Obstracting the field", "Obstructing the field"]
+  reconciliation_min_match_rate: 0.98
+  # Final/knockout stages
+  knockout_stages: ["Final", "Qualifier", "Eliminator", "Semi Final", "Super 4"]
+
+win_probability:
+  train_max_season: 2024 # train <= 2024
+  test_seasons: [2025, 2026] # untouched until evaluation
+  calibration_season: 2024 # isotonic calibration fitted on this season (inside the training window)
+  lgbm:
+    n_estimators: 300
+    learning_rate: 0.04
+    num_leaves: 15
+    min_child_samples: 1000
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.9
+    reg_lambda: 1.0
+  par_lgbm:
+    n_estimators: 300
+    learning_rate: 0.05
+    num_leaves: 31
+    min_child_samples: 200
+
+pressure:
+  # Pressure ball = top X% of balls by pressure weight (computed separately for the
+  # batting side and the bowling side). Sensitivity tests 10/20/30%.
+  top_share: 0.20
+  sensitivity_shares: [0.10, 0.20, 0.30]
+  # Empirical outcome probabilities for leverage are taken per state cell:
+  # innings x phase x wickets bucket x (innings 2: required-rate bucket).
+  leverage_min_cell: 200
+  # Rule-based pressure (sensitivity test d): death overs, a tight chase, or a collapse.
+  rule_based:
+    death_overs_from: 16
+    chase_rrr_at_least: 9.0
+    collapse_wickets_last12: 2
+
+threat:
+  phases: ["PP", "Middle", "Death"]
+  min_balls: 60
+  elite_share: 0.15
+  strong_share: 0.25
+  # Bounds for the data-derived multipliers. "auto" multipliers are clipped here.
+  multiplier_bounds:
+    Strong: [1.0, 1.6]
+    Elite: [1.2, 2.0]
+  # Fallback multipliers if the data cannot support a split.
+  default_multiplier: { Normal: 1.0, Strong: 1.3, Elite: 1.7 }
+  # Scale: multiplier = 1 + scale * (combined difficulty ratio - 1)
+  # The raw runs+dismissal cost ratio between tiers is small per ball; the scale
+  # converts it to a per-ball pressure multiplier. Logged with evidence.
+  difficulty_scale: 3.0
+
+stakes:
+  enabled: true
+  knockout: 1.40
+  final_extra: 1.10 # applied on top of knockout for a Final
+  must_win: 1.15 # team lost its previous 2+ matches in the competition
+  must_win_losses: 2
+  series_decider: 1.25
+  dead_rubber: 0.85
+  nrr_race: 1.20 # IPL late-league qualification race
+  nrr_late_league_share: 0.30 # last 30% of a team's league fixtures
+  nrr_points_window: 2 # within 2 points of 4th place
+  favourite_under_threat: true # F18 flag
+  favourite_wp_threshold: 0.40
+  favourite_bonus: 1.10
+  cap: [0.80, 1.80]
+
+elo:
+  start: 1500
+  k: 24
+  # Performances are weighted by opponent strength:
+  # weight = clip(1 + (opp_elo - pool_mean) / scale, lo, hi)
+  scale: 400
+  weight_bounds: [0.85, 1.20]
+
+shrinkage:
+  # Empirical-Bayes prior strength is estimated from the data (method of moments);
+  # these bounds stop degenerate estimates.
+  min_prior_balls: 20
+  max_prior_balls: 2000
+
+eligibility:
+  batter_min_pressure_balls: 150
+  batter_min_matches: 15
+  bowler_min_pressure_balls: 120
+  bowler_min_matches: 15
+
+features:
+  rescue_wp_threshold: 0.20 # F11
+  heist_wp_threshold: 0.20
+  set_batter_balls: 20
+  collapse_wickets: 2 # F14: 2+ wickets in previous 12 balls when batter walked in
+  collapse_window: 12
+  set_partnership_runs: 30 # F13
+  set_partnership_balls: 25
+  clamp_runs: 9 # F7: death over conceding <= 9 runs
+  clamp_min_threat_share: 0.5 # over bowled mostly (>=50%) to Elite/Strong finishers
+  low_total_quantile: 0.25 # F8: defending a total below the 25th percentile
+  pp_situation_weight: { low_total: 1.5, knockout: 1.3, nrr: 1.2 }
+
+rating:
+  # Weights of the standardised components. Positive weight = higher is better.
+  batter_weights:
+    nrae_p: 0.20 # net runs above expected per pressure ball (runs + dismissal cost)
+    runs_ae_p: 0.10 # runs above expected per pressure ball
+    out_ae_p: -0.10 # dismissals above expected per pressure ball (lower is better)
+    wpa_p: 0.20 # win probability added per pressure ball
+    delta: 0.10 # pressure minus normal (net runs above expected)
+    consistency: 0.10 # share of matches above the population average
+    rescue: 0.06 # F11
+    collapse: 0.04 # F14
+    matchup_ppdeath: 0.10 # F3/F8 batting mirror: vs Elite/Strong bowlers in PP + death
+  bowler_weights:
+    rsae_p: 0.14 # runs saved vs expected per pressure ball
+    wae_p: 0.12 # wickets above expected per pressure ball
+    dot_p: 0.06 # dot-ball % under pressure
+    wpa_p: 0.18 # win probability added per pressure ball
+    delta: 0.08
+    consistency: 0.08
+    death_clamp: 0.08 # F7
+    pp_control: 0.07 # F8
+    control: 0.07 # F9
+    heist: 0.06 # F11
+    pair_breaker: 0.06 # F13
+  # Weights above are PRIORS. The pipeline multiplies each by the component's split-half
+  # (odd vs even matches) Spearman-Brown reliability, floored here, so components that do
+  # not repeat between halves of a player's matches count for less. Final weights are logged.
+  reliability_weighting: true
+  reliability_floor: 0.10
+  # rating = 100 * Phi(z / scale_divisor); 2.0 keeps the top of the scale readable
+  # (with 1.0 every top-10 rating and its bootstrap interval saturate near 100).
+  scale_divisor: 2.0
+  # F17: captaincy only breaks ties when two adjacent ratings differ by less than this.
+  tie_epsilon: 0.30
+
+bootstrap:
+  iterations: 1000
+  ci: [5, 95]
+  top_n: 10
+
+validation:
+  layers: ["F3", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "F13", "F14"]
+
+export:
+  replay_matches: 10
+  evidence_matches: 3        # standout matches shown per top-10 player
+  profiles_max: 160
+  scout_min_cell_balls: 20
+  leaderboard_slice_min_pressure_balls: 40
+  model_version: "v1.0"

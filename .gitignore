@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+screenshots/*.tmp
+
+# Python pipeline
+__pycache__/
+data/processed/

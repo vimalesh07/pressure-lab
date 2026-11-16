@@ -1,0 +1,17 @@
+model,version,evaluation,innings,n_balls,auc,brier,log_loss,par_mae_runs
+logreg,ml_only,test 2025-26 (honest),all,78364,0.7915,0.188,0.5461,
+logreg,ml_only,test 2025-26 (honest),1,41158,0.6575,0.242,0.6852,
+logreg,ml_only,test 2025-26 (honest),2,37206,0.9022,0.1281,0.3922,
+logreg,ml+endgame_dp,test 2025-26 (honest),all,78364,0.7916,0.1876,0.5446,
+logreg,ml+endgame_dp,test 2025-26 (honest),1,41158,0.6575,0.242,0.6852,
+logreg,ml+endgame_dp,test 2025-26 (honest),2,37206,0.9036,0.1274,0.3891,
+lgbm,ml_only,test 2025-26 (honest),all,78364,0.7939,0.1866,0.5436,
+lgbm,ml_only,test 2025-26 (honest),1,41158,0.6611,0.2406,0.681,
+lgbm,ml_only,test 2025-26 (honest),2,37206,0.9037,0.127,0.3915,
+lgbm,ml+endgame_dp,test 2025-26 (honest),all,78364,0.7943,0.1862,0.5416,
+lgbm,ml+endgame_dp,test 2025-26 (honest),1,41158,0.6611,0.2406,0.681,
+lgbm,ml+endgame_dp,test 2025-26 (honest),2,37206,0.9055,0.1261,0.3873,
+logreg,ml+endgame_dp,refit on all seasons (in-sample),all,197005,0.817,0.1738,0.5121,
+logreg,ml+endgame_dp,refit on all seasons (in-sample),1,102863,0.7038,0.2179,0.6247,
+logreg,ml+endgame_dp,refit on all seasons (in-sample),2,94142,0.9041,0.1257,0.389,
+par_score,-,test 2025-26 (honest),1,42331,,,,17.54

@@ -1,0 +1,7 @@
+list,metric,n_players,pearson_r,spearman,spearman_brown_full
+batters,delta,87,0.02,0.057,0.039
+batters,rating,87,0.28,0.29,0.438
+batters,nrae_p,87,0.19,0.232,0.32
+bowlers,delta,99,-0.118,-0.08,-0.268
+bowlers,rating,99,0.443,0.461,0.614
+bowlers,rsae_p,99,0.091,0.046,0.166

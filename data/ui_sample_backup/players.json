@@ -1,0 +1,583 @@
+[
+  {
+    "id": "bat-a",
+    "name": "Batter A",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Right-hand top order",
+    "teams": [
+      "MTR",
+      "NTN-B"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-b",
+    "name": "Batter B",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand top order",
+    "teams": [
+      "RVR",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-c",
+    "name": "Batter C",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand middle order",
+    "teams": [
+      "MTR"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-d",
+    "name": "Batter D",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand middle order",
+    "teams": [
+      "PLN",
+      "MTR",
+      "NTN-A"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-e",
+    "name": "Batter E",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand finisher",
+    "teams": [
+      "MTR",
+      "HBR"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-f",
+    "name": "Batter F",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Left-hand finisher",
+    "teams": [
+      "HLD"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-g",
+    "name": "Batter G",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand top order",
+    "teams": [
+      "CST"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-h",
+    "name": "Batter H",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Left-hand top order",
+    "teams": [
+      "VLY",
+      "NTN-E"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-i",
+    "name": "Batter I",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand middle order",
+    "teams": [
+      "CST",
+      "PLN",
+      "NTN-F"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-j",
+    "name": "Batter J",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand middle order",
+    "teams": [
+      "SUM",
+      "MTR",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-k",
+    "name": "Batter K",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand finisher",
+    "teams": [
+      "DSR",
+      "FRT",
+      "NTN-B"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-l",
+    "name": "Batter L",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Left-hand finisher",
+    "teams": [
+      "SUM",
+      "NTN-E"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-m",
+    "name": "Batter M",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand top order",
+    "teams": [
+      "HLD"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-n",
+    "name": "Batter N",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand top order",
+    "teams": [
+      "SUM"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-o",
+    "name": "Batter O",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Right-hand middle order",
+    "teams": [
+      "SUM"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-p",
+    "name": "Batter P",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand middle order",
+    "teams": [
+      "SUM",
+      "FRT"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-q",
+    "name": "Batter Q",
+    "role": "All-rounder",
+    "discipline": "batting",
+    "style": "Right-hand finisher",
+    "teams": [
+      "MTR",
+      "HBR"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-r",
+    "name": "Batter R",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand finisher",
+    "teams": [
+      "HBR",
+      "PLN",
+      "NTN-C"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bat-s",
+    "name": "Batter S",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Right-hand top order",
+    "teams": [
+      "SUM"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bat-t",
+    "name": "Batter T",
+    "role": "Batter",
+    "discipline": "batting",
+    "style": "Left-hand top order",
+    "teams": [
+      "RVR",
+      "SUM"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-a",
+    "name": "Bowler A",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast",
+    "teams": [
+      "CST",
+      "HLD"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-b",
+    "name": "Bowler B",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm fast",
+    "teams": [
+      "FRT",
+      "HLD",
+      "NTN-E"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-c",
+    "name": "Bowler C",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast-medium",
+    "teams": [
+      "FRT"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-d",
+    "name": "Bowler D",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm orthodox spin",
+    "teams": [
+      "PLN",
+      "HLD",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-e",
+    "name": "Bowler E",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm off spin",
+    "teams": [
+      "RVR",
+      "MTR",
+      "NTN-F"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-f",
+    "name": "Bowler F",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm leg spin",
+    "teams": [
+      "CST",
+      "MTR"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-g",
+    "name": "Bowler G",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm wrist spin",
+    "teams": [
+      "HLD"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-h",
+    "name": "Bowler H",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast",
+    "teams": [
+      "DSR",
+      "RVR",
+      "NTN-B"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-i",
+    "name": "Bowler I",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm fast",
+    "teams": [
+      "PLN",
+      "HLD"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-j",
+    "name": "Bowler J",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast-medium",
+    "teams": [
+      "MTR",
+      "VLY"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-k",
+    "name": "Bowler K",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm orthodox spin",
+    "teams": [
+      "MTR",
+      "RVR",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-l",
+    "name": "Bowler L",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm off spin",
+    "teams": [
+      "RVR",
+      "NTN-F"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-m",
+    "name": "Bowler M",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm leg spin",
+    "teams": [
+      "RVR"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-n",
+    "name": "Bowler N",
+    "role": "All-rounder",
+    "discipline": "bowling",
+    "style": "Left-arm wrist spin",
+    "teams": [
+      "HBR",
+      "MTR",
+      "NTN-A"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-o",
+    "name": "Bowler O",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast",
+    "teams": [
+      "HLD",
+      "NTN-E"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-p",
+    "name": "Bowler P",
+    "role": "All-rounder",
+    "discipline": "bowling",
+    "style": "Left-arm fast",
+    "teams": [
+      "VLY",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-q",
+    "name": "Bowler Q",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm fast-medium",
+    "teams": [
+      "PLN"
+    ],
+    "formats": [
+      "IPL"
+    ]
+  },
+  {
+    "id": "bowl-r",
+    "name": "Bowler R",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Left-arm orthodox spin",
+    "teams": [
+      "HBR",
+      "NTN-D"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-s",
+    "name": "Bowler S",
+    "role": "All-rounder",
+    "discipline": "bowling",
+    "style": "Right-arm off spin",
+    "teams": [
+      "VLY",
+      "NTN-E"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  },
+  {
+    "id": "bowl-t",
+    "name": "Bowler T",
+    "role": "Bowler",
+    "discipline": "bowling",
+    "style": "Right-arm leg spin",
+    "teams": [
+      "PLN",
+      "NTN-B"
+    ],
+    "formats": [
+      "IPL",
+      "T20I"
+    ]
+  }
+]

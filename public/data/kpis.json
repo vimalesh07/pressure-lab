@@ -1,0 +1,14 @@
+{
+ "matchesAnalysed": 837,
+ "ballsAnalysed": 185692,
+ "pressureBalls": 41085,
+ "playersRated": 176,
+ "dataWindow": "2022–2026",
+ "competitions": [
+  "IPL",
+  "T20I"
+ ],
+ "modelVersion": "v2.0",
+ "lastUpdated": "2026-11-14",
+ "pressureThreshold": "Top 20% of balls by leverage x stakes (per side)"
+}

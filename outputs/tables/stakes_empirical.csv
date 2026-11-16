@@ -1,0 +1,9 @@
+flag,multiplier,balls,boundary_pct,boundary_pct_matched,dot_pct,dot_pct_matched,wicket_pct,wicket_pct_matched,votes_harder_for_batter,data_direction,boundary_diff_in_se,supports_multiplier
+knockout,1.4,7042,18.12,18.84,35.08,35.17,5.78,5.66,2,harder,-1.57,True
+final,1.54,2233,15.09,18.87,36.18,34.99,6.14,5.72,3,harder,-4.99,True
+must_win (batting side),1.15,27023,19.19,18.72,35.06,35.21,5.28,5.72,0,easier,1.94,False
+must_win (bowling side),1.15,26839,19.95,18.56,33.7,35.45,5.33,5.64,0,easier,5.72,False
+series_decider,1.25,7282,16.55,18.83,35.7,35.33,5.71,5.6,3,harder,-5.25,True
+dead_rubber,0.85,13397,18.81,18.77,36.32,35.15,5.9,5.66,2,harder,0.13,False
+nrr_race (batting side),1.2,11689,20.95,18.61,33.42,35.42,5.15,5.57,0,easier,6.23,False
+nrr_race (bowling side),1.2,11698,20.94,18.65,33.61,35.28,4.98,5.67,0,easier,6.09,False

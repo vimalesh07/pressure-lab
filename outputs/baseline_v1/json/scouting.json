@@ -1,0 +1,403 @@
+{
+ "squadName": "Rajasthan Royals",
+ "fix": [
+  {
+   "playerId": "shimron-hetmyer-3297",
+   "name": "Shimron Hetmyer",
+   "discipline": "batting",
+   "team": "WI",
+   "role": "Batter",
+   "normalIndex": 107.6,
+   "pressureIndex": 95.7,
+   "dropPct": -11.1,
+   "sampleBalls": 180,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "n/a",
+    "line": "Off-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "RunOut (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Slog)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Slog Sweep)",
+     "count": 1
+    },
+    {
+     "type": "LBW (Worked)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Performance index drops 108 -> 96 under pressure; work on Right-arm pace (n/a, off-side) in the powerplay, and on shot choice with the cover drive, the most common dismissal shot."
+  },
+  {
+   "playerId": "riyan-parag-6423",
+   "name": "Riyan Parag",
+   "discipline": "batting",
+   "team": "RR",
+   "role": "Batter",
+   "normalIndex": 101.6,
+   "pressureIndex": 87.2,
+   "dropPct": -14.2,
+   "sampleBalls": 189,
+   "struggles": {
+    "versus": "Left-arm orthodox",
+    "delivery": "Googly",
+    "line": "Off-side",
+    "phase": "Death"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (On drive)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Straight Drive)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Flick)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Square Cut)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Performance index drops 102 -> 87 under pressure; work on Left-arm orthodox (Googly, off-side) in the death, and on shot choice with the on drive, the most common dismissal shot."
+  }
+ ],
+ "attack": [
+  {
+   "playerId": "jos-buttler-813",
+   "name": "Jos Buttler",
+   "discipline": "batting",
+   "team": "ENG",
+   "role": "Batter",
+   "normalIndex": 122.4,
+   "pressureIndex": 95.8,
+   "dropPct": -21.7,
+   "sampleBalls": 623,
+   "struggles": {
+    "versus": "Left-arm pace",
+    "delivery": "Straight",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Off Drive)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Bowled (Paddle Scoop)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Left-arm pace with straight on the off-side in the middle; performance index falls 122 -> 96 under pressure and the pull shot is the most common dismissal shot."
+  },
+  {
+   "playerId": "quinton-de-kock-2101",
+   "name": "Quinton de Kock",
+   "discipline": "batting",
+   "team": "MI",
+   "role": "Batter",
+   "normalIndex": 115.4,
+   "pressureIndex": 79.5,
+   "dropPct": -31.1,
+   "sampleBalls": 287,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Inswing",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Off Drive)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Backfoot defensive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Slog)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with inswing on the off-side in the middle; performance index falls 115 -> 80 under pressure and the off drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "jitesh-sharma-3916",
+   "name": "Jitesh Sharma",
+   "discipline": "batting",
+   "team": "RCB",
+   "role": "Batter",
+   "normalIndex": 112.6,
+   "pressureIndex": 72.7,
+   "dropPct": -35.4,
+   "sampleBalls": 204,
+   "struggles": {
+    "versus": "Left-arm wrist spin",
+    "delivery": "Seamed In",
+    "line": "On-side",
+    "phase": "Death"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "LBW (Frontfoot defensive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Slog)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Left-arm wrist spin with seamed in on the on-side in the death; performance index falls 113 -> 73 under pressure and the pull shot is the most common dismissal shot."
+  },
+  {
+   "playerId": "liam-livingstone-4391",
+   "name": "Liam Livingstone",
+   "discipline": "batting",
+   "team": "SH",
+   "role": "All-rounder",
+   "normalIndex": 116.8,
+   "pressureIndex": 83.0,
+   "dropPct": -28.9,
+   "sampleBalls": 177,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Googly",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Square Cut)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Slog)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Flick)",
+     "count": 1
+    },
+    {
+     "type": "Stump (On drive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with googly on the off-side in the middle; performance index falls 117 -> 83 under pressure and the slog is the most common dismissal shot."
+  },
+  {
+   "playerId": "abhishek-sharma-6281",
+   "name": "Abhishek Sharma",
+   "discipline": "batting",
+   "team": "IND",
+   "role": "All-rounder",
+   "normalIndex": 144.7,
+   "pressureIndex": 128.0,
+   "dropPct": -11.5,
+   "sampleBalls": 611,
+   "struggles": {
+    "versus": "Leg spin",
+    "delivery": "Googly",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Pull shot)",
+     "count": 6
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Slog Sweep)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Square drive)",
+     "count": 3
+    }
+   ],
+   "recommendation": "Bowl Leg spin with googly on the off-side in the middle; performance index falls 145 -> 128 under pressure and the pull shot is the most common dismissal shot."
+  },
+  {
+   "playerId": "finn-allen-4847",
+   "name": "Finn Allen",
+   "discipline": "batting",
+   "team": "NZ",
+   "role": "Batter",
+   "normalIndex": 142.8,
+   "pressureIndex": 119.7,
+   "dropPct": -16.2,
+   "sampleBalls": 265,
+   "struggles": {
+    "versus": "Left-arm pace",
+    "delivery": "Out Swing",
+    "line": "Off-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Flick)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Slog)",
+     "count": 1
+    },
+    {
+     "type": "LBW (Flick)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Left-arm pace with out swing on the off-side in the powerplay; performance index falls 143 -> 120 under pressure and the cover drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "pathum-nissanka-6931",
+   "name": "Pathum Nissanka",
+   "discipline": "batting",
+   "team": "SL",
+   "role": "Batter",
+   "normalIndex": 115.9,
+   "pressureIndex": 87.4,
+   "dropPct": -24.6,
+   "sampleBalls": 411,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Off Cutter",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Pull shot)",
+     "count": 6
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Flick)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Square Cut)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Slog Sweep)",
+     "count": 2
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with off cutter on the off-side in the middle; performance index falls 116 -> 87 under pressure and the pull shot is the most common dismissal shot."
+  },
+  {
+   "playerId": "glenn-phillips-4853",
+   "name": "Glenn Phillips",
+   "discipline": "batting",
+   "team": "NZ",
+   "role": "Batter",
+   "normalIndex": 121.9,
+   "pressureIndex": 99.8,
+   "dropPct": -18.1,
+   "sampleBalls": 157,
+   "struggles": {
+    "versus": "Leg spin",
+    "delivery": "Seamed In",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Reverse Sweep)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Leg spin with seamed in on the off-side in the middle; performance index falls 122 -> 100 under pressure and the pull shot is the most common dismissal shot."
+  }
+ ]
+}

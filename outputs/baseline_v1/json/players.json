@@ -1,0 +1,3474 @@
+[
+ {
+  "id": "vaibhav-sooryavanshi-50284",
+  "name": "Vaibhav Sooryavanshi",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "IND",
+   "RR",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "tim-david-6396",
+  "name": "Tim David",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "AUS",
+   "RCB",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rinku-singh-4708",
+  "name": "Rinku Singh",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand finisher",
+  "teams": [
+   "IND",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "phil-salt-5553",
+  "name": "Phil Salt",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "ENG",
+   "RCB",
+   "KKR",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "abhishek-sharma-6281",
+  "name": "Abhishek Sharma",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "IND",
+   "SH",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jonny-bairstow-1205",
+  "name": "Jonny Bairstow",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "MI",
+   "ENG",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "priyansh-arya-25669",
+  "name": "Priyansh Arya",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "PK",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "glenn-maxwell-838",
+  "name": "Glenn Maxwell",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "AUS",
+   "PK",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "yashasvi-jaiswal-6819",
+  "name": "Yashasvi Jaiswal",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "RR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "suryakumar-yadav-1699",
+  "name": "Suryakumar Yadav",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "MI",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sunil-narine-781",
+  "name": "Sunil Narine",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "KKR"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "jasprit-bumrah-2933",
+  "name": "Jasprit Bumrah",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "IND",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "blessing-muzarabani-6523",
+  "name": "Blessing Muzarabani",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "ZIM",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "josh-hazlewood-830",
+  "name": "Josh Hazlewood",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "RCB",
+   "AUS"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "krunal-pandya-4219",
+  "name": "Krunal Pandya",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "RCB",
+   "LSG"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "akeal-hosein-2417",
+  "name": "Akeal Hosein",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "WI",
+   "CSK",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "varun-chakravarthy-6256",
+  "name": "Varun Chakravarthy",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "IND",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mahedi-hasan-5837",
+  "name": "Mahedi Hasan",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "BAN"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "trent-boult-2320",
+  "name": "Trent Boult",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "MI",
+   "RR",
+   "NZ"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohsin-khan-6669",
+  "name": "Mohsin Khan",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "LSG"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mitchell-santner-4101",
+  "name": "Mitchell Santner",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "NZ",
+   "MI",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jason-behrendorff-2054",
+  "name": "Jason Behrendorff",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "AUS",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mahendra-singh-dhoni-8",
+  "name": "Mahendra Singh Dhoni",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "CSK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "saim-ayub-7690",
+  "name": "Saim Ayub",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "chamika-karunaratne-6160",
+  "name": "Chamika Karunaratne",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "SL"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "zubaid-akbari-17937",
+  "name": "Zubaid Akbari",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "AFG-A",
+   "AFG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "rahmanullah-gurbaz-6674",
+  "name": "Rahmanullah Gurbaz",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AFG",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rahul-chahar-6161",
+  "name": "Rahul Chahar",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "CSK",
+   "SH",
+   "IND-A",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "azmatullah-omarzai-6676",
+  "name": "Azmatullah Omarzai",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "AFG",
+   "PK",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ishan-kishan-4117",
+  "name": "Ishan Kishan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "IND",
+   "SH",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "aiden-markram-3605",
+  "name": "Aiden Markram",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "LSG",
+   "SA",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "alishan-sharafu-8726",
+  "name": "Alishan Sharafu",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "UAE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "piyush-chawla-23",
+  "name": "Piyush Chawla",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "MI"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mohammad-hasnain-6677",
+  "name": "Mohammad Hasnain",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "mayank-markande-6683",
+  "name": "Mayank Markande",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "MI",
+   "SH"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "ishant-sharma-28",
+  "name": "Ishant Sharma",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "GT",
+   "DC"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mohammed-shami-1566",
+  "name": "Mohammed Shami",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "LSG",
+   "SH",
+   "IND",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "wellington-masakadza-4639",
+  "name": "Wellington Masakadza",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "ZIM"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "lungi-ngidi-4641",
+  "name": "Lungi Ngidi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "DC",
+   "SA",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohammad-haris-8741",
+  "name": "Mohammad Haris",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "PAK",
+   "PAK-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "vaibhav-arora-8746",
+  "name": "Vaibhav Arora",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "KKR",
+   "IND-A",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "kagiso-rabada-3628",
+  "name": "Kagiso Rabada",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "GT",
+   "SA",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "corbin-bosch-3629",
+  "name": "Corbin Bosch",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "MI",
+   "SA"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "virat-kohli-47",
+  "name": "Virat Kohli",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "RCB",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "prabhsimran-singh-7216",
+  "name": "Prabhsimran Singh",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "PK",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "david-miller-1077",
+  "name": "David Miller",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "DC",
+   "SA",
+   "LSG",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "nicholas-pooran-3125",
+  "name": "Nicholas Pooran",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "LSG",
+   "WI",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "brandon-king-3639",
+  "name": "Brandon King",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "WI"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "quinton-de-kock-2101",
+  "name": "Quinton de Kock",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "MI",
+   "SA",
+   "KKR",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "moeen-ali-1596",
+  "name": "Moeen Ali",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "KKR",
+   "ENG",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "kuldeep-yadav-3644",
+  "name": "Kuldeep Yadav",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Chinaman",
+  "teams": [
+   "IND",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shreyas-iyer-3647",
+  "name": "Shreyas Iyer",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "IND",
+   "PK",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "deepak-hooda-3648",
+  "name": "Deepak Hooda",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "CSK",
+   "LSG",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sherfane-rutherford-6725",
+  "name": "Sherfane Rutherford",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "WI",
+   "MI",
+   "GT",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "romario-shepherd-6726",
+  "name": "Romario Shepherd",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "WI",
+   "RCB",
+   "MI",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "avesh-khan-3653",
+  "name": "Avesh Khan",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "LSG",
+   "IND",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jason-holder-2633",
+  "name": "Jason Holder",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "WI",
+   "GT",
+   "RR",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "faheem-ashraf-5189",
+  "name": "Faheem Ashraf",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "fazalhaq-farooqi-7240",
+  "name": "FazalHaq Farooqi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "AFG",
+   "RR",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "yuzvendra-chahal-1612",
+  "name": "Yuzvendra Chahal",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "PK",
+   "RR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "george-dockrell-1101",
+  "name": "George Dockrell",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "adam-zampa-2636",
+  "name": "Adam Zampa",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "AUS",
+   "SH",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "marcus-stoinis-2639",
+  "name": "Marcus Stoinis",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "PK",
+   "AUS",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mukesh-choudhary-7250",
+  "name": "Mukesh Choudhary",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "CSK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "lockie-ferguson-4692",
+  "name": "Lockie Ferguson",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "NZ",
+   "PK",
+   "RCB",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "faf-du-plessis-88",
+  "name": "Faf du Plessis",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "DC",
+   "RCB"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "kusal-mendis-3672",
+  "name": "Kusal Mendis",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "SL",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "dhruv-jurel-7260",
+  "name": "Dhruv Jurel",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "RR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rishabh-pant-4703",
+  "name": "Rishabh Pant",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "LSG",
+   "IND",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "matt-henry-3174",
+  "name": "Matt Henry",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "NZ",
+   "CSK",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "fareed-malik-4201",
+  "name": "Fareed Malik",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "AFG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "xavier-bartlett-5738",
+  "name": "Xavier Bartlett",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "AUS",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "asif-khan-8301",
+  "name": "Asif Khan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "UAE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "wriddhiman-saha-109",
+  "name": "Wriddhiman Saha",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "GT"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "rashid-khan-4722",
+  "name": "Rashid Khan",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "AFG",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "tim-seifert-3700",
+  "name": "Tim Seifert",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "NZ",
+   "KKR",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "suyash-sharma-36982",
+  "name": "Suyash Sharma",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "RCB",
+   "IND-A",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "dewald-brevis-25213",
+  "name": "Dewald Brevis",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "CSK",
+   "SA",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rohit-sharma-126",
+  "name": "Rohit Sharma",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "MI",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "roston-chase-2687",
+  "name": "Roston Chase",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "WI"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "josh-inglis-4736",
+  "name": "Josh Inglis",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AUS",
+   "LSG",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "marco-jansen-7808",
+  "name": "Marco Jansen",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "PK",
+   "SA",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "william-jacks-6272",
+  "name": "William Jacks",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "ENG",
+   "MI",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "harry-brook-6280",
+  "name": "Harry Brook",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "ENG",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "craig-young-3720",
+  "name": "Craig Young",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "anukul-roy-6284",
+  "name": "Anukul Roy",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "KKR"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "shikhar-dhawan-142",
+  "name": "Shikhar Dhawan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "PK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "yash-thakur-6287",
+  "name": "Yash Thakur",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "IND",
+   "PK",
+   "IND-A",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shubman-gill-6288",
+  "name": "Shubman Gill",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "GT",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "nandre-burger-7312",
+  "name": "Nandre Burger",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "RR",
+   "SA"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shivam-dube-4755",
+  "name": "Shivam Dube",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "IND",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "nitish-rana-4246",
+  "name": "Nitish Rana",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "DC",
+   "RR",
+   "KKR"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "tushar-deshpande-6806",
+  "name": "Tushar Deshpande",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "RR",
+   "IND",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ravindra-jadeja-152",
+  "name": "Ravindra Jadeja",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "RR",
+   "CSK",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "yash-dayal-7322",
+  "name": "Yash Dayal",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "RCB",
+   "GT"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "harpreet-brar-7325",
+  "name": "Harpreet Brar",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "PK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "alex-hales-1183",
+  "name": "Alex Hales",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "ENG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "rasikh-salam-7327",
+  "name": "Rasikh Salam",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "RCB",
+   "IND-A",
+   "DC",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "heinrich-klaasen-4260",
+  "name": "Heinrich Klaasen",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "SH",
+   "SA"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jason-roy-1187",
+  "name": "Jason Roy",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "KKR",
+   "ENG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ajinkya-rahane-167",
+  "name": "Ajinkya Rahane",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "KKR",
+   "CSK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "gulbadin-naib-2214",
+  "name": "Gulbadin Naib",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "AFG",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "robin-uthappa-169",
+  "name": "Robin Uthappa",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "CSK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "devdutt-padikkal-6314",
+  "name": "Devdutt Padikkal",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "RCB",
+   "LSG",
+   "RR"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "jake-mcgurk-7341",
+  "name": "Jake McGurk",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AUS",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shoriful-islam-7344",
+  "name": "Shoriful Islam",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "BAN"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "naveen-ul-haq-5809",
+  "name": "Naveen ul Haq",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "AFG",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "naman-dhir-37052",
+  "name": "Naman Dhir",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "IND",
+   "MI",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohammad-rishad-hossain-8380",
+  "name": "Mohammad Rishad Hossain",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "BAN"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "ripon-mondol-24767",
+  "name": "Ripon Mondol",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "BAN",
+   "BAN-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "harshit-rana-29888",
+  "name": "Harshit Rana",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "IND",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "david-willey-1219",
+  "name": "David Willey",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "RCB",
+   "ENG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "haris-rauf-7364",
+  "name": "Haris Rauf",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "m-shahrukh-khan-3782",
+  "name": "M Shahrukh Khan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "GT",
+   "PK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "joshua-little-4807",
+  "name": "Joshua Little",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Fast",
+  "teams": [
+   "IRE",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "alzarri-joseph-3275",
+  "name": "Alzarri Joseph",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "WI",
+   "RCB",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "gudakesh-motie-3276",
+  "name": "Gudakesh Motie",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "WI"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "lorcan-tucker-4814",
+  "name": "Lorcan Tucker",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "khaleel-ahmed-4816",
+  "name": "Khaleel Ahmed",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "CSK",
+   "IND",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sanju-samson-2258",
+  "name": "Sanju Samson",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "IND",
+   "CSK",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "spencer-johnson-6354",
+  "name": "Spencer Johnson",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Fast",
+  "teams": [
+   "AUS",
+   "CSK",
+   "KKR",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shaheen-afridi-6355",
+  "name": "Shaheen Afridi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "harshal-patel-2261",
+  "name": "Harshal Patel",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "SH",
+   "PK",
+   "RCB",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "garuka-sanketh-39637",
+  "name": "Garuka Sanketh",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "SL-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "washington-sundar-4823",
+  "name": "Washington Sundar",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "IND",
+   "GT",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "namboori-tilak-varma-7897",
+  "name": "Namboori Tilak Varma",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "IND",
+   "MI",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "david-warner-220",
+  "name": "David Warner",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "DC",
+   "AUS"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "patrick-cummins-1758",
+  "name": "Patrick Cummins",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "SH",
+   "AUS",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "salman-mirza-20704",
+  "name": "Salman Mirza",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "shimron-hetmyer-3297",
+  "name": "Shimron Hetmyer",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "WI",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jofra-archer-3298",
+  "name": "Jofra Archer",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "ENG",
+   "RR",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "obed-mccoy-4837",
+  "name": "Obed McCoy",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "WI",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sm-meherob-hasan-26854",
+  "name": "SM Meherob Hasan",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "BAN-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "tanveer-sangha-8424",
+  "name": "Tanveer Sangha",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "AUS"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "finn-allen-4847",
+  "name": "Finn Allen",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "NZ",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "nathan-ellis-7920",
+  "name": "Nathan Ellis",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "AUS",
+   "CSK",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "glenn-phillips-4853",
+  "name": "Glenn Phillips",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "NZ",
+   "GT",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "aaron-finch-250",
+  "name": "Aaron Finch",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AUS",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "afif-hossain-5882",
+  "name": "Afif Hossain",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "BAN"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "reeza-hendricks-768",
+  "name": "Reeza Hendricks",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "SA"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "hardik-pandya-3330",
+  "name": "Hardik Pandya",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "MI",
+   "IND",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "abishek-porel-19714",
+  "name": "Abishek Porel",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "DC"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mark-adair-5379",
+  "name": "Mark Adair",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "richard-ngarava-4874",
+  "name": "Richard Ngarava",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "ZIM"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "reece-topley-2315",
+  "name": "Reece Topley",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "MI",
+   "ENG",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shai-hope-4369",
+  "name": "Shai Hope",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "WI",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "martin-guptill-274",
+  "name": "Martin Guptill",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "NZ"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "pathum-nissanka-6931",
+  "name": "Pathum Nissanka",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "SL",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mustafizur-rahman-4373",
+  "name": "Mustafizur Rahman",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "BAN",
+   "DC",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "deepak-chahar-1813",
+  "name": "Deepak Chahar",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "MI",
+   "CSK",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "riyan-parag-6423",
+  "name": "Riyan Parag",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "RR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "digvesh-rathi-58134",
+  "name": "Digvesh Rathi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "LSG"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "abdul-samad-7446",
+  "name": "Abdul Samad",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "LSG",
+   "SH"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "matthew-wade-796",
+  "name": "Matthew Wade",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand finisher",
+  "teams": [
+   "GT",
+   "AUS"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shardul-thakur-2847",
+  "name": "Shardul Thakur",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "MI",
+   "LSG",
+   "CSK",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "noor-ahmad-7967",
+  "name": "Noor Ahmad",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Chinaman",
+  "teams": [
+   "AFG",
+   "CSK",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "wanindu-hasaranga-4900",
+  "name": "Wanindu Hasaranga",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "SL",
+   "RR",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "andre-russell-1318",
+  "name": "Andre Russell",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "WI",
+   "KKR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "liam-livingstone-4391",
+  "name": "Liam Livingstone",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "SH",
+   "RCB",
+   "ENG",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "kamindu-mendis-4904",
+  "name": "Kamindu Mendis",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "SL",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "omair-yousuf-6440",
+  "name": "Omair Yousuf",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "PAK",
+   "PAK-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "jos-buttler-813",
+  "name": "Jos Buttler",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "ENG",
+   "GT",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mark-chapman-3374",
+  "name": "Mark Chapman",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "NZ"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "ibrahim-zadran-6448",
+  "name": "Ibrahim Zadran",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AFG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "ravichandran-ashwin-305",
+  "name": "Ravichandran Ashwin",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "CSK",
+   "RR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mitchell-marsh-818",
+  "name": "Mitchell Marsh",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "AUS",
+   "LSG",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "cameron-green-5939",
+  "name": "Cameron Green",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "KKR",
+   "AUS",
+   "RCB",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shahbaz-ahmed-7472",
+  "name": "Shahbaz Ahmed",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "LSG",
+   "SH",
+   "RCB"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mohammed-siraj-5944",
+  "name": "Mohammed Siraj",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "GT",
+   "IND",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mayank-yadav-27960",
+  "name": "Mayank Yadav",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "IND",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sam-curran-4409",
+  "name": "Sam Curran",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "ENG",
+   "CSK",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "axar-patel-2876",
+  "name": "Axar Patel",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "IND",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "anshul-kamboj-27964",
+  "name": "Anshul Kamboj",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "CSK",
+   "IND-A",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "travis-head-2367",
+  "name": "Travis Head",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "SH",
+   "AUS"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "arshdeep-singh-6464",
+  "name": "Arshdeep Singh",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium-fast",
+  "teams": [
+   "IND",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "shadab-khan-4926",
+  "name": "Shadab Khan",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "jitesh-sharma-3916",
+  "name": "Jitesh Sharma",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "RCB",
+   "IND",
+   "IND-A",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ravi-bishnoi-7503",
+  "name": "Ravi Bishnoi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "IND",
+   "RR",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rahul-tewatia-3926",
+  "name": "Rahul Tewatia",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand finisher",
+  "teams": [
+   "GT"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "milan-rathnayake-33114",
+  "name": "Milan Rathnayake",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "SL-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "dushmantha-chameera-2399",
+  "name": "Dushmantha Chameera",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "SL",
+   "DC",
+   "KKR",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "bhuvneshwar-kumar-360",
+  "name": "Bhuvneshwar Kumar",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "IND",
+   "RCB",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "fakhar-zaman-2921",
+  "name": "Fakhar Zaman",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "sandeep-sharma-2411",
+  "name": "Sandeep Sharma",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "RR",
+   "PK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "kyle-mayers-2416",
+  "name": "Kyle Mayers",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "WI",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "andrew-balbirnie-3954",
+  "name": "Andrew Balbirnie",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "nuwan-thushara-19312",
+  "name": "Nuwan Thushara",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "SL",
+   "RCB",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "maheesh-theekshana-19316",
+  "name": "Maheesh Theekshana",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm offbreak",
+  "teams": [
+   "SL",
+   "RR",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "daniel-sams-6518",
+  "name": "Daniel Sams",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm fast-medium",
+  "teams": [
+   "AUS",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "naseem-shah-8049",
+  "name": "Naseem Shah",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "ayush-mhatre-48504",
+  "name": "Ayush Mhatre",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "CSK"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "venkatesh-iyer-7544",
+  "name": "Venkatesh Iyer",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "RCB",
+   "KKR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rovman-powell-4986",
+  "name": "Rovman Powell",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "WI",
+   "KKR",
+   "RR",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "benjamin-lister-6515",
+  "name": "Benjamin Lister",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm medium",
+  "teams": [
+   "NZ"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "dasun-shanaka-2436",
+  "name": "Dasun Shanaka",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "SL",
+   "RR",
+   "GT"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "prince-yadav-58246",
+  "name": "Prince Yadav",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "IND",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "jacob-duffy-22920",
+  "name": "Jacob Duffy",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "NZ",
+   "RCB"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "kamil-mishara-7049",
+  "name": "Kamil Mishara",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "SL"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "prasidh-krishna-4489",
+  "name": "Prasidh Krishna",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium-fast",
+  "teams": [
+   "IND",
+   "GT",
+   "RR"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "dunith-wellalage-7052",
+  "name": "Dunith Wellalage",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "SL",
+   "SL-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "nehal-wadhera-7059",
+  "name": "Nehal Wadhera",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "PK",
+   "IND-A",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "umesh-yadav-403",
+  "name": "Umesh Yadav",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "GT",
+   "KKR",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "devon-conway-1941",
+  "name": "Devon Conway",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "NZ",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "saqib-mahmood-4499",
+  "name": "Saqib Mahmood",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm fast-medium",
+  "teams": [
+   "ENG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "sai-sudharsan-23450",
+  "name": "Sai Sudharsan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "GT"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "rahul-tripathi-1440",
+  "name": "Rahul Tripathi",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "CSK",
+   "SH",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "salman-agha-3489",
+  "name": "Salman Agha",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "ashutosh-sharma-8101",
+  "name": "Ashutosh Sharma",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand finisher",
+  "teams": [
+   "DC",
+   "IND-A",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ryan-rickelton-4007",
+  "name": "Ryan Rickelton",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "MI",
+   "SA"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sikandar-raza-2984",
+  "name": "Sikandar Raza",
+  "role": "All-rounder",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "ZIM",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ruturaj-gaikwad-6059",
+  "name": "Ruturaj Gaikwad",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "CSK",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "rajat-patidar-5039",
+  "name": "Rajat Patidar",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "RCB"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "mukesh-kumar-5041",
+  "name": "Mukesh Kumar",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "DC",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "babar-azam-2485",
+  "name": "Babar Azam",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "lokesh-rahul-953",
+  "name": "Lokesh Rahul",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "DC",
+   "LSG",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohammad-nawaz-2490",
+  "name": "Mohammad Nawaz",
+  "role": "All-rounder",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "paul-stirling-443",
+  "name": "Paul Stirling",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "IRE"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "sediqullah-atal-8647",
+  "name": "Sediqullah Atal",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "AFG",
+   "AFG-A",
+   "DC"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "kusal-perera-1481",
+  "name": "Kusal Perera",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "SL"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "shamar-joseph-47050",
+  "name": "Shamar Joseph",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "WI",
+   "LSG"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "sai-kishore-5577",
+  "name": "Sai Kishore",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Slow left-arm orthodox",
+  "teams": [
+   "GT",
+   "IND-A"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "adam-milne-1487",
+  "name": "Adam Milne",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "NZ",
+   "RR",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohammad-rizwan-3024",
+  "name": "Mohammad Rizwan",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "brian-bennett-24017",
+  "name": "Brian Bennett",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand top order",
+  "teams": [
+   "ZIM"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "bhanuka-rajapaksa-2003",
+  "name": "Bhanuka Rajapaksa",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand middle order",
+  "teams": [
+   "SL",
+   "PK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "matheesha-pathirana-8661",
+  "name": "Matheesha Pathirana",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "KKR",
+   "SL",
+   "CSK"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "mohammad-amir-470",
+  "name": "Mohammad Amir",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Left-arm Fast",
+  "teams": [
+   "PAK"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "umran-malik-25048",
+  "name": "Umran Malik",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm medium",
+  "teams": [
+   "SH",
+   "IND"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "ish-sodhi-2526",
+  "name": "Ish Sodhi",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "NZ"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "adil-rashid-479",
+  "name": "Adil Rashid",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "ENG",
+   "SH"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "gerald-coetzee-6628",
+  "name": "Gerald Coetzee",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Fast",
+  "teams": [
+   "SA",
+   "GT",
+   "MI"
+  ],
+  "formats": [
+   "IPL",
+   "T20I"
+  ]
+ },
+ {
+  "id": "hazratullah-zazai-7152",
+  "name": "Hazratullah Zazai",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Left-hand top order",
+  "teams": [
+   "AFG"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ },
+ {
+  "id": "vipraj-nigam-46066",
+  "name": "Vipraj Nigam",
+  "role": "Bowler",
+  "discipline": "bowling",
+  "style": "Right-arm Leg-Break",
+  "teams": [
+   "DC"
+  ],
+  "formats": [
+   "IPL"
+  ]
+ },
+ {
+  "id": "towhid-hridoy-6651",
+  "name": "Towhid Hridoy",
+  "role": "Batter",
+  "discipline": "batting",
+  "style": "Right-hand middle order",
+  "teams": [
+   "BAN",
+   "BAN-A"
+  ],
+  "formats": [
+   "T20I"
+  ]
+ }
+]

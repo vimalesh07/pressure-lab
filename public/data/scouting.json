@@ -1,0 +1,367 @@
+{
+ "squadName": "Rajasthan Royals",
+ "fix": [
+  {
+   "playerId": "riyan-parag-6423",
+   "name": "Riyan Parag",
+   "discipline": "batting",
+   "team": "RR",
+   "role": "Batter",
+   "normalIndex": 106.8,
+   "pressureIndex": 70.4,
+   "dropPct": -34.1,
+   "sampleBalls": 240,
+   "struggles": {
+    "versus": "Left-arm pace",
+    "delivery": "Leg Break",
+    "line": "Off-side",
+    "phase": "Death"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Flick)",
+     "count": 2
+    },
+    {
+     "type": "Bowled (Slog)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Performance index drops 107 -> 70 under pressure; work on Left-arm pace (Leg Break, off-side) in the death, and on shot choice with the pull shot, the most common dismissal shot."
+  }
+ ],
+ "attack": [
+  {
+   "playerId": "faf-du-plessis-88",
+   "name": "Faf du Plessis",
+   "discipline": "batting",
+   "team": "DC",
+   "role": "Batter",
+   "normalIndex": 113.1,
+   "pressureIndex": 60.8,
+   "dropPct": -46.2,
+   "sampleBalls": 334,
+   "struggles": {
+    "versus": "Off spin",
+    "delivery": "Inswing",
+    "line": "On-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (On drive)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Square drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "Bowled (Frontfoot defensive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Off spin with inswing on the on-side in the powerplay; performance index falls 113 -> 61 under pressure and the on drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "moeen-ali-1596",
+   "name": "Moeen Ali",
+   "discipline": "batting",
+   "team": "KKR",
+   "role": "All-rounder",
+   "normalIndex": 99.0,
+   "pressureIndex": 73.7,
+   "dropPct": -25.6,
+   "sampleBalls": 158,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Seamed Out",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "Caught (Square drive)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (On drive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Sweep Shot)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with seamed out on the off-side in the middle; performance index falls 99 -> 74 under pressure and the cover drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "quinton-de-kock-2101",
+   "name": "Quinton de Kock",
+   "discipline": "batting",
+   "team": "MI",
+   "role": "Batter",
+   "normalIndex": 114.6,
+   "pressureIndex": 81.6,
+   "dropPct": -28.8,
+   "sampleBalls": 296,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Off Cutter",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (On drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Inside out)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Frontfoot defensive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with off cutter on the off-side in the middle; performance index falls 115 -> 82 under pressure and the off drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "charith-asalanka-4895",
+   "name": "Charith Asalanka",
+   "discipline": "batting",
+   "team": "SL",
+   "role": "Batter",
+   "normalIndex": 92.7,
+   "pressureIndex": 32.0,
+   "dropPct": -65.5,
+   "sampleBalls": 150,
+   "struggles": {
+    "versus": "Leg spin",
+    "delivery": "Off Break",
+    "line": "On-side",
+    "phase": "Death"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Slog Sweep)",
+     "count": 4
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 3
+    },
+    {
+     "type": "LBW (Backfoot defensive)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Slog Sweep)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Flick)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Leg spin with off break on the on-side in the death; performance index falls 93 -> 32 under pressure and the slog sweep is the most common dismissal shot."
+  },
+  {
+   "playerId": "liam-livingstone-4391",
+   "name": "Liam Livingstone",
+   "discipline": "batting",
+   "team": "SH",
+   "role": "All-rounder",
+   "normalIndex": 116.1,
+   "pressureIndex": 87.8,
+   "dropPct": -24.4,
+   "sampleBalls": 195,
+   "struggles": {
+    "versus": "Left-arm orthodox",
+    "delivery": "Orthodox",
+    "line": "Off-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Square Cut)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 2
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 2
+    },
+    {
+     "type": "Bowled (Slog)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Left-arm orthodox with orthodox on the off-side in the powerplay; performance index falls 116 -> 88 under pressure and the pull shot is the most common dismissal shot."
+  },
+  {
+   "playerId": "rajat-patidar-5039",
+   "name": "Rajat Patidar",
+   "discipline": "batting",
+   "team": "RCB",
+   "role": "Batter",
+   "normalIndex": 122.4,
+   "pressureIndex": 99.5,
+   "dropPct": -18.7,
+   "sampleBalls": 215,
+   "struggles": {
+    "versus": "Left-arm pace",
+    "delivery": "Seamed In",
+    "line": "Off-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "LBW (Flick)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (On drive)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Flick)",
+     "count": 1
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Left-arm pace with seamed in on the off-side in the powerplay; performance index falls 122 -> 100 under pressure and the flick is the most common dismissal shot."
+  },
+  {
+   "playerId": "sanju-samson-2258",
+   "name": "Sanju Samson",
+   "discipline": "batting",
+   "team": "IND",
+   "role": "Batter",
+   "normalIndex": 116.6,
+   "pressureIndex": 90.6,
+   "dropPct": -22.3,
+   "sampleBalls": 490,
+   "struggles": {
+    "versus": "Left-arm pace",
+    "delivery": "Out Swing",
+    "line": "Off-side",
+    "phase": "Middle"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 5
+    },
+    {
+     "type": "Caught (Off Drive)",
+     "count": 5
+    },
+    {
+     "type": "Caught (Pull shot)",
+     "count": 4
+    },
+    {
+     "type": "Bowled (Flick)",
+     "count": 2
+    },
+    {
+     "type": "Caught (Square Cut)",
+     "count": 2
+    }
+   ],
+   "recommendation": "Bowl Left-arm pace with out swing on the off-side in the middle; performance index falls 117 -> 91 under pressure and the cover drive is the most common dismissal shot."
+  },
+  {
+   "playerId": "tanzid-hasan-7900",
+   "name": "Tanzid Hasan",
+   "discipline": "batting",
+   "team": "BAN",
+   "role": "Batter",
+   "normalIndex": 108.6,
+   "pressureIndex": 80.7,
+   "dropPct": -25.7,
+   "sampleBalls": 150,
+   "struggles": {
+    "versus": "Right-arm pace",
+    "delivery": "Out Swing",
+    "line": "Off-side",
+    "phase": "Powerplay"
+   },
+   "dismissals": [
+    {
+     "type": "Caught (Cover Drive)",
+     "count": 2
+    },
+    {
+     "type": "Bowled (Pull shot)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Push)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (On drive)",
+     "count": 1
+    },
+    {
+     "type": "Bowled (Straight Drive)",
+     "count": 1
+    }
+   ],
+   "recommendation": "Bowl Right-arm pace with out swing on the off-side in the powerplay; performance index falls 109 -> 81 under pressure and the cover drive is the most common dismissal shot."
+  }
+ ]
+}

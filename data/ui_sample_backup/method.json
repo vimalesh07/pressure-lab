@@ -1,0 +1,163 @@
+{
+  "pipeline": [
+    {
+      "id": "situation",
+      "title": "Situation",
+      "detail": "Ball-by-ball state: runs needed, balls left, wickets in hand, required vs current rate.",
+      "output": "Base win probability per ball"
+    },
+    {
+      "id": "stakes",
+      "title": "Stakes",
+      "detail": "Match importance: playoff race, knockout, bilateral decider, tournament stage.",
+      "output": "Stakes multiplier 0.8–1.5"
+    },
+    {
+      "id": "threat",
+      "title": "Opponent threat",
+      "detail": "Quality of the bowler or batter faced, by tier and phase.",
+      "output": "Threat-adjusted expectation"
+    },
+    {
+      "id": "performance",
+      "title": "Performance vs expected",
+      "detail": "Runs, wickets and WP added on each pressure ball, relative to the expected outcome.",
+      "output": "Per-ball residual"
+    },
+    {
+      "id": "rank",
+      "title": "Shrink & rank",
+      "detail": "Empirical-Bayes shrinkage toward the role mean, bootstrap 1,000× for intervals.",
+      "output": "Pressure Rating 0–100 ± CI"
+    }
+  ],
+  "calibration": [
+    {
+      "predicted": 5,
+      "observed": 4.3,
+      "n": 3561
+    },
+    {
+      "predicted": 15,
+      "observed": 14,
+      "n": 8568
+    },
+    {
+      "predicted": 25,
+      "observed": 25.1,
+      "n": 4231
+    },
+    {
+      "predicted": 35,
+      "observed": 33.9,
+      "n": 8703
+    },
+    {
+      "predicted": 45,
+      "observed": 45.4,
+      "n": 3563
+    },
+    {
+      "predicted": 55,
+      "observed": 54.1,
+      "n": 7991
+    },
+    {
+      "predicted": 65,
+      "observed": 63.5,
+      "n": 6071
+    },
+    {
+      "predicted": 75,
+      "observed": 75.1,
+      "n": 3444
+    },
+    {
+      "predicted": 85,
+      "observed": 84.9,
+      "n": 4368
+    },
+    {
+      "predicted": 95,
+      "observed": 95.3,
+      "n": 8317
+    }
+  ],
+  "phaseImpact": [
+    {
+      "phase": "Powerplay",
+      "batting": 0.82,
+      "bowling": 0.91
+    },
+    {
+      "phase": "Middle",
+      "batting": 0.64,
+      "bowling": 0.58
+    },
+    {
+      "phase": "Death",
+      "batting": 1.37,
+      "bowling": 1.46
+    }
+  ],
+  "sensitivity": [
+    {
+      "test": "Pressure threshold",
+      "change": "0.6 → 0.5",
+      "rankCorrelation": 0.94,
+      "top10Overlap": 9
+    },
+    {
+      "test": "Pressure threshold",
+      "change": "0.6 → 0.7",
+      "rankCorrelation": 0.91,
+      "top10Overlap": 8
+    },
+    {
+      "test": "Shrinkage prior",
+      "change": "k = 120 → 60 balls",
+      "rankCorrelation": 0.89,
+      "top10Overlap": 8
+    },
+    {
+      "test": "Drop stakes feature",
+      "change": "remove",
+      "rankCorrelation": 0.96,
+      "top10Overlap": 9
+    },
+    {
+      "test": "IPL only",
+      "change": "exclude T20I",
+      "rankCorrelation": 0.87,
+      "top10Overlap": 7
+    },
+    {
+      "test": "Leave-one-season-out",
+      "change": "drop 2022",
+      "rankCorrelation": 0.92,
+      "top10Overlap": 9
+    }
+  ],
+  "limitations": [
+    {
+      "title": "Small samples at the death",
+      "detail": "Specialist finishers face few pressure balls per season; intervals stay wide even after shrinkage."
+    },
+    {
+      "title": "No ball-tracking data",
+      "detail": "Line and length come from commentary tags, which are inconsistent across broadcasters."
+    },
+    {
+      "title": "Fielding not modelled",
+      "detail": "Dropped catches and misfields are credited to the bowler and batter, not the fielder."
+    },
+    {
+      "title": "Team context",
+      "detail": "Batting depth changes how freely a batter can attack; this is only partly captured by wickets in hand."
+    },
+    {
+      "title": "T20I opposition strength",
+      "detail": "Associate-nation fixtures are down-weighted, but the weighting itself is a modelling choice."
+    }
+  ]
+}

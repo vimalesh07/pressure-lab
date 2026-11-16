@@ -1,0 +1,39 @@
+test,change,list,eligible,common_eligible,spearman,top10_overlap,jaccard
+Threshold 10%,Pressure balls = top 10% instead of 20%,batters,81,75,0.853,5,0.333
+Threshold 10%,Pressure balls = top 10% instead of 20%,bowlers,94,90,0.952,8,0.667
+Threshold 30%,Pressure balls = top 30% instead of 20%,batters,89,84,0.94,7,0.538
+Threshold 30%,Pressure balls = top 30% instead of 20%,bowlers,102,96,0.965,9,0.818
+Stakes off,Every stakes multiplier = 1.0,batters,85,81,0.953,8,0.667
+Stakes off,Every stakes multiplier = 1.0,bowlers,97,93,0.967,9,0.818
+Stakes -50%,Every stakes multiplier's effect x0.5,batters,84,82,0.978,9,0.818
+Stakes -50%,Every stakes multiplier's effect x0.5,bowlers,96,94,0.98,10,1.0
+Stakes +50%,Every stakes multiplier's effect x1.5,batters,81,81,0.989,9,0.818
+Stakes +50%,Every stakes multiplier's effect x1.5,bowlers,100,98,0.987,9,0.818
+Without F3,Remove opponent tier in the expected-value models,batters,87,87,0.989,10,1.0
+Without F3,Remove opponent tier in the expected-value models,bowlers,99,99,0.997,10,1.0
+Without F6,Remove match stakes,batters,87,84,0.965,7,0.538
+Without F6,Remove match stakes,bowlers,97,93,0.974,9,0.818
+Without F7,Remove death clamp,batters,87,87,1.0,10,1.0
+Without F7,Remove death clamp,bowlers,99,99,0.999,10,1.0
+Without F8,Remove powerplay control,batters,87,87,0.991,10,1.0
+Without F8,Remove powerplay control,bowlers,99,99,0.998,10,1.0
+Without F9,Remove control vs teammates,batters,87,87,1.0,10,1.0
+Without F9,Remove control vs teammates,bowlers,99,99,0.776,7,0.538
+Without F10,Remove opposition Elo in the expected-value models,batters,87,87,1.0,10,1.0
+Without F10,Remove opposition Elo in the expected-value models,bowlers,99,99,0.999,10,1.0
+Without F11,Remove rescue / heist,batters,87,87,1.0,10,1.0
+Without F11,Remove rescue / heist,bowlers,99,99,0.999,10,1.0
+Without F12,Remove NRR race,batters,85,85,0.989,9,0.818
+Without F12,Remove NRR race,bowlers,98,97,0.993,10,1.0
+Without F13,Remove pair-breaker,batters,87,87,1.0,10,1.0
+Without F13,Remove pair-breaker,bowlers,99,99,0.958,10,1.0
+Without F14,Remove collapse entry,batters,87,87,0.998,9,0.818
+Without F14,Remove collapse entry,bowlers,99,99,1.0,10,1.0
+Without F18,Favourite-under-threat bonus off,batters,83,83,0.99,9,0.818
+Without F18,Favourite-under-threat bonus off,bowlers,97,97,0.99,10,1.0
+IPL only,Rate on IPL balls only,batters,84,62,0.947,5,0.333
+IPL only,Rate on IPL balls only,bowlers,89,70,0.912,5,0.333
+T20I only,Rate on international balls only,batters,69,45,0.847,5,0.333
+T20I only,Rate on international balls only,bowlers,91,62,0.858,6,0.429
+Rule-based pressure,Death overs / RRR >= 9 / collapse instead of leverage,batters,73,57,0.799,5,0.333
+Rule-based pressure,Death overs / RRR >= 9 / collapse instead of leverage,bowlers,97,88,0.869,6,0.429

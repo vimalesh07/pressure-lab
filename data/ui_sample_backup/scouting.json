@@ -1,0 +1,527 @@
+{
+  "squadName": "DSR",
+  "fix": [
+    {
+      "playerId": "bowl-p",
+      "name": "Bowler P",
+      "discipline": "bowling",
+      "team": "DSR",
+      "role": "All-rounder",
+      "normalIndex": 111,
+      "pressureIndex": 74,
+      "dropPct": -33.1,
+      "sampleBalls": 280,
+      "struggles": {
+        "versus": "Right-hand finishers",
+        "delivery": "Length ball on the stumps",
+        "line": "Leg-stump line",
+        "phase": "Death"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 11
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 5
+        },
+        {
+          "type": "Extras",
+          "count": 2
+        },
+        {
+          "type": "Dropped catch",
+          "count": 4
+        },
+        {
+          "type": "Misfield",
+          "count": 1
+        }
+      ],
+      "recommendation": "Keep out of the 19th over; bowl two of the first four overs instead."
+    },
+    {
+      "playerId": "bowl-k",
+      "name": "Bowler K",
+      "discipline": "bowling",
+      "team": "DSR",
+      "role": "Bowler",
+      "normalIndex": 114,
+      "pressureIndex": 79,
+      "dropPct": -30.6,
+      "sampleBalls": 244,
+      "struggles": {
+        "versus": "Left-hand power hitters",
+        "delivery": "Full toss under pressure",
+        "line": "On the stumps",
+        "phase": "Death"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 11
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 6
+        },
+        {
+          "type": "Extras",
+          "count": 8
+        },
+        {
+          "type": "Dropped catch",
+          "count": 6
+        },
+        {
+          "type": "Misfield",
+          "count": 3
+        }
+      ],
+      "recommendation": "Set a deep square-leg and long-on when bowling to left-hand power hitters."
+    },
+    {
+      "playerId": "bowl-f",
+      "name": "Bowler F",
+      "discipline": "bowling",
+      "team": "DSR",
+      "role": "Bowler",
+      "normalIndex": 102,
+      "pressureIndex": 73,
+      "dropPct": -28.2,
+      "sampleBalls": 284,
+      "struggles": {
+        "versus": "Set top-order batters",
+        "delivery": "Length ball on the stumps",
+        "line": "Wide outside off",
+        "phase": "Middle"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 2
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 8
+        },
+        {
+          "type": "Extras",
+          "count": 5
+        },
+        {
+          "type": "Dropped catch",
+          "count": 2
+        },
+        {
+          "type": "Misfield",
+          "count": 3
+        }
+      ],
+      "recommendation": "Pair with a wrist spinner at the other end in the middle phase."
+    },
+    {
+      "playerId": "bat-i",
+      "name": "Batter I",
+      "discipline": "batting",
+      "team": "DSR",
+      "role": "Batter",
+      "normalIndex": 110,
+      "pressureIndex": 86,
+      "dropPct": -21.9,
+      "sampleBalls": 361,
+      "struggles": {
+        "versus": "Right-arm leg spin",
+        "delivery": "Hard-length cutter",
+        "line": "Wide outside off",
+        "phase": "Middle"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 10
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 6
+        },
+        {
+          "type": "Bowled",
+          "count": 2
+        },
+        {
+          "type": "LBW",
+          "count": 4
+        },
+        {
+          "type": "Run out",
+          "count": 4
+        }
+      ],
+      "recommendation": "Net sessions vs hard-length cutter on a wide outside off; avoid sending in during a middle collapse."
+    },
+    {
+      "playerId": "bat-m",
+      "name": "Batter M",
+      "discipline": "batting",
+      "team": "DSR",
+      "role": "Batter",
+      "normalIndex": 112,
+      "pressureIndex": 99,
+      "dropPct": -11.6,
+      "sampleBalls": 105,
+      "struggles": {
+        "versus": "Right-arm fast (145+)",
+        "delivery": "Wide yorker",
+        "line": "Leg-stump line",
+        "phase": "Middle"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 8
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 3
+        },
+        {
+          "type": "Bowled",
+          "count": 3
+        },
+        {
+          "type": "LBW",
+          "count": 6
+        },
+        {
+          "type": "Run out",
+          "count": 2
+        }
+      ],
+      "recommendation": "Use as a death-overs finisher instead; pressure index rises there."
+    },
+    {
+      "playerId": "bat-d",
+      "name": "Batter D",
+      "discipline": "batting",
+      "team": "DSR",
+      "role": "Batter",
+      "normalIndex": 117,
+      "pressureIndex": 105,
+      "dropPct": -10,
+      "sampleBalls": 338,
+      "struggles": {
+        "versus": "Left-arm wrist spin",
+        "delivery": "Googly",
+        "line": "On the stumps",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 12
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 8
+        },
+        {
+          "type": "Bowled",
+          "count": 7
+        },
+        {
+          "type": "LBW",
+          "count": 4
+        },
+        {
+          "type": "Run out",
+          "count": 1
+        }
+      ],
+      "recommendation": "Hold back until over 10 against left-arm wrist spin; pair with a left-right partner."
+    }
+  ],
+  "attack": [
+    {
+      "playerId": "bat-r",
+      "name": "Batter R",
+      "discipline": "batting",
+      "team": "HBR",
+      "role": "Batter",
+      "normalIndex": 121,
+      "pressureIndex": 83,
+      "dropPct": -31.2,
+      "sampleBalls": 111,
+      "struggles": {
+        "versus": "Right-arm leg spin",
+        "delivery": "Short ball at the body",
+        "line": "Outside off, 5th stump",
+        "phase": "Death"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 9
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 1
+        },
+        {
+          "type": "Bowled",
+          "count": 2
+        },
+        {
+          "type": "LBW",
+          "count": 4
+        },
+        {
+          "type": "Run out",
+          "count": 2
+        }
+      ],
+      "recommendation": "Attack with right-arm leg spin in the death; set a deep point and deep cover."
+    },
+    {
+      "playerId": "bowl-j",
+      "name": "Bowler J",
+      "discipline": "bowling",
+      "team": "MTR",
+      "role": "Bowler",
+      "normalIndex": 111,
+      "pressureIndex": 80,
+      "dropPct": -28,
+      "sampleBalls": 188,
+      "struggles": {
+        "versus": "Left-hand power hitters",
+        "delivery": "Slower bouncer",
+        "line": "Into the body",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 9
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 8
+        },
+        {
+          "type": "Extras",
+          "count": 1
+        },
+        {
+          "type": "Dropped catch",
+          "count": 1
+        },
+        {
+          "type": "Misfield",
+          "count": 2
+        }
+      ],
+      "recommendation": "Target the powerplay overs with left-hand power hitters; economy rises 19% under pressure."
+    },
+    {
+      "playerId": "bat-o",
+      "name": "Batter O",
+      "discipline": "batting",
+      "team": "SUM",
+      "role": "All-rounder",
+      "normalIndex": 101,
+      "pressureIndex": 74,
+      "dropPct": -26.3,
+      "sampleBalls": 258,
+      "struggles": {
+        "versus": "Off spin into the pads",
+        "delivery": "Hard-length cutter",
+        "line": "Into the body",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 10
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 3
+        },
+        {
+          "type": "Bowled",
+          "count": 6
+        },
+        {
+          "type": "LBW",
+          "count": 1
+        },
+        {
+          "type": "Run out",
+          "count": 1
+        }
+      ],
+      "recommendation": "Build a pressure over: two dot balls in a row roughly doubles the dismissal risk."
+    },
+    {
+      "playerId": "bowl-n",
+      "name": "Bowler N",
+      "discipline": "bowling",
+      "team": "HBR",
+      "role": "All-rounder",
+      "normalIndex": 99,
+      "pressureIndex": 77,
+      "dropPct": -22,
+      "sampleBalls": 119,
+      "struggles": {
+        "versus": "Set top-order batters",
+        "delivery": "Slower bouncer",
+        "line": "On the stumps",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 1
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 3
+        },
+        {
+          "type": "Extras",
+          "count": 3
+        },
+        {
+          "type": "Dropped catch",
+          "count": 4
+        },
+        {
+          "type": "Misfield",
+          "count": 3
+        }
+      ],
+      "recommendation": "Attack early in the spell, before the on the stumps settles."
+    },
+    {
+      "playerId": "bowl-c",
+      "name": "Bowler C",
+      "discipline": "bowling",
+      "team": "FRT",
+      "role": "Bowler",
+      "normalIndex": 116,
+      "pressureIndex": 97,
+      "dropPct": -16.4,
+      "sampleBalls": 270,
+      "struggles": {
+        "versus": "Set top-order batters",
+        "delivery": "Full toss under pressure",
+        "line": "On the stumps",
+        "phase": "Middle"
+      },
+      "dismissals": [
+        {
+          "type": "Boundary hit (4)",
+          "count": 7
+        },
+        {
+          "type": "Boundary hit (6)",
+          "count": 8
+        },
+        {
+          "type": "Extras",
+          "count": 5
+        },
+        {
+          "type": "Dropped catch",
+          "count": 5
+        },
+        {
+          "type": "Misfield",
+          "count": 3
+        }
+      ],
+      "recommendation": "Attack early in the spell, before the on the stumps settles."
+    },
+    {
+      "playerId": "bat-b",
+      "name": "Batter B",
+      "discipline": "batting",
+      "team": "RVR",
+      "role": "Batter",
+      "normalIndex": 120,
+      "pressureIndex": 102,
+      "dropPct": -14.9,
+      "sampleBalls": 228,
+      "struggles": {
+        "versus": "Right-arm leg spin",
+        "delivery": "Slower ball (back of hand)",
+        "line": "Into the body",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 8
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 10
+        },
+        {
+          "type": "Bowled",
+          "count": 4
+        },
+        {
+          "type": "LBW",
+          "count": 2
+        },
+        {
+          "type": "Run out",
+          "count": 3
+        }
+      ],
+      "recommendation": "Attack with right-arm leg spin in the powerplay; set a deep point and deep cover."
+    },
+    {
+      "playerId": "bat-g",
+      "name": "Batter G",
+      "discipline": "batting",
+      "team": "CST",
+      "role": "Batter",
+      "normalIndex": 101,
+      "pressureIndex": 89,
+      "dropPct": -11.5,
+      "sampleBalls": 222,
+      "struggles": {
+        "versus": "Right-arm leg spin",
+        "delivery": "Short ball at the body",
+        "line": "Into the body",
+        "phase": "Powerplay"
+      },
+      "dismissals": [
+        {
+          "type": "Caught deep",
+          "count": 10
+        },
+        {
+          "type": "Caught inner ring",
+          "count": 6
+        },
+        {
+          "type": "Bowled",
+          "count": 4
+        },
+        {
+          "type": "LBW",
+          "count": 7
+        },
+        {
+          "type": "Run out",
+          "count": 1
+        }
+      ],
+      "recommendation": "Bowl short ball at the body on a into the body; dismissed 5 times to it."
+    }
+  ]
+}

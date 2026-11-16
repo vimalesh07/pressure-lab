@@ -1,0 +1,14 @@
+{
+  "matchesAnalysed": 1284,
+  "ballsAnalysed": 296412,
+  "pressureBalls": 71836,
+  "playersRated": 279,
+  "dataWindow": "2022–2026",
+  "competitions": [
+    "IPL",
+    "T20I"
+  ],
+  "modelVersion": "v0.9 · template",
+  "lastUpdated": "2026-11-10",
+  "pressureThreshold": "Pressure index ≥ 0.6 (top ~24% of deliveries)"
+}

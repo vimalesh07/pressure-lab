@@ -1,0 +1,388 @@
+{
+  "tiers": [
+    {
+      "id": "death-finishers",
+      "label": "Death finishers",
+      "description": "Top-15 batters by SR in overs 16–20 (min 150 balls)"
+    },
+    {
+      "id": "powerplay-hitters",
+      "label": "Powerplay hitters",
+      "description": "Top-15 batters by boundary % in overs 1–6 (min 200 balls)"
+    }
+  ],
+  "leagueAverage": {
+    "death-finishers": {
+      "deathClampRate": 31.4,
+      "threatAdjEcon": 10.42,
+      "setBatterWickets": 0,
+      "dotPct": 27.8,
+      "boundaryPct": 21.6,
+      "overs": 0
+    },
+    "powerplay-hitters": {
+      "deathClampRate": 38.9,
+      "threatAdjEcon": 9.15,
+      "setBatterWickets": 0,
+      "dotPct": 39.1,
+      "boundaryPct": 19.4,
+      "overs": 0
+    }
+  },
+  "eliteBenchmark": {
+    "death-finishers": {
+      "deathClampRate": 48.2,
+      "threatAdjEcon": 8.61,
+      "setBatterWickets": 0,
+      "dotPct": 33.9,
+      "boundaryPct": 15.2,
+      "overs": 0
+    },
+    "powerplay-hitters": {
+      "deathClampRate": 52.7,
+      "threatAdjEcon": 7.48,
+      "setBatterWickets": 0,
+      "dotPct": 46.3,
+      "boundaryPct": 13.1,
+      "overs": 0
+    }
+  },
+  "bowlers": [
+    {
+      "id": "bowl-a",
+      "name": "Bowler A",
+      "team": "CST",
+      "style": "Right-arm fast",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 47.4,
+          "threatAdjEcon": 8.89,
+          "setBatterWickets": 7,
+          "dotPct": 32,
+          "boundaryPct": 17,
+          "overs": 47
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 53.3,
+          "threatAdjEcon": 7.86,
+          "setBatterWickets": 6,
+          "dotPct": 44.7,
+          "boundaryPct": 15.5,
+          "overs": 15
+        }
+      }
+    },
+    {
+      "id": "bowl-b",
+      "name": "Bowler B",
+      "team": "FRT",
+      "style": "Left-arm fast",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 45.4,
+          "threatAdjEcon": 9.02,
+          "setBatterWickets": 8,
+          "dotPct": 31.9,
+          "boundaryPct": 16.7,
+          "overs": 43
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 49.2,
+          "threatAdjEcon": 7.98,
+          "setBatterWickets": 5,
+          "dotPct": 43.6,
+          "boundaryPct": 15.7,
+          "overs": 21
+        }
+      }
+    },
+    {
+      "id": "bowl-c",
+      "name": "Bowler C",
+      "team": "FRT",
+      "style": "Right-arm fast-medium",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 42.8,
+          "threatAdjEcon": 9.57,
+          "setBatterWickets": 2,
+          "dotPct": 31.8,
+          "boundaryPct": 17.8,
+          "overs": 17
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 50.9,
+          "threatAdjEcon": 8.17,
+          "setBatterWickets": 5,
+          "dotPct": 43.9,
+          "boundaryPct": 16.6,
+          "overs": 40
+        }
+      }
+    },
+    {
+      "id": "bowl-d",
+      "name": "Bowler D",
+      "team": "PLN",
+      "style": "Left-arm orthodox spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 44.8,
+          "threatAdjEcon": 9.17,
+          "setBatterWickets": 9,
+          "dotPct": 34,
+          "boundaryPct": 17.2,
+          "overs": 52
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 49.2,
+          "threatAdjEcon": 8.29,
+          "setBatterWickets": 7,
+          "dotPct": 44,
+          "boundaryPct": 15.3,
+          "overs": 44
+        }
+      }
+    },
+    {
+      "id": "bowl-e",
+      "name": "Bowler E",
+      "team": "RVR",
+      "style": "Right-arm off spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 43.8,
+          "threatAdjEcon": 9.53,
+          "setBatterWickets": 5,
+          "dotPct": 29.8,
+          "boundaryPct": 18,
+          "overs": 42
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 48,
+          "threatAdjEcon": 8.43,
+          "setBatterWickets": 5,
+          "dotPct": 43.6,
+          "boundaryPct": 17.7,
+          "overs": 16
+        }
+      }
+    },
+    {
+      "id": "bowl-f",
+      "name": "Bowler F",
+      "team": "CST",
+      "style": "Right-arm leg spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 44.3,
+          "threatAdjEcon": 9.14,
+          "setBatterWickets": 6,
+          "dotPct": 33,
+          "boundaryPct": 18.8,
+          "overs": 20
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 46.1,
+          "threatAdjEcon": 8.15,
+          "setBatterWickets": 7,
+          "dotPct": 42.5,
+          "boundaryPct": 16.9,
+          "overs": 23
+        }
+      }
+    },
+    {
+      "id": "bowl-g",
+      "name": "Bowler G",
+      "team": "HLD",
+      "style": "Left-arm wrist spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 39,
+          "threatAdjEcon": 9.72,
+          "setBatterWickets": 4,
+          "dotPct": 30.8,
+          "boundaryPct": 19.7,
+          "overs": 50
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 41.7,
+          "threatAdjEcon": 8.71,
+          "setBatterWickets": 6,
+          "dotPct": 41,
+          "boundaryPct": 17.4,
+          "overs": 30
+        }
+      }
+    },
+    {
+      "id": "bowl-h",
+      "name": "Bowler H",
+      "team": "DSR",
+      "style": "Right-arm fast",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 40.9,
+          "threatAdjEcon": 9.46,
+          "setBatterWickets": 7,
+          "dotPct": 30.2,
+          "boundaryPct": 18.7,
+          "overs": 30
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 41.6,
+          "threatAdjEcon": 8.35,
+          "setBatterWickets": 5,
+          "dotPct": 41.3,
+          "boundaryPct": 17.6,
+          "overs": 42
+        }
+      }
+    },
+    {
+      "id": "bowl-i",
+      "name": "Bowler I",
+      "team": "PLN",
+      "style": "Left-arm fast",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 37.6,
+          "threatAdjEcon": 9.97,
+          "setBatterWickets": 7,
+          "dotPct": 29.4,
+          "boundaryPct": 20.4,
+          "overs": 45
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 44,
+          "threatAdjEcon": 8.61,
+          "setBatterWickets": 7,
+          "dotPct": 42.1,
+          "boundaryPct": 18.3,
+          "overs": 15
+        }
+      }
+    },
+    {
+      "id": "bowl-j",
+      "name": "Bowler J",
+      "team": "MTR",
+      "style": "Right-arm fast-medium",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 35.3,
+          "threatAdjEcon": 9.89,
+          "setBatterWickets": 3,
+          "dotPct": 29,
+          "boundaryPct": 19.1,
+          "overs": 39
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 43.1,
+          "threatAdjEcon": 9.11,
+          "setBatterWickets": 4,
+          "dotPct": 39.5,
+          "boundaryPct": 18.1,
+          "overs": 28
+        }
+      }
+    },
+    {
+      "id": "bowl-k",
+      "name": "Bowler K",
+      "team": "MTR",
+      "style": "Left-arm orthodox spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 31.6,
+          "threatAdjEcon": 10.26,
+          "setBatterWickets": 3,
+          "dotPct": 28.7,
+          "boundaryPct": 20.3,
+          "overs": 51
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 40.4,
+          "threatAdjEcon": 8.7,
+          "setBatterWickets": 5,
+          "dotPct": 41.6,
+          "boundaryPct": 18.9,
+          "overs": 19
+        }
+      }
+    },
+    {
+      "id": "bowl-l",
+      "name": "Bowler L",
+      "team": "RVR",
+      "style": "Right-arm off spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 33.3,
+          "threatAdjEcon": 10.31,
+          "setBatterWickets": 8,
+          "dotPct": 29.7,
+          "boundaryPct": 20.9,
+          "overs": 29
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 41.5,
+          "threatAdjEcon": 8.82,
+          "setBatterWickets": 3,
+          "dotPct": 38.1,
+          "boundaryPct": 17.9,
+          "overs": 45
+        }
+      }
+    },
+    {
+      "id": "bowl-m",
+      "name": "Bowler M",
+      "team": "RVR",
+      "style": "Right-arm leg spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 33.5,
+          "threatAdjEcon": 10.47,
+          "setBatterWickets": 1,
+          "dotPct": 29.8,
+          "boundaryPct": 20.5,
+          "overs": 26
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 39.4,
+          "threatAdjEcon": 9.14,
+          "setBatterWickets": 1,
+          "dotPct": 38.7,
+          "boundaryPct": 18.3,
+          "overs": 41
+        }
+      }
+    },
+    {
+      "id": "bowl-n",
+      "name": "Bowler N",
+      "team": "HBR",
+      "style": "Left-arm wrist spin",
+      "byTier": {
+        "death-finishers": {
+          "deathClampRate": 30.4,
+          "threatAdjEcon": 10.12,
+          "setBatterWickets": 1,
+          "dotPct": 28.4,
+          "boundaryPct": 21.2,
+          "overs": 47
+        },
+        "powerplay-hitters": {
+          "deathClampRate": 41.2,
+          "threatAdjEcon": 8.92,
+          "setBatterWickets": 3,
+          "dotPct": 39.3,
+          "boundaryPct": 18.2,
+          "overs": 40
+        }
+      }
+    }
+  ]
+}
