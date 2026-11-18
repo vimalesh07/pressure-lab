@@ -16,7 +16,7 @@ interface FilterState {
 const Ctx = createContext<FilterState | null>(null);
 
 export function FilterProvider({ children }: { children: ReactNode }) {
-  const [format, setFormat] = useState<FormatFilter>("All");
+  const [format, setFormat] = useState<FormatFilter>("IPL");
   const [season, setSeason] = useState("All");
   const [phase, setPhase] = useState<PhaseFilter>("All");
   const value = useMemo(
@@ -39,7 +39,7 @@ export function FilterBar() {
   const f = useFilters();
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <Segmented label="Format" value={f.format} options={["All", "IPL", "T20I"] as const} onChange={f.setFormat} size="sm" />
+      <Segmented label="Format" value={f.format} options={["IPL", "T20I"] as const} onChange={f.setFormat} size="sm" />
       <Select
         label="Season"
         hideLabel

@@ -1,11 +1,11 @@
 rank,player_id,name,rating,rank_p5,rank_p95,p_top10,sens_top10_share,confidence_group,pressure_balls,matches,pressure_balls_ipl,pressure_balls_t20i,weak_opp_share,weak_opp_flag
-1,50284,Vaibhav Sooryavanshi,92.1,1,21,0.867,0.842,Core,178,19,149,29,0.433,True
-2,6281,Abhishek Sharma,88.4,1,21,0.806,0.947,Core,575,74,298,277,0.233,False
-3,6396,Tim David,85.9,1,37,0.664,1.0,Core,260,51,174,86,0.138,False
-4,6819,Yashasvi Jaiswal,85.0,1,25,0.695,0.842,Core,495,62,404,91,0.317,True
-5,4847,Finn Allen,81.9,1,40,0.551,0.842,Likely,201,28,37,164,0.095,False
-6,4986,Rovman Powell,80.9,2,27,0.533,0.842,Likely,238,49,89,149,0.113,False
-7,4260,Heinrich Klaasen,80.0,3,29,0.459,0.895,Likely,194,39,172,22,0.366,True
-8,1205,Jonny Bairstow,79.7,2,46,0.429,0.579,Likely,151,15,114,37,0.0,False
-9,3647,Shreyas Iyer,78.4,2,46,0.409,0.737,Likely,347,46,251,96,0.34,True
-10,3639,Brandon King,78.2,4,35,0.347,0.737,Likely,264,32,0,264,0.0,False
+1,6281,Abhishek Sharma,95.6,1,7,0.981,1.0,Core,575,74,298,277,0.233,False
+2,50284,Vaibhav Sooryavanshi,95.5,1,8,0.979,0.842,Core,178,19,149,29,0.433,True
+3,6396,Tim David,86.7,2,16,0.84,1.0,Core,260,51,174,86,0.138,False
+4,4260,Heinrich Klaasen,82.6,3,18,0.767,0.947,Core,194,39,172,22,0.366,True
+5,5553,Phil Salt,82.5,2,27,0.716,0.947,Core,338,46,168,170,0.349,True
+6,1699,Suryakumar Yadav,80.5,3,23,0.646,0.895,Core,569,85,328,241,0.095,False
+7,813,Jos Buttler,80.3,3,25,0.637,0.947,Core,545,69,337,208,0.213,False
+8,7897,Namboori Tilak Varma,79.2,3,26,0.583,0.895,Likely,482,71,286,196,0.124,False
+9,3647,Shreyas Iyer,78.4,3,35,0.525,0.947,Likely,347,46,251,96,0.34,True
+10,4847,Finn Allen,76.3,2,41,0.474,0.789,Likely,201,28,37,164,0.095,False

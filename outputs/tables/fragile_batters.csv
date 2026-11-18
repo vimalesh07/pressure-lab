@@ -1,21 +1,43 @@
 player_id,name,plan,rating,delta,delta_odd,delta_even,p_balls,matches_p,recommendation
-88,Faf du Plessis,Attack plan,19.5957,-0.3998,-0.1019,-0.4901,334,34,Bowl Off spin with inswing on the on-side in the powerplay; performance index falls 113 -> 61 under pressure and the on drive is the most common dismissal shot.
-1596,Moeen Ali,Attack plan,20.1559,-0.2637,-0.1624,-0.1791,158,29,Bowl Right-arm pace with seamed out on the off-side in the middle; performance index falls 99 -> 74 under pressure and the cover drive is the most common dismissal shot.
-2101,Quinton de Kock,Attack plan,34.5808,-0.2616,-0.1971,-0.1926,296,45,Bowl Right-arm pace with off cutter on the off-side in the middle; performance index falls 115 -> 82 under pressure and the off drive is the most common dismissal shot.
-4895,Charith Asalanka,Attack plan,11.9625,-0.2374,-0.0277,-0.2613,150,33,Bowl Leg spin with off break on the on-side in the death; performance index falls 93 -> 32 under pressure and the slog sweep is the most common dismissal shot.
-4391,Liam Livingstone,Attack plan,47.6773,-0.2223,-0.0909,-0.2184,195,36,Bowl Left-arm orthodox with orthodox on the off-side in the powerplay; performance index falls 116 -> 88 under pressure and the pull shot is the most common dismissal shot.
-5039,Rajat Patidar,Attack plan,42.3711,-0.2215,-0.0777,-0.2593,215,28,Bowl Left-arm pace with seamed in on the off-side in the powerplay; performance index falls 122 -> 100 under pressure and the flick is the most common dismissal shot.
-2258,Sanju Samson,Attack plan,45.4546,-0.2173,-0.186,-0.1851,490,69,Bowl Left-arm pace with out swing on the off-side in the middle; performance index falls 117 -> 91 under pressure and the cover drive is the most common dismissal shot.
-7900,Tanzid Hasan,Attack plan,36.7852,-0.193,-0.2225,-0.033,150,23,Bowl Right-arm pace with out swing on the off-side in the powerplay; performance index falls 109 -> 81 under pressure and the cover drive is the most common dismissal shot.
-20702,Tristan Stubbs,Attack plan,46.3851,-0.1906,-0.1575,-0.1343,191,38,Bowl Right-arm pace with seamed in on the off-side in the middle; performance index falls 125 -> 112 under pressure and the on drive is the most common dismissal shot.
-7544,Venkatesh Iyer,Attack plan,40.0928,-0.1603,-0.097,-0.1435,200,30,Bowl Leg spin with inswing on the off-side in the death; performance index falls 110 -> 76 under pressure and the off drive is the most common dismissal shot.
-4755,Shivam Dube,Attack plan,39.6919,-0.1602,-0.1454,-0.1036,232,55,Bowl Left-arm pace with seamed out on the off-side in the death; performance index falls 116 -> 89 under pressure and the pull shot is the most common dismissal shot.
-3672,Kusal Mendis,Attack plan,39.7606,-0.1503,-0.1437,-0.0871,312,43,Bowl Left-arm pace with inswing on the off-side in the middle; performance index falls 107 -> 94 under pressure and the flick is the most common dismissal shot.
-3091,Sahibzada Farhan,Attack plan,45.6894,-0.1501,-0.1012,-0.1101,203,23,Bowl Left-arm orthodox with out swing on the off-side in the powerplay; performance index falls 113 -> 96 under pressure and the pull shot is the most common dismissal shot.
-1699,Suryakumar Yadav,Attack plan,76.7899,-0.1245,-0.0147,-0.2684,569,85,Bowl Left-arm pace with full toss on the off-side in the powerplay; performance index falls 130 -> 127 under pressure and the flick is the most common dismissal shot.
-4007,Ryan Rickelton,Attack plan,50.5123,-0.1077,-0.0251,-0.1332,169,24,Bowl Left-arm pace with out swing on the off-side in the middle; performance index falls 124 -> 81 under pressure and the square cut is the most common dismissal shot.
-3605,Aiden Markram,Attack plan,35.701,-0.0952,-0.1252,-0.0073,280,48,Bowl Leg spin with leg break on the off-side in the middle; performance index falls 104 -> 92 under pressure and the pull shot is the most common dismissal shot.
-6059,Ruturaj Gaikwad,Attack plan,43.1734,-0.0865,-0.0034,-0.1373,428,49,Bowl Leg spin with inswing on the off-side in the powerplay; performance index falls 106 -> 93 under pressure and the slog sweep is the most common dismissal shot.
-4260,Heinrich Klaasen,Attack plan,79.9543,-0.0569,-0.0392,-0.1106,194,39,Bowl Left-arm orthodox with orthodox on the off-side in the death; performance index falls 131 -> 123 under pressure and the slog is the most common dismissal shot.
-6651,Towhid Hridoy,Attack plan,37.739,-0.0454,-0.0048,-0.0429,173,22,Bowl Left-arm orthodox with orthodox on the off-side in the powerplay; performance index falls 104 -> 89 under pressure and the slog is the most common dismissal shot.
-6396,Tim David,Attack plan,85.8836,-0.0303,-0.0613,-0.0435,260,51,Bowl Leg spin with seamed in on the off-side in the middle; performance index falls 147 -> 139 under pressure and the pull shot is the most common dismissal shot.
+3648,Deepak Hooda,Attack plan,22.8154,-0.0663,-0.0461,-0.0462,152,27,Bowl Right-arm pace with n/a on the on-side in the death; performance index falls 83 -> 83 under pressure and the slog sweep is the most common dismissal shot.
+6674,Rahmanullah Gurbaz,Attack plan,25.7493,-0.0639,-0.0386,-0.0513,256,46,Bowl Left-arm pace with out swing on the off-side in the middle; performance index falls 92 -> 72 under pressure and the off drive is the most common dismissal shot.
+109,Wriddhiman Saha,Attack plan,26.992,-0.0615,-0.0426,-0.0416,184,22,Bowl Right-arm pace with seamed in on the off-side in the middle; performance index falls 90 -> 56 under pressure and the flick is the most common dismissal shot.
+4895,Charith Asalanka,Attack plan,28.1896,-0.0556,-0.0448,-0.0332,150,33,Bowl Leg spin with off break on the on-side in the death; performance index falls 93 -> 32 under pressure and the slog sweep is the most common dismissal shot.
+2876,Axar Patel,Attack plan,24.6534,-0.0529,-0.0231,-0.0631,215,48,Bowl Leg spin with off cutter on the off-side in the middle; performance index falls 94 -> 118 under pressure and the pull shot is the most common dismissal shot.
+1440,Rahul Tripathi,Attack plan,27.8462,-0.0495,-0.0332,-0.0403,171,21,Bowl Right-arm pace with seamed in on the off-side in the middle; performance index falls 87 -> 93 under pressure and the sweep shot is the most common dismissal shot.
+2671,Liton Das,Attack plan,31.9409,-0.0465,-0.0502,-0.0222,190,30,Bowl Leg spin with leg break on the on-side in the middle; performance index falls 93 -> 110 under pressure and the slog sweep is the most common dismissal shot.
+4246,Nitish Rana,Attack plan,25.148,-0.0454,-0.0294,-0.0462,231,28,Bowl Leg spin with straight on the off-side in the death; performance index falls 86 -> 109 under pressure and the pull shot is the most common dismissal shot.
+2416,Kyle Mayers,Attack plan,32.1104,-0.0442,-0.0373,-0.0297,178,25,Bowl Off spin with off break on the off-side in the middle; performance index falls 90 -> 103 under pressure and the pull shot is the most common dismissal shot.
+7690,Saim Ayub,Attack plan,30.4433,-0.0437,-0.0351,-0.0346,209,33,Bowl Off spin with out swing on the off-side in the middle; performance index falls 90 -> 111 under pressure and the worked is the most common dismissal shot.
+1596,Moeen Ali,Attack plan,31.7425,-0.0435,-0.0299,-0.0343,158,29,Bowl Right-arm pace with seamed out on the off-side in the middle; performance index falls 99 -> 74 under pressure and the cover drive is the most common dismissal shot.
+6314,Devdutt Padikkal,Attack plan,29.149,-0.0422,-0.0497,-0.0222,215,36,Bowl Left-arm pace with orthodox on the off-side in the death; performance index falls 78 -> 91 under pressure and the flick is the most common dismissal shot.
+4219,Krunal Pandya,Attack plan,31.0159,-0.0418,-0.0514,-0.0167,154,28,Bowl Left-arm pace with n/a on the off-side in the middle; performance index falls 80 -> 100 under pressure and the on drive is the most common dismissal shot.
+1941,Devon Conway,Attack plan,34.034,-0.0416,-0.01,-0.0562,383,46,Bowl Leg spin with googly on the off-side in the middle; performance index falls 102 -> 90 under pressure and the off drive is the most common dismissal shot.
+4703,Rishabh Pant,Attack plan,34.6941,-0.0404,-0.008,-0.0616,181,38,Bowl Off spin with off break on the off-side in the middle; performance index falls 98 -> 95 under pressure and the pull shot is the most common dismissal shot.
+88,Faf du Plessis,Attack plan,41.5941,-0.037,-0.0439,-0.0082,334,34,Bowl Off spin with inswing on the on-side in the powerplay; performance index falls 113 -> 61 under pressure and the on drive is the most common dismissal shot.
+4812,Harry Tector,Attack plan,35.0594,-0.036,-0.0352,-0.0239,197,27,Bowl Left-arm pace with orthodox on the on-side in the powerplay; performance index falls 91 -> 107 under pressure and the slog sweep is the most common dismissal shot.
+167,Ajinkya Rahane,Attack plan,32.1921,-0.0359,-0.0262,-0.0348,191,34,Bowl Right-arm pace with out swing on the off-side in the middle; performance index falls 86 -> 96 under pressure and the on drive is the most common dismissal shot.
+3605,Aiden Markram,Attack plan,36.348,-0.0326,-0.0172,-0.0367,280,48,Bowl Leg spin with leg break on the off-side in the middle; performance index falls 104 -> 92 under pressure and the pull shot is the most common dismissal shot.
+3916,Jitesh Sharma,Attack plan,33.8102,-0.0313,-0.026,-0.0299,185,36,Bowl Left-arm pace with seamed in on the on-side in the death; performance index falls 94 -> 109 under pressure and the cover drive is the most common dismissal shot.
+6460,Ayush Badoni,Attack plan,37.7855,-0.0311,-0.0232,-0.0266,163,35,
+2984,Sikandar Raza,Attack plan,40.2262,-0.0301,-0.0025,-0.0481,164,26,
+152,Ravindra Jadeja,Fix plan,40.2102,-0.0295,-0.0359,-0.0173,196,38,"Performance index drops 97 -> 110 under pressure; work on Leg spin (Off Cutter, off-side) in the middle, and on shot choice with the slog, the most common dismissal shot."
+3926,Rahul Tewatia,Attack plan,39.9727,-0.0262,-0.0473,-0.0007,174,30,
+6651,Towhid Hridoy,Attack plan,42.2534,-0.0249,-0.0428,-0.0031,173,22,
+24017,Brian Bennett,Attack plan,38.7716,-0.0237,-0.0429,-0.004,188,25,
+6448,Ibrahim Zadran,Attack plan,40.1333,-0.0214,-0.0401,-0.0037,212,33,
+6725,Sherfane Rutherford,Attack plan,45.3649,-0.0204,-0.019,-0.016,208,29,
+3672,Kusal Mendis,Attack plan,44.2687,-0.0179,-0.0267,-0.0059,312,43,
+2921,Fakhar Zaman,Attack plan,37.7751,-0.0175,-0.0061,-0.0366,223,33,
+2490,Mohammad Nawaz,Attack plan,44.4952,-0.0174,-0.0108,-0.0259,150,23,
+2485,Babar Azam,Attack plan,42.4527,-0.0172,-0.006,-0.0333,216,31,
+4391,Liam Livingstone,Attack plan,45.6504,-0.0164,-0.0333,-0.0008,195,36,
+3297,Shimron Hetmyer,Fix plan,45.377,-0.0155,-0.0141,-0.0185,242,47,"Performance index drops 105 -> 110 under pressure; work on Leg spin (Seamed Out, off-side) in the death, and on shot choice with the worked, the most common dismissal shot."
+6423,Riyan Parag,Fix plan,44.6048,-0.0126,-0.0137,-0.0118,240,39,"Performance index drops 107 -> 70 under pressure; work on Left-arm pace (Leg Break, off-side) in the death, and on shot choice with the pull shot, the most common dismissal shot."
+4409,Sam Curran,Fix plan,44.9837,-0.0117,-0.0133,-0.0178,179,31,"Performance index drops 90 -> 96 under pressure; work on Leg spin (n/a, off-side) in the powerplay, and on shot choice with the pull shot, the most common dismissal shot."
+3639,Brandon King,Attack plan,38.7408,-0.0113,-0.0285,-0.0096,264,32,
+6059,Ruturaj Gaikwad,Attack plan,46.7898,-0.0084,-0.0223,-0.0009,428,49,
+7544,Venkatesh Iyer,Attack plan,51.4466,-0.0055,-0.0016,-0.0192,200,30,
+1077,David Miller,Attack plan,50.0657,-0.0047,-0.0223,-0.0007,290,40,
+4755,Shivam Dube,Attack plan,54.3288,-0.004,-0.0035,-0.0087,232,55,
+1205,Jonny Bairstow,Attack plan,45.1746,-0.0028,-0.0081,-0.0146,151,15,

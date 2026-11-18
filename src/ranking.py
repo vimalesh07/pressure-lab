@@ -28,6 +28,10 @@ RATING_COMPS = {
 COMP_LAYER = {"rescue": "F11", "collapse": "F14", "matchup_ppdeath": "F8", "death_clamp": "F7", "pp_control": "F8",
               "control": "F9", "heist": "F11", "pair_breaker": "F13"}
 DELTA = {"bat": ("nrae_p", "nrae_n"), "bowl": ("nrs_p", "nrs_n")}
+# v3: each pressure component is shrunk toward (beta x the player's own normal-ball skill), not toward the
+# population mean: pressure performance is mostly overall skill, the pressure-specific part is small.
+PAIRS = {"bat": {"nrae_p": "nrae_n", "runs_ae_p": "runs_ae_n", "out_ae_p": "out_ae_n", "wpa_p": "wpa_n"},
+         "bowl": {"nrs_p": "nrs_n", "rsae_p": "rsae_n", "wae_p": "wae_n", "wpa_p": "wpa_n", "dot_p": "dot_n"}}
 
 
 class Rater:
@@ -59,6 +63,13 @@ class Rater:
             sq = S[f"{c}_sq"][keep] if f"{c}_sq" in S else None
             self.prior[c] = eb_prior_strength(S[f"{c}_num"][keep], n[keep], sq, sc["min_prior_balls"],
                                               sc["max_prior_balls"], p_rate=(kind == "rate"))
+        # ---- v3: pressure components centred on the player's normal-ball skill
+        self.pairs = {}
+        pp = cfg["rating"].get("pressure_prior", "population")
+        if (pp.get(side, "population") if isinstance(pp, dict) else pp) == "normal_skill":
+            for c, a in PAIRS[side].items():
+                if f"{a}_num" in S and f"{c}_num" in S:
+                    self.pairs[c] = self._fit_pair(S, c, a)
         # ---- eligibility
         S["eligible"] = (S.p_balls >= self.min_pb) & (S.matches_p >= self.min_m)
         self.eligible_ids = S.index[S.eligible]
@@ -86,10 +97,43 @@ class Rater:
         S["matches"] = (PM.balls > 0).groupby(level="pid").sum()
         return S
 
+    def _normal_skill(self, S: pd.DataFrame, a: str) -> pd.Series:
+        mu_a, m_a, _ = self.prior[a]
+        return (S[f"{a}_num"] + m_a * mu_a) / (S[f"{a}_den"] + m_a)
+
+    def _fit_pair(self, S: pd.DataFrame, c: str, a: str) -> tuple:
+        """Target_i = mu_c + beta (normal_i - mu_a); beta by ball-weighted regression of the observed pressure
+        mean on the shrunk normal-ball skill (no shared balls, so no shared noise). The residual around the
+        target gets its own EB prior (usually much stronger than the population prior)."""
+        mu_c = self.prior[c][0]
+        mu_a = self.prior[a][0]
+        ns = self._normal_skill(S, a)
+        den = S[f"{c}_den"]
+        ok = (den >= 10) & (S[f"{a}_den"] >= 10)
+        y = (S[f"{c}_num"] / den.replace(0, np.nan))[ok]
+        x = (ns - mu_a)[ok]
+        w = den[ok]
+        beta = float(np.sum(w * x * (y - mu_c)) / max(np.sum(w * x * x), 1e-12)) if ok.sum() > 10 else 0.0
+        beta = float(np.clip(beta, 0.0, 3.0))
+        t = mu_c + beta * (ns - mu_a)
+        r_num = S[f"{c}_num"] - den * t
+        r_sq = S[f"{c}_sq"] - 2 * t * S[f"{c}_num"] + t * t * den if f"{c}_sq" in S else None
+        sc = self.cfg["shrinkage"]
+        keep = den >= 10
+        mu_r, m_r, tau_r = eb_prior_strength(r_num[keep], den[keep], None if r_sq is None else r_sq[keep],
+                                             sc["min_prior_balls"], sc["max_prior_balls"])
+        return (a, beta, mu_r, m_r, tau_r)
+
     def _values(self, S: pd.DataFrame) -> pd.DataFrame:
         V = pd.DataFrame(index=S.index)
         for c in self.kinds:
             mu, m, _ = self.prior[c]
+            if c in getattr(self, "pairs", {}):
+                a, beta, mu_r, m_r, _ = self.pairs[c]
+                t = self.prior[c][0] + beta * (self._normal_skill(S, a) - self.prior[a][0])
+                den = S[f"{c}_den"]
+                V[c] = t + (S[f"{c}_num"] - den * t + m_r * mu_r) / (den + m_r)
+                continue
             V[c] = (S[f"{c}_num"] + m * mu) / (S[f"{c}_den"] + m)
         a, bb = DELTA[self.side]
         V["delta"] = V[a] - V[bb]

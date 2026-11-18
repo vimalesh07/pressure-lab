@@ -1,4 +1,7 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 /** Shared tooltip surface for Recharts and custom SVG charts. */
 export function TooltipBox({ title, children }: { title?: ReactNode; children: ReactNode }) {
@@ -19,5 +22,34 @@ export function TooltipRow({ label, value, color }: { label: string; value: Reac
       </span>
       <span className="tnum font-semibold text-text-100">{value}</span>
     </div>
+  );
+}
+
+/**
+ * Tooltip rendered in a portal at fixed viewport coordinates, so scroll / overflow containers
+ * never clip it. (x, y) = the anchor point; the box sits above it, clamped inside the viewport.
+ */
+export function FloatingTip({ x, y, children, below = false }: { x: number; y: number; children: ReactNode; below?: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const left = Math.max(8, Math.min(vw - r.width - 8, x - r.width / 2));
+    let top = below ? y + 10 : y - r.height - 10;
+    if (top < 8) top = y + 14;
+    el.style.left = `${left}px`;
+    el.style.top = `${top}px`;
+    el.style.opacity = "1";
+  });
+  if (!mounted) return null;
+  return createPortal(
+    <div ref={ref} className="pointer-events-none fixed left-0 top-0 z-[100] opacity-0" role="tooltip">
+      {children}
+    </div>,
+    document.body,
   );
 }

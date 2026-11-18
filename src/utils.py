@@ -183,19 +183,31 @@ def slugify(name: str, pid: int) -> str:
     return f"{s}-{int(pid)}"
 
 
+# Official short codes (IPL franchises and ICC members / associates). One table, used for every JSON.
+TEAM_CODES = {
+    "Chennai Super Kings": "CSK", "Delhi Capitals": "DC", "Gujarat Titans": "GT", "Kolkata Knight Riders": "KKR",
+    "Lucknow Super Giants": "LSG", "Mumbai Indians": "MI", "Punjab Kings": "PBKS", "Rajasthan Royals": "RR",
+    "Royal Challengers Bengaluru": "RCB", "Royal Challengers Bangalore": "RCB", "Sunrisers Hyderabad": "SRH",
+    "Afghanistan": "AFG", "Australia": "AUS", "Bangladesh": "BAN", "Canada": "CAN", "England": "ENG", "Hong Kong": "HK",
+    "India": "IND", "Ireland": "IRE", "Japan": "JPN", "Kuwait": "KUW", "Nepal": "NEP", "Netherlands": "NED",
+    "New Zealand": "NZ", "Oman": "OMA", "Pakistan": "PAK", "Scotland": "SCO", "Singapore": "SIN", "South Africa": "SA",
+    "Sri Lanka": "SL", "United Arab Emirates": "UAE", "United States Of America": "USA", "United States of America": "USA",
+    "West Indies": "WI", "Zimbabwe": "ZIM", "Namibia": "NAM", "Uganda": "UGA", "Papua New Guinea": "PNG",
+}
+IPL_CODES = {"CSK", "DC", "GT", "KKR", "LSG", "MI", "PBKS", "RR", "RCB", "SRH"}
+
+
 def team_code(name: str) -> str:
-    """Short, generic team code derived from the name (no hardcoded teams)."""
+    """Official short code for a team (A-sides get "-A"). Unknown teams keep their full name and log a warning."""
     name = str(name).strip()
     suffix = ""
     m = re.match(r"^(.*?)\s+(A|U19|Women)$", name)
-    if m:
+    if m and m.group(1) in TEAM_CODES:
         name, suffix = m.group(1), "-" + m.group(2)
-    words = [w for w in re.split(r"[\s\-]+", name) if w]
-    if len(words) == 1:
-        code = words[0][:3].upper()
-    else:
-        code = "".join(w[0] for w in words).upper()
-    return code + suffix
+    if name in TEAM_CODES:
+        return TEAM_CODES[name] + suffix
+    log(f"WARNING: no short code for team '{name}', showing the full name")
+    return name + suffix
 
 
 def to_jsonable(o):

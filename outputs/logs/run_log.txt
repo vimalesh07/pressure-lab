@@ -44,7 +44,7 @@ RECONCILIATION: rebuilt innings totals vs winning margins: 826/831 = 99.40%
   [assert ok] reconciliation rate 99.40% >= 98%
 players with an id: 1,217
 SUMMARY: 867 matches with balls, 200,961 deliveries, 192,412 legal, seasons [np.int32(2022), np.int32(2023), np.int32(2024), np.int32(2025), np.int32(2026)]
-[time] data prep: 5.5s
+[time] data prep: 8.5s
 
 ==============================================================================
   STAGE 2 · F1 WIN PROBABILITY (ML + END-GAME DP), PAR SCORE, WPA, LEVERAGE, WICKET VALUE
@@ -109,7 +109,7 @@ Chase pressure index vs leverage: Spearman -0.139
 FIX 6 wicket value: innings 1 mean 8.02 runs, innings 2 mean 9.94 (20.1% of chase balls use the par fallback, slope < 0.002); p10 1.9, p90 16.5
 Fixed wicket value (v1 definition: mean 1st-innings par difference): 8.32 runs
 saved refit models -> D:\SupeRR Selector Season 2\pressure-lab\outputs\models\wp_model.pkl, D:\SupeRR Selector Season 2\pressure-lab\outputs\models\par_score_model.pkl
-[time] win probability: 30.2s
+[time] win probability: 50.4s
 FIX 3 excluded competitions [2670, 3289]: 30 matches, 6,973 deliveries (Mens T20 Emerging Teams Asia Cup 2024: 15; Asia Cup Rising Stars 2025: 15); 172 players affected
    Sediqullah Atal            batting  - 293 balls, -8 matches (36% of their batting balls)
    Babar Hayat                batting  - 215 balls, -6 matches (57% of their batting balls)
@@ -139,7 +139,7 @@ Threat-tier gap (all balls, LOO tiers):
   Elite: net-runs cost ratio bat 1.149, bowl 1.516 -> multiplier = 1 + 3.0 x (ratio - 1), clipped to [1.2, 2.0]
   JUSTIFICATION: multipliers bat {'Normal': 1.0, 'Strong': 1.16, 'Elite': 1.45}, bowl {'Normal': 1.0, 'Strong': 1.6, 'Elite': 2.0} (Normal 1.0 by definition)
   [assert ok] every ball has a threat multiplier
-[time] threat: 1.9s
+[time] threat: 1.7s
 
 ==============================================================================
   STAGE 4 · F6 STAKES · F10 ELO · F12 NRR RACE · F18 FAVOURITE UNDER THREAT
@@ -168,7 +168,7 @@ nrr_race (batting side)        1.20  11689         20.95                 18.61  
 nrr_race (bowling side)        1.20  11698         20.94                 18.65    33.61            35.28        4.98                5.67                        0         easier                 6.09                False
   data supports the direction of 3/8 multipliers (direction = majority of boundary / dot / wicket votes; |boundary diff| < 2 SE means the data cannot tell)
   [assert ok] every ball has a stakes multiplier
-[time] stakes: 4.4s
+[time] stakes: 5.2s
 
 ==============================================================================
   STAGE 5 · PRESSURE WEIGHT AND PRESSURE BALLS
@@ -181,7 +181,7 @@ FIX 4 pressure-ball set, bowling: v1 (x threat) 38,798 vs v2 (leverage x stakes)
   threshold 30%: batting 55,955, bowling 58,197
 Rule-based pressure (death, chase RRR >= 9, or 2+ wkts in last 12) flags 47.4% of balls; overlap with leverage-based batting flag: 44.9%
 Mean leverage by phase: {'Death': 1.03, 'Middle': 0.82, 'PP': 1.24}; share of balls that are pressure balls (bowling side): {'Death': 0.221, 'Middle': 0.14, 'PP': 0.273}
-[time] pressure: 1.2s
+[time] pressure: 3.6s
 
 ==============================================================================
   STAGE 6 · EXPECTED VALUES AND PER-BALL CONTRIBUTIONS
@@ -198,92 +198,92 @@ F13: 2954 bowler wickets ended a set partnership (>= 30 runs or >= 25 balls)
 ==============================================================================
   STAGE 7 · F4 SHRINKAGE + ELIGIBILITY · F5 CONSISTENCY + BOOTSTRAP · RATINGS
 ==============================================================================
-[time] player metrics: 2.2s
+[time] player metrics: 8.1s
 Weight justification (batters): prior x split-half reliability (floor 0.1)
-   nrae_p           prior +0.20 · reliability 0.32 -> final +0.0640
-   runs_ae_p        prior +0.10 · reliability 0.60 -> final +0.0605
-   out_ae_p         prior -0.10 · reliability 0.00 -> final -0.0100
-   wpa_p            prior +0.20 · reliability 0.17 -> final +0.0332
-   delta            prior +0.10 · reliability 0.04 -> final +0.0100
+   nrae_p           prior +0.20 · reliability 0.75 -> final +0.1501
+   runs_ae_p        prior +0.10 · reliability 0.87 -> final +0.0875
+   out_ae_p         prior -0.10 · reliability 0.63 -> final -0.0634
+   wpa_p            prior +0.20 · reliability 0.40 -> final +0.0804
+   delta            prior +0.10 · reliability 0.76 -> final +0.0761
    consistency      prior +0.10 · reliability 0.30 -> final +0.0296
    rescue           prior +0.06 · reliability 0.00 -> final +0.0060
-   collapse         prior +0.04 · reliability 0.47 -> final +0.0186
-   matchup_ppdeath  prior +0.10 · reliability 0.35 -> final +0.0352
+   collapse         prior +0.04 · reliability 0.38 -> final +0.0154
+   matchup_ppdeath  prior +0.10 · reliability 0.41 -> final +0.0406
 batters: 87 eligible of 824 with any balls (>= 150 pressure balls and >= 15 matches with pressure balls); 87 pass the ball rule, 141 the match rule
-  EB prior strength (balls of pseudo-data toward the batters mean): nrae_p: m=173, runs_ae_p: m=111, out_ae_p: m=158, wpa_p: m=107, nrae_n: m=268, consistency: m=40, rescue: m=2000, collapse: m=164, matchup_ppdeath: m=403
-[time] bootstrap bat: 2.5s
+  EB prior strength (balls of pseudo-data toward the batters mean): nrae_p: m=1713, runs_ae_p: m=217, out_ae_p: m=2000, wpa_p: m=470, nrae_n: m=977, consistency: m=40, rescue: m=2000, collapse: m=2000, matchup_ppdeath: m=2000, runs_ae_n: m=144, out_ae_n: m=2000, wpa_n: m=2000
+[time] bootstrap bat: 10.0s
 F17 captaincy tie-break: 39 captains analysed; 0 adjacent swap(s) applied in the top 10
 Weight justification (bowlers): prior x split-half reliability (floor 0.1)
-   rsae_p           prior +0.14 · reliability 0.17 -> final +0.0233
+   rsae_p           prior +0.14 · reliability 0.28 -> final +0.0398
    wae_p            prior +0.12 · reliability 0.00 -> final +0.0120
-   dot_p            prior +0.06 · reliability 0.63 -> final +0.0379
-   wpa_p            prior +0.18 · reliability 0.03 -> final +0.0180
-   delta            prior +0.08 · reliability 0.00 -> final +0.0080
+   dot_p            prior +0.06 · reliability 0.56 -> final +0.0339
+   wpa_p            prior +0.18 · reliability 0.14 -> final +0.0259
+   delta            prior +0.08 · reliability 0.04 -> final +0.0080
    consistency      prior +0.08 · reliability 0.34 -> final +0.0272
    death_clamp      prior +0.08 · reliability 0.26 -> final +0.0208
    pp_control       prior +0.07 · reliability 0.00 -> final +0.0070
    control          prior +0.07 · reliability 0.78 -> final +0.0546
-   heist            prior +0.06 · reliability 0.00 -> final +0.0060
-   pair_breaker     prior +0.06 · reliability 0.64 -> final +0.0382
+   heist            prior +0.06 · reliability 0.32 -> final +0.0189
+   pair_breaker     prior +0.06 · reliability 0.53 -> final +0.0316
 bowlers: 99 eligible of 596 with any balls (>= 120 pressure balls and >= 15 matches with pressure balls); 99 pass the ball rule, 140 the match rule
-  EB prior strength (balls of pseudo-data toward the bowlers mean): rsae_p: m=222, wae_p: m=247, dot_p: m=70, wpa_p: m=196, nrs_p: m=253, nrs_n: m=867, consistency: m=134, death_clamp: m=1494, pp_control: m=225, control: m=20, heist: m=1323, pair_breaker: m=1437
-[time] bootstrap bowl: 3.0s
-F17 captaincy tie-break: 11 captains analysed; 1 adjacent swap(s) applied in the top 10
+  EB prior strength (balls of pseudo-data toward the bowlers mean): rsae_p: m=848, wae_p: m=2000, dot_p: m=234, wpa_p: m=2000, nrs_p: m=2000, nrs_n: m=2000, consistency: m=134, death_clamp: m=1494, pp_control: m=2000, control: m=20, heist: m=2000, pair_breaker: m=2000, rsae_n: m=2000, wae_n: m=2000, wpa_n: m=2000, dot_n: m=210
+[time] bootstrap bowl: 10.4s
+F17 captaincy tie-break: 11 captains analysed; 0 adjacent swap(s) applied in the top 10
 
 ==============================================================================
   STAGE 8a · SENSITIVITY
 ==============================================================================
-  Threshold 10%          batters  eligible  81 · rho 0.853 · top-10 overlap 5/10
-  Threshold 10%          bowlers  eligible  94 · rho 0.952 · top-10 overlap 8/10
-  Threshold 30%          batters  eligible  89 · rho 0.940 · top-10 overlap 7/10
-  Threshold 30%          bowlers  eligible 102 · rho 0.965 · top-10 overlap 9/10
-  Stakes off             batters  eligible  85 · rho 0.953 · top-10 overlap 8/10
-  Stakes off             bowlers  eligible  97 · rho 0.967 · top-10 overlap 9/10
-  Stakes -50%            batters  eligible  84 · rho 0.978 · top-10 overlap 9/10
-  Stakes -50%            bowlers  eligible  96 · rho 0.980 · top-10 overlap 10/10
-  Stakes +50%            batters  eligible  81 · rho 0.989 · top-10 overlap 9/10
-  Stakes +50%            bowlers  eligible 100 · rho 0.987 · top-10 overlap 9/10
-  Without F3             batters  eligible  87 · rho 0.989 · top-10 overlap 10/10
-  Without F3             bowlers  eligible  99 · rho 0.997 · top-10 overlap 10/10
-  Without F6             batters  eligible  87 · rho 0.965 · top-10 overlap 7/10
-  Without F6             bowlers  eligible  97 · rho 0.974 · top-10 overlap 9/10
+  Threshold 10%          batters  eligible  81 · rho 0.910 · top-10 overlap 8/10
+  Threshold 10%          bowlers  eligible  94 · rho 0.965 · top-10 overlap 8/10
+  Threshold 30%          batters  eligible  89 · rho 0.993 · top-10 overlap 10/10
+  Threshold 30%          bowlers  eligible 102 · rho 0.978 · top-10 overlap 8/10
+  Stakes off             batters  eligible  85 · rho 0.997 · top-10 overlap 9/10
+  Stakes off             bowlers  eligible  97 · rho 0.983 · top-10 overlap 8/10
+  Stakes -50%            batters  eligible  84 · rho 0.998 · top-10 overlap 10/10
+  Stakes -50%            bowlers  eligible  96 · rho 0.991 · top-10 overlap 9/10
+  Stakes +50%            batters  eligible  81 · rho 0.997 · top-10 overlap 10/10
+  Stakes +50%            bowlers  eligible 100 · rho 0.991 · top-10 overlap 10/10
+  Without F3             batters  eligible  87 · rho 0.999 · top-10 overlap 10/10
+  Without F3             bowlers  eligible  99 · rho 0.998 · top-10 overlap 9/10
+  Without F6             batters  eligible  87 · rho 0.997 · top-10 overlap 10/10
+  Without F6             bowlers  eligible  97 · rho 0.985 · top-10 overlap 9/10
   Without F7             batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
   Without F7             bowlers  eligible  99 · rho 0.999 · top-10 overlap 10/10
-  Without F8             batters  eligible  87 · rho 0.991 · top-10 overlap 10/10
-  Without F8             bowlers  eligible  99 · rho 0.998 · top-10 overlap 10/10
+  Without F8             batters  eligible  87 · rho 0.999 · top-10 overlap 10/10
+  Without F8             bowlers  eligible  99 · rho 0.999 · top-10 overlap 10/10
   Without F9             batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
-  Without F9             bowlers  eligible  99 · rho 0.776 · top-10 overlap 7/10
+  Without F9             bowlers  eligible  99 · rho 0.679 · top-10 overlap 7/10
   Without F10            batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
-  Without F10            bowlers  eligible  99 · rho 0.999 · top-10 overlap 10/10
+  Without F10            bowlers  eligible  99 · rho 0.998 · top-10 overlap 10/10
   Without F11            batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
   Without F11            bowlers  eligible  99 · rho 0.999 · top-10 overlap 10/10
-  Without F12            batters  eligible  85 · rho 0.989 · top-10 overlap 9/10
-  Without F12            bowlers  eligible  98 · rho 0.993 · top-10 overlap 10/10
+  Without F12            batters  eligible  85 · rho 0.999 · top-10 overlap 10/10
+  Without F12            bowlers  eligible  98 · rho 0.994 · top-10 overlap 10/10
   Without F13            batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
-  Without F13            bowlers  eligible  99 · rho 0.958 · top-10 overlap 10/10
-  Without F14            batters  eligible  87 · rho 0.998 · top-10 overlap 9/10
+  Without F13            bowlers  eligible  99 · rho 0.990 · top-10 overlap 9/10
+  Without F14            batters  eligible  87 · rho 1.000 · top-10 overlap 10/10
   Without F14            bowlers  eligible  99 · rho 1.000 · top-10 overlap 10/10
-  Without F18            batters  eligible  83 · rho 0.990 · top-10 overlap 9/10
-  Without F18            bowlers  eligible  97 · rho 0.990 · top-10 overlap 10/10
-  IPL only               batters  eligible  84 · rho 0.947 · top-10 overlap 5/10
-  IPL only               bowlers  eligible  89 · rho 0.912 · top-10 overlap 5/10
-  T20I only              batters  eligible  69 · rho 0.847 · top-10 overlap 5/10
-  T20I only              bowlers  eligible  91 · rho 0.858 · top-10 overlap 6/10
-  Rule-based pressure    batters  eligible  73 · rho 0.799 · top-10 overlap 5/10
-  Rule-based pressure    bowlers  eligible  97 · rho 0.869 · top-10 overlap 6/10
-[time] sensitivity: 38.7s
+  Without F18            batters  eligible  83 · rho 0.999 · top-10 overlap 10/10
+  Without F18            bowlers  eligible  97 · rho 0.994 · top-10 overlap 9/10
+  IPL only               batters  eligible  84 · rho 0.901 · top-10 overlap 5/10
+  IPL only               bowlers  eligible  89 · rho 0.924 · top-10 overlap 4/10
+  T20I only              batters  eligible  69 · rho 0.910 · top-10 overlap 6/10
+  T20I only              bowlers  eligible  91 · rho 0.875 · top-10 overlap 6/10
+  Rule-based pressure    batters  eligible  73 · rho 0.927 · top-10 overlap 7/10
+  Rule-based pressure    bowlers  eligible  97 · rho 0.888 · top-10 overlap 7/10
+[time] sensitivity: 111.4s
 
 ==============================================================================
   STAGE 8b · SPLIT-HALF RELIABILITY (odd vs even matches)
 ==============================================================================
-  batters  delta      r = +0.020  (Spearman-Brown full-sample reliability +0.039, n=87)
-  batters  rating     r = +0.280  (Spearman-Brown full-sample reliability +0.438, n=87)
-  batters  nrae_p     r = +0.190  (Spearman-Brown full-sample reliability +0.320, n=87)
-  bowlers  delta      r = -0.118  (Spearman-Brown full-sample reliability -0.268, n=99)
-  bowlers  rating     r = +0.443  (Spearman-Brown full-sample reliability +0.614, n=99)
-  bowlers  rsae_p     r = +0.091  (Spearman-Brown full-sample reliability +0.166, n=99)
-Sanity (bat): 11 of top 30 flagged -> Vaibhav Sooryavanshi: thin sample; Jonny Bairstow: thin sample; wide CI; Priyansh Arya: thin sample; wide CI; driven by runs_ae_p; Josh Inglis: thin sample; wide CI; Travis Head: wide CI; Cameron Green: thin sample; wide CI; Mark Chapman: thin sample; wide CI; Nicholas Pooran: wide CI
-Sanity (bowl): 16 of top 30 flagged -> Sunil Narine: driven by control; Akeal Hosein: driven by control; Mujeeb Ur Rahman: tier-2-heavy sample; thin sample; Mohsin Khan: wide CI; drops more than average under pressure; driven by control; Prince Yadav: thin sample; wide CI; driven by control; Mitchell Santner: driven by control; Adil Rashid: thin sample; Axar Patel: driven by control
+  batters  delta      r = +0.614  (Spearman-Brown full-sample reliability +0.761, n=87)
+  batters  rating     r = +0.579  (Spearman-Brown full-sample reliability +0.734, n=87)
+  batters  nrae_p     r = +0.601  (Spearman-Brown full-sample reliability +0.750, n=87)
+  bowlers  delta      r = +0.019  (Spearman-Brown full-sample reliability +0.037, n=99)
+  bowlers  rating     r = +0.589  (Spearman-Brown full-sample reliability +0.742, n=99)
+  bowlers  rsae_p     r = +0.166  (Spearman-Brown full-sample reliability +0.284, n=99)
+Sanity (bat): 16 of top 30 flagged -> Vaibhav Sooryavanshi: thin sample; Phil Salt: driven by nrae_p; Suryakumar Yadav: driven by nrae_p; Finn Allen: wide CI; Virat Kohli: driven by nrae_p; Ryan Rickelton: thin sample; wide CI; driven by nrae_p; Shai Hope: wide CI; Priyansh Arya: thin sample; wide CI
+Sanity (bowl): 23 of top 30 flagged -> Sunil Narine: drops more than average under pressure; driven by control; Jasprit Bumrah: drops more than average under pressure; driven by control; Krunal Pandya: driven by control; Akeal Hosein: driven by control; Rashid Khan: drops more than average under pressure; driven by control; Prince Yadav: thin sample; driven by control; Mujeeb Ur Rahman: tier-2-heavy sample; thin sample; driven by control; Mohsin Khan: driven by control
 
 ==============================================================================
   STAGE 8c · F15 PHASE-IMPACT TEST
@@ -320,55 +320,55 @@ Win % by phases won on WPA (All formats): exactly / at least
    All       |WPA| share: PP: 38.4%
    All       |WPA| share: Middle: 37.3%
    All       |WPA| share: Death: 24.3%
-FIX 3 weak-opposition share (batters): 33 of 87 eligible flagged (> 25% of pressure balls vs bottom-quartile Elo sides); top-10 flagged: Vaibhav Sooryavanshi, Yashasvi Jaiswal, Heinrich Klaasen, Shreyas Iyer
-FIX 3 weak-opposition share (bowlers): 41 of 99 eligible flagged (> 25% of pressure balls vs bottom-quartile Elo sides); top-10 flagged: Sunil Narine, Krunal Pandya, Varun Chakravarthy, Mujeeb Ur Rahman
+FIX 3 weak-opposition share (batters): 33 of 87 eligible flagged (> 25% of pressure balls vs bottom-quartile Elo sides); top-10 flagged: Vaibhav Sooryavanshi, Heinrich Klaasen, Phil Salt, Shreyas Iyer
+FIX 3 weak-opposition share (bowlers): 41 of 99 eligible flagged (> 25% of pressure balls vs bottom-quartile Elo sides); top-10 flagged: Sunil Narine, Varun Chakravarthy, Krunal Pandya, Mujeeb Ur Rahman
 
 ==============================================================================
   FIX 5 · SINGLE-OVER DOMINANCE (top-20 players)
 ==============================================================================
    list                              scheme  median   mean    max
-batters    raw leverage x stakes (uncapped)  0.0627 0.0607 0.1206
-batters      v1: uniform (x opp-Elo weight)  0.0391 0.0441 0.0850
-batters v2: log1p(capped leverage x stakes)  0.0448 0.0472 0.0767
-bowlers    raw leverage x stakes (uncapped)  0.0640 0.0805 0.1910
-bowlers      v1: uniform (x opp-Elo weight)  0.0525 0.0641 0.1309
-bowlers v2: log1p(capped leverage x stakes)  0.0579 0.0697 0.1730
+batters    raw leverage x stakes (uncapped)  0.0557 0.0574 0.1206
+batters      v1: uniform (x opp-Elo weight)  0.0384 0.0408 0.0686
+batters v2: log1p(capped leverage x stakes)  0.0439 0.0451 0.0686
+bowlers    raw leverage x stakes (uncapped)  0.0745 0.0886 0.1910
+bowlers      v1: uniform (x opp-Elo weight)  0.0606 0.0677 0.1309
+bowlers v2: log1p(capped leverage x stakes)  0.0678 0.0744 0.1730
 
 ==============================================================================
   FIX 9 · CONFIDENCE GROUPS AND SAMPLE CARDS
 ==============================================================================
 BATTERS (sensitivity runs: 19)
  rank                 name  rating  rank_p5  rank_p95  p_top10  sens_top10_share confidence_group  pressure_balls  matches  pressure_balls_ipl  pressure_balls_t20i  weak_opp_share  weak_opp_flag
-    1 Vaibhav Sooryavanshi    92.1        1        21    0.867             0.842             Core             178       19                 149                   29           0.433           True
-    2      Abhishek Sharma    88.4        1        21    0.806             0.947             Core             575       74                 298                  277           0.233          False
-    3            Tim David    85.9        1        37    0.664             1.000             Core             260       51                 174                   86           0.138          False
-    4     Yashasvi Jaiswal    85.0        1        25    0.695             0.842             Core             495       62                 404                   91           0.317           True
-    5           Finn Allen    81.9        1        40    0.551             0.842           Likely             201       28                  37                  164           0.095          False
-    6        Rovman Powell    80.9        2        27    0.533             0.842           Likely             238       49                  89                  149           0.113          False
-    7     Heinrich Klaasen    80.0        3        29    0.459             0.895           Likely             194       39                 172                   22           0.366           True
-    8       Jonny Bairstow    79.7        2        46    0.429             0.579           Likely             151       15                 114                   37           0.000          False
-    9         Shreyas Iyer    78.4        2        46    0.409             0.737           Likely             347       46                 251                   96           0.340           True
-   10         Brandon King    78.2        4        35    0.347             0.737           Likely             264       32                   0                  264           0.000          False
+    1      Abhishek Sharma    95.6        1         7    0.981             1.000             Core             575       74                 298                  277           0.233          False
+    2 Vaibhav Sooryavanshi    95.5        1         8    0.979             0.842             Core             178       19                 149                   29           0.433           True
+    3            Tim David    86.7        2        16    0.840             1.000             Core             260       51                 174                   86           0.138          False
+    4     Heinrich Klaasen    82.6        3        18    0.767             0.947             Core             194       39                 172                   22           0.366           True
+    5            Phil Salt    82.5        2        27    0.716             0.947             Core             338       46                 168                  170           0.349           True
+    6     Suryakumar Yadav    80.5        3        23    0.646             0.895             Core             569       85                 328                  241           0.095          False
+    7          Jos Buttler    80.3        3        25    0.637             0.947             Core             545       69                 337                  208           0.213          False
+    8 Namboori Tilak Varma    79.2        3        26    0.583             0.895           Likely             482       71                 286                  196           0.124          False
+    9         Shreyas Iyer    78.4        3        35    0.525             0.947           Likely             347       46                 251                   96           0.340           True
+   10           Finn Allen    76.3        2        41    0.474             0.789           Likely             201       28                  37                  164           0.095          False
 BOWLERS (sensitivity runs: 19)
  rank               name  rating  rank_p5  rank_p95  p_top10  sens_top10_share confidence_group  pressure_balls  matches  pressure_balls_ipl  pressure_balls_t20i  weak_opp_share  weak_opp_flag
-    1       Sunil Narine    91.5        1         9    0.964             0.947             Core             254       42                 254                    0           0.295           True
-    2     Jasprit Bumrah    89.3        1        16    0.885             0.947             Core             393       52                 264                  129           0.188          False
-    3      Krunal Pandya    87.7        1        17    0.866             0.895             Core             265       40                 265                    0           0.313           True
-    4 Varun Chakravarthy    87.3        1        17    0.864             1.000             Core             358       62                 241                  117           0.279           True
-    5        Rashid Khan    79.3        2        35    0.526             0.842           Likely             426       73                 293                  133           0.214          False
-    6       Akeal Hosein    79.4        3        30    0.511             0.842           Likely             393       54                  38                  355           0.165          False
-    7   Mujeeb Ur Rahman    78.9        3        38    0.478             0.947           Likely             130       21                   2                  128           0.546           True
-    8     Josh Hazlewood    75.4        3        47    0.374             0.895           Likely             364       48                 220                  144           0.107          False
-    9        Mohsin Khan    74.6        2        62    0.394             0.895           Likely             186       22                 186                    0           0.220          False
-   10 Maheesh Theekshana    73.7        6        38    0.224             0.632           Likely             457       65                 197                  260           0.236          False
+    1       Sunil Narine    94.4        1         4    0.998             0.947             Core             254       42                 254                    0           0.295           True
+    2     Jasprit Bumrah    91.1        1         9    0.960             0.947             Core             393       52                 264                  129           0.188          False
+    3 Varun Chakravarthy    85.3        2        15    0.888             1.000             Core             358       62                 241                  117           0.279           True
+    4      Krunal Pandya    84.9        2        16    0.840             0.895             Core             265       40                 265                    0           0.313           True
+    5       Akeal Hosein    82.1        2        25    0.708             0.895             Core             393       54                  38                  355           0.165          False
+    6        Rashid Khan    79.0        3        34    0.570             0.842           Likely             426       73                 293                  133           0.214          False
+    7       Prince Yadav    76.0        2        48    0.453             0.526           Likely             120       24                  76                   44           0.242          False
+    8 Maheesh Theekshana    75.7        5        31    0.382             0.842           Likely             457       65                 197                  260           0.236          False
+    9   Mujeeb Ur Rahman    74.6        5        37    0.345             0.842           Likely             130       21                   2                  128           0.546           True
+   10     Josh Hazlewood    74.1        3        44    0.359             0.842           Likely             364       48                 220                  144           0.107          False
 
 ==============================================================================
   STAGE 9 · F16 PRESSURE-FRAGILE LIST AND WEAKNESS PROFILES
 ==============================================================================
 Team id 3 (Rajasthan Royals) latest season 2026: 27 squad players -> Fix plans
-Pressure-fragile batters (negative delta in full sample AND both halves): 20 of 87 eligible
-Squad batters with a pressure drop and >= 60 pressure balls: 1
-Cards whose displayed index also drops under pressure: 21 of 21
+Pressure-fragile batters (negative delta in full sample AND both halves): 42 of 87 eligible
+Squad batters with a pressure drop and >= 60 pressure balls: 6
+Cards whose displayed index also drops under pressure: 10 of 26
 
 ==============================================================================
   STAGE 10a · CSV TABLES
@@ -378,22 +378,25 @@ tables written to D:\SupeRR Selector Season 2\pressure-lab\outputs\tables
 ==============================================================================
   STAGE 10c · LEADERBOARD JSON (format x season x phase)
 ==============================================================================
-leaderboard_batters.json: 72 views, 512 rows
-leaderboard_bowlers.json: 72 views, 522 rows
+leaderboard_batters.json: 72 views, 1299 rows
+leaderboard_bowlers.json: 72 views, 1316 rows
 match_replay.json: 10 highest-leverage completed matches
-evidence.json: 20 top-10 players, 60 standout matches (highest pressure-ball WPA, >= 2 pressure balls); largest single-ball swing 77.2 WP points
+All-rounders: 25 players with >= 75 batting and >= 60 bowling pressure balls; combined-WPA rating, 1000 match resamples; top 10 exported
+evidence.json: 30 top-10 entries (10 all-rounders), 90 standout matches (highest pressure-ball WPA, >= 2 pressure balls); largest single-ball swing 77.2 WP points
 matchups.json: 16 bowlers, tiers ['death-finishers', 'powerplay-hitters']
 
 ==============================================================================
   STAGE 10d · PROFILES, PLAYERS, REPLAY, MATCHUPS, SCOUTING, METHOD, KPIS
 ==============================================================================
+matches/*.json: 790 match files (38.7 MB), 2651 player-match links; 0 unresolved links
+logs/*.json: 304 player match logs, 14468 player-match rows (2651 with ball-by-ball detail)
 
 ==============================================================================
   STAGE 10b · FIGURES
 ==============================================================================
 figures written to D:\SupeRR Selector Season 2\pressure-lab\outputs\figures
-JSON written to D:\SupeRR Selector Season 2\pressure-lab\public\data: 233 players / profiles
-[time] export: 186.5s
+JSON written to D:\SupeRR Selector Season 2\pressure-lab\public\data: 304 players / profiles
+[time] export: 708.6s
 
 ==============================================================================
   RERUN + COMPARE · comparison_v1_vs_v2.md
@@ -406,29 +409,29 @@ written D:\SupeRR Selector Season 2\pressure-lab\outputs\comparison_v1_vs_v2.md
 
 TOP 10 BATTERS
  rank                 name  rating   CI 5-95 rank 5-95  P(top10)  group  pressure balls  matches
-    1 Vaibhav Sooryavanshi    92.1 70.8-98.0      1-21      0.87   Core             178       19
-    2      Abhishek Sharma    88.4 71.8-96.5      1-21      0.81   Core             575       74
-    3            Tim David    85.9 60.0-96.5      1-37      0.66   Core             260       51
-    4     Yashasvi Jaiswal    85.0 68.1-93.7      1-25      0.70   Core             495       62
-    5           Finn Allen    81.9 57.8-94.7      1-40      0.55 Likely             201       28
-    6        Rovman Powell    80.9 66.5-90.8      2-27      0.53 Likely             238       49
-    7     Heinrich Klaasen    80.0 65.0-89.4      3-29      0.46 Likely             194       39
-    8       Jonny Bairstow    79.7 51.4-93.0      2-46      0.43 Likely             151       15
-    9         Shreyas Iyer    78.4 53.1-91.6      2-46      0.41 Likely             347       46
-   10         Brandon King    78.2 59.7-88.5      4-35      0.35 Likely             264       32
+    1      Abhishek Sharma    95.6 81.7-99.4       1-7      0.98   Core             575       74
+    2 Vaibhav Sooryavanshi    95.5 81.3-99.3       1-8      0.98   Core             178       19
+    3            Tim David    86.7 69.2-95.2      2-16      0.84   Core             260       51
+    4     Heinrich Klaasen    82.6 67.5-91.7      3-18      0.77   Core             194       39
+    5            Phil Salt    82.5 59.5-94.1      2-27      0.72   Core             338       46
+    6     Suryakumar Yadav    80.5 62.1-92.4      3-23      0.65   Core             569       85
+    7          Jos Buttler    80.3 62.0-91.4      3-25      0.64   Core             545       69
+    8 Namboori Tilak Varma    79.2 60.4-91.4      3-26      0.58 Likely             482       71
+    9         Shreyas Iyer    78.4 52.9-92.8      3-35      0.52 Likely             347       46
+   10           Finn Allen    76.3 48.6-92.9      2-41      0.47 Likely             201       28
 
 TOP 10 BOWLERS
  rank               name  rating   CI 5-95 rank 5-95  P(top10)  group  pressure balls  matches
-    1       Sunil Narine    91.5 80.2-96.9       1-9      0.96   Core             254       42
-    2     Jasprit Bumrah    89.3 74.9-96.8      1-16      0.88   Core             393       52
-    3      Krunal Pandya    87.7 73.5-95.2      1-17      0.87   Core             265       40
-    4 Varun Chakravarthy    87.3 74.1-95.7      1-17      0.86   Core             358       62
-    5        Rashid Khan    79.3 61.7-90.3      2-35      0.53 Likely             426       73
-    6       Akeal Hosein    79.4 64.5-89.4      3-30      0.51 Likely             393       54
-    7   Mujeeb Ur Rahman    78.9 59.6-89.9      3-38      0.48 Likely             130       21
-    8     Josh Hazlewood    75.4 54.0-89.9      3-47      0.37 Likely             364       48
-    9        Mohsin Khan    74.6 42.3-92.6      2-62      0.39 Likely             186       22
-   10 Maheesh Theekshana    73.7 59.6-84.4      6-38      0.22 Likely             457       65
+    1       Sunil Narine    94.4 86.4-98.0       1-4      1.00   Core             254       42
+    2     Jasprit Bumrah    91.1 78.4-97.3       1-9      0.96   Core             393       52
+    3 Varun Chakravarthy    85.3 73.2-93.0      2-15      0.89   Core             358       62
+    4      Krunal Pandya    84.9 72.2-92.9      2-16      0.84   Core             265       40
+    5       Akeal Hosein    82.1 66.2-91.3      2-25      0.71   Core             393       54
+    6        Rashid Khan    79.0 61.7-90.4      3-34      0.57 Likely             426       73
+    7       Prince Yadav    76.0 53.2-90.7      2-48      0.45 Likely             120       24
+    8 Maheesh Theekshana    75.7 63.6-84.7      5-31      0.38 Likely             457       65
+    9   Mujeeb Ur Rahman    74.6 59.0-85.5      5-37      0.34 Likely             130       21
+   10     Josh Hazlewood    74.1 55.4-88.4      3-44      0.36 Likely             364       48
 
 FINAL ACCEPTANCE CHECKLIST
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -443,29 +446,32 @@ FINAL ACCEPTANCE CHECKLIST
 ✅  F8 Powerplay control by situation (batting mirror included)                                                34,060 PP balls vs Elite/Strong batters (situation-weighted); 25,778 PP balls faced vs Elite/Strong bowlers
 ✅  F9 Control score vs teammates                                                                              185,429 legal balls compared with same-innings teammates
 ✅  F10 Elo opposition adjustment, IPL vs T20I reported                                                        IPL fav win 48%; International fav win 62%
-✅  F11 Rescue + Heist scores                                                                                  rescue balls 36,134, heist balls 27,271
+✅  F11 Rescue + Heist scores                                                                                  rescue balls 20,430, heist balls 11,071
 ✅  F12 NRR pressure flags (IPL)                                                                               106 IPL team-matches in the race
 ✅  F13 Pair-breaker score                                                                                     2954 set-partnership wickets, weighted by pair threat
-✅  F14 Collapse entry                                                                                         43,382 balls faced after walking in during a collapse
+✅  F14 Collapse entry                                                                                         24,260 balls faced after walking in during a collapse
 ✅  F15 Phase-impact test                                                                                      share of |WPA| by phase x format + phase-winner win rates -> phase_impact.csv
-✅  F16 Fragile list + weakness profiles + RR Fix / Attack tags                                                20 fragile batters; 21 profiles; 1 Fix / 8 Attack cards
+✅  F16 Fragile list + weakness profiles + RR Fix / Attack tags                                                42 fragile batters; 26 profiles; 1 Fix / 8 Attack cards
 ✅  F17 Captain tie-breaker analysis                                                                           39 batting / 11 bowling captains compared with vs without captaincy
 ✅  F18 Favourite-under-threat flag                                                                            30.7% of balls flagged, bonus x1.1
-✅  Sensitivity, split-half and sanity checks done                                                             19 sensitivity tests; split-half delta r = [0.02, -0.12] (bat, bowl)
+✅  Sensitivity, split-half and sanity checks done                                                             19 sensitivity tests; split-half delta r = [0.61, 0.02] (bat, bowl)
 ✅  All CSV, PNG, model and JSON outputs written                                                               37/37 files
 ✅  Baseline v1 snapshot saved                                                                                 D:\SupeRR Selector Season 2\pressure-lab\outputs\baseline_v1 (CSV tables, JSON, v1 run log, v1 config)
 ✅  FIX 1 DP end-game WP live; calibration error < 5 pts in each balls-left bucket                             after: 1: gap -0.7 / ECE 1.8, 2-3: gap -1.5 / ECE 2.5, 4-6: gap -3.3 / ECE 4.3, 7-12: gap -4.2 / ECE 4.2, 13-24: gap -2.1 / ECE 3.1, 25+: gap -1.7 / ECE 2.6 | before worst gap 4.5
 ✅  FIX 2 era feature added; honest test metrics logged; final model refit on all seasons                      test Brier 0.1876, AUC 0.792; refit on 197,005 balls 2022-2026; metrics in wp_model_metrics.csv
 ✅  FIX 3 A-team cups excluded; Elo built; opposition Elo in the xR/xW models; weak-opposition share reported  removed 30 matches / 6,973 balls (172 players); Elo home adv {'IPL': 0, 'International': 25}, newcomer offset -50; +100 opp Elo: bat runs x1.010, bowl wkts x0.972; 74 players flagged > 25% weak-opposition pressure balls
 ✅  FIX 4 Opponent tier used in one place only; pressure balls = leverage x stakes                             pressure weight == leverage x stakes on every ball; tier + opp Elo only in E[runs]/E[wkts] (Elite bowler: bat runs x0.949); v1/v2 pressure-ball Jaccard bat 0.75, bowl 0.55
-✅  FIX 5 Leverage capped; single-over dominance reduced (numbers shown)                                       batters: max single-over share 12.1% (raw lev x stakes) -> 7.7% (log1p capped), median 6.3% -> 4.5%; bowlers: max single-over share 19.1% (raw lev x stakes) -> 17.3% (log1p capped), median 6.4% -> 5.8%; leverage cap p99
+✅  FIX 5 Leverage capped; single-over dominance reduced (numbers shown)                                       batters: max single-over share 12.1% (raw lev x stakes) -> 6.9% (log1p capped), median 5.6% -> 4.4%; bowlers: max single-over share 19.1% (raw lev x stakes) -> 17.3% (log1p capped), median 7.4% -> 6.8%; leverage cap p99
 ✅  FIX 6 State-based wicket value table + heatmap                                                             inn1 mean 8.02, inn2 mean 9.94 runs (v1 fixed 8.32); wicket_value_table.csv + wicket_value_heatmap.png
-✅  FIX 7 Stakes off / -50% / +50% sensitivity done; empirical support logged                                  Stakes off batters overlap 8/10 rho 0.95; Stakes off bowlers overlap 9/10 rho 0.97; Stakes -50% batters overlap 9/10 rho 0.98; Stakes -50% bowlers overlap 10/10 rho 0.98; Stakes +50% batters overlap 9/10 rho 0.99; Stakes +50% bowlers overlap 9/10 rho 0.99 | data supports 3/8 multiplier directions (stakes_empirical.csv)
+✅  FIX 7 Stakes off / -50% / +50% sensitivity done; empirical support logged                                  Stakes off batters overlap 9/10 rho 1.00; Stakes off bowlers overlap 8/10 rho 0.98; Stakes -50% batters overlap 10/10 rho 1.00; Stakes -50% bowlers overlap 9/10 rho 0.99; Stakes +50% batters overlap 10/10 rho 1.00; Stakes +50% bowlers overlap 10/10 rho 0.99 | data supports 3/8 multiplier directions (stakes_empirical.csv)
 ✅  FIX 8 Phase-impact baselines table                                                                         PP + Middle 96% (occurs 31%); PP + Death 97% (occurs 32%); Middle + Death 99% (occurs 33%) -> phase_impact_baselines.csv/.png
-✅  FIX 9 Confidence groups + sample cards; wording changed                                                    groups bat {'Likely': 6, 'Core': 4}, bowl {'Likely': 6, 'Core': 4}; no 'clutch' / 'raises his game' left in src/ or README
+✅  FIX 9 Confidence groups + sample cards; wording changed                                                    groups bat {'Core': 7, 'Likely': 3}, bowl {'Core': 5, 'Likely': 5}; no 'clutch' / 'raises his game' left in src/ or README
 ✅  Full rerun done; comparison_v1_vs_v2.md written; JSON updated                                              comparison_v1_vs_v2.md; public/data/*.json with confidence groups; bootstrap 1000, 19 sensitivity tests, split-half done
 ✅  Final top 10 batters and bowlers printed (rating, rank range, P(top 10), group, pressure balls, matches)   see tables above and outputs/tables/top10_*.csv
-✅  Evidence replay for every top-10 player                                                                    20 players, 60 standout matches with ball-level pressure reasons
+✅  Leaderboard batters: team label matches the scope, official codes, no duplicates                           72 views checked; mismatches []; legacy codes []
+✅  Leaderboard bowlers: team label matches the scope, official codes, no duplicates                           72 views checked; mismatches []; legacy codes []
+✅  Evidence replay for every top-10 player                                                                    30 players, 90 standout matches with ball-level pressure reasons
+✅  Match info files for every best innings + signature moment                                                 790 files, 2651 player-match links, 38.7 MB in public/data/matches/
 
-Total runtime 312s
+Total runtime 1002s
 ALL CHECKS PASSED

@@ -86,74 +86,74 @@
  "confidenceGroups": {
   "bat": [
    {
-    "name": "Vaibhav Sooryavanshi",
+    "name": "Abhishek Sharma",
     "rank": 1,
     "group": "Core",
-    "pTop10": 0.867,
-    "sensTop10Share": 0.842
+    "pTop10": 0.981,
+    "sensTop10Share": 1.0
    },
    {
-    "name": "Abhishek Sharma",
+    "name": "Vaibhav Sooryavanshi",
     "rank": 2,
     "group": "Core",
-    "pTop10": 0.806,
-    "sensTop10Share": 0.947
+    "pTop10": 0.979,
+    "sensTop10Share": 0.842
    },
    {
     "name": "Tim David",
     "rank": 3,
     "group": "Core",
-    "pTop10": 0.664,
+    "pTop10": 0.84,
     "sensTop10Share": 1.0
    },
    {
-    "name": "Yashasvi Jaiswal",
+    "name": "Heinrich Klaasen",
     "rank": 4,
     "group": "Core",
-    "pTop10": 0.695,
-    "sensTop10Share": 0.842
+    "pTop10": 0.767,
+    "sensTop10Share": 0.947
    },
    {
-    "name": "Finn Allen",
+    "name": "Phil Salt",
     "rank": 5,
-    "group": "Likely",
-    "pTop10": 0.551,
-    "sensTop10Share": 0.842
+    "group": "Core",
+    "pTop10": 0.716,
+    "sensTop10Share": 0.947
    },
    {
-    "name": "Rovman Powell",
+    "name": "Suryakumar Yadav",
     "rank": 6,
-    "group": "Likely",
-    "pTop10": 0.533,
-    "sensTop10Share": 0.842
-   },
-   {
-    "name": "Heinrich Klaasen",
-    "rank": 7,
-    "group": "Likely",
-    "pTop10": 0.459,
+    "group": "Core",
+    "pTop10": 0.646,
     "sensTop10Share": 0.895
    },
    {
-    "name": "Jonny Bairstow",
+    "name": "Jos Buttler",
+    "rank": 7,
+    "group": "Core",
+    "pTop10": 0.637,
+    "sensTop10Share": 0.947
+   },
+   {
+    "name": "Namboori Tilak Varma",
     "rank": 8,
     "group": "Likely",
-    "pTop10": 0.429,
-    "sensTop10Share": 0.579
+    "pTop10": 0.583,
+    "sensTop10Share": 0.895
    },
    {
     "name": "Shreyas Iyer",
     "rank": 9,
     "group": "Likely",
-    "pTop10": 0.409,
-    "sensTop10Share": 0.737
+    "pTop10": 0.525,
+    "sensTop10Share": 0.947
    },
    {
-    "name": "Brandon King",
+    "name": "Finn Allen",
     "rank": 10,
     "group": "Likely",
-    "pTop10": 0.347,
-    "sensTop10Share": 0.737
+    "pTop10": 0.474,
+    "sensTop10Share": 0.789
    }
   ],
   "bowl": [
@@ -161,71 +161,71 @@
     "name": "Sunil Narine",
     "rank": 1,
     "group": "Core",
-    "pTop10": 0.964,
+    "pTop10": 0.998,
     "sensTop10Share": 0.947
    },
    {
     "name": "Jasprit Bumrah",
     "rank": 2,
     "group": "Core",
-    "pTop10": 0.885,
+    "pTop10": 0.96,
     "sensTop10Share": 0.947
    },
    {
-    "name": "Krunal Pandya",
+    "name": "Varun Chakravarthy",
     "rank": 3,
     "group": "Core",
-    "pTop10": 0.866,
-    "sensTop10Share": 0.895
-   },
-   {
-    "name": "Varun Chakravarthy",
-    "rank": 4,
-    "group": "Core",
-    "pTop10": 0.864,
+    "pTop10": 0.888,
     "sensTop10Share": 1.0
    },
    {
-    "name": "Rashid Khan",
-    "rank": 5,
-    "group": "Likely",
-    "pTop10": 0.526,
-    "sensTop10Share": 0.842
+    "name": "Krunal Pandya",
+    "rank": 4,
+    "group": "Core",
+    "pTop10": 0.84,
+    "sensTop10Share": 0.895
    },
    {
     "name": "Akeal Hosein",
+    "rank": 5,
+    "group": "Core",
+    "pTop10": 0.708,
+    "sensTop10Share": 0.895
+   },
+   {
+    "name": "Rashid Khan",
     "rank": 6,
     "group": "Likely",
-    "pTop10": 0.511,
+    "pTop10": 0.57,
+    "sensTop10Share": 0.842
+   },
+   {
+    "name": "Prince Yadav",
+    "rank": 7,
+    "group": "Likely",
+    "pTop10": 0.453,
+    "sensTop10Share": 0.526
+   },
+   {
+    "name": "Maheesh Theekshana",
+    "rank": 8,
+    "group": "Likely",
+    "pTop10": 0.382,
     "sensTop10Share": 0.842
    },
    {
     "name": "Mujeeb Ur Rahman",
-    "rank": 7,
+    "rank": 9,
     "group": "Likely",
-    "pTop10": 0.478,
-    "sensTop10Share": 0.947
+    "pTop10": 0.345,
+    "sensTop10Share": 0.842
    },
    {
     "name": "Josh Hazlewood",
-    "rank": 8,
-    "group": "Likely",
-    "pTop10": 0.374,
-    "sensTop10Share": 0.895
-   },
-   {
-    "name": "Mohsin Khan",
-    "rank": 9,
-    "group": "Likely",
-    "pTop10": 0.394,
-    "sensTop10Share": 0.895
-   },
-   {
-    "name": "Maheesh Theekshana",
     "rank": 10,
     "group": "Likely",
-    "pTop10": 0.224,
-    "sensTop10Share": 0.632
+    "pTop10": 0.359,
+    "sensTop10Share": 0.842
    }
   ]
  },
@@ -331,85 +331,85 @@
   {
    "test": "Threshold 10% (batters)",
    "change": "Pressure balls = top 10% instead of 20%",
-   "rankCorrelation": 0.853,
-   "top10Overlap": 5
+   "rankCorrelation": 0.91,
+   "top10Overlap": 8
   },
   {
    "test": "Threshold 10% (bowlers)",
    "change": "Pressure balls = top 10% instead of 20%",
-   "rankCorrelation": 0.952,
+   "rankCorrelation": 0.965,
    "top10Overlap": 8
   },
   {
    "test": "Threshold 30% (batters)",
    "change": "Pressure balls = top 30% instead of 20%",
-   "rankCorrelation": 0.94,
-   "top10Overlap": 7
+   "rankCorrelation": 0.993,
+   "top10Overlap": 10
   },
   {
    "test": "Threshold 30% (bowlers)",
    "change": "Pressure balls = top 30% instead of 20%",
-   "rankCorrelation": 0.965,
-   "top10Overlap": 9
+   "rankCorrelation": 0.978,
+   "top10Overlap": 8
   },
   {
    "test": "Stakes off (batters)",
    "change": "Every stakes multiplier = 1.0",
-   "rankCorrelation": 0.953,
-   "top10Overlap": 8
+   "rankCorrelation": 0.997,
+   "top10Overlap": 9
   },
   {
    "test": "Stakes off (bowlers)",
    "change": "Every stakes multiplier = 1.0",
-   "rankCorrelation": 0.967,
-   "top10Overlap": 9
+   "rankCorrelation": 0.983,
+   "top10Overlap": 8
   },
   {
    "test": "Stakes -50% (batters)",
    "change": "Every stakes multiplier's effect x0.5",
-   "rankCorrelation": 0.978,
-   "top10Overlap": 9
+   "rankCorrelation": 0.998,
+   "top10Overlap": 10
   },
   {
    "test": "Stakes -50% (bowlers)",
    "change": "Every stakes multiplier's effect x0.5",
-   "rankCorrelation": 0.98,
-   "top10Overlap": 10
+   "rankCorrelation": 0.991,
+   "top10Overlap": 9
   },
   {
    "test": "Stakes +50% (batters)",
    "change": "Every stakes multiplier's effect x1.5",
-   "rankCorrelation": 0.989,
-   "top10Overlap": 9
+   "rankCorrelation": 0.997,
+   "top10Overlap": 10
   },
   {
    "test": "Stakes +50% (bowlers)",
    "change": "Every stakes multiplier's effect x1.5",
-   "rankCorrelation": 0.987,
-   "top10Overlap": 9
+   "rankCorrelation": 0.991,
+   "top10Overlap": 10
   },
   {
    "test": "Without F3 (batters)",
    "change": "Remove opponent tier in the expected-value models",
-   "rankCorrelation": 0.989,
+   "rankCorrelation": 0.999,
    "top10Overlap": 10
   },
   {
    "test": "Without F3 (bowlers)",
    "change": "Remove opponent tier in the expected-value models",
-   "rankCorrelation": 0.997,
-   "top10Overlap": 10
+   "rankCorrelation": 0.998,
+   "top10Overlap": 9
   },
   {
    "test": "Without F6 (batters)",
    "change": "Remove match stakes",
-   "rankCorrelation": 0.965,
-   "top10Overlap": 7
+   "rankCorrelation": 0.997,
+   "top10Overlap": 10
   },
   {
    "test": "Without F6 (bowlers)",
    "change": "Remove match stakes",
-   "rankCorrelation": 0.974,
+   "rankCorrelation": 0.985,
    "top10Overlap": 9
   },
   {
@@ -427,13 +427,13 @@
   {
    "test": "Without F8 (batters)",
    "change": "Remove powerplay control",
-   "rankCorrelation": 0.991,
+   "rankCorrelation": 0.999,
    "top10Overlap": 10
   },
   {
    "test": "Without F8 (bowlers)",
    "change": "Remove powerplay control",
-   "rankCorrelation": 0.998,
+   "rankCorrelation": 0.999,
    "top10Overlap": 10
   },
   {
@@ -445,7 +445,7 @@
   {
    "test": "Without F9 (bowlers)",
    "change": "Remove control vs teammates",
-   "rankCorrelation": 0.776,
+   "rankCorrelation": 0.679,
    "top10Overlap": 7
   },
   {
@@ -457,7 +457,7 @@
   {
    "test": "Without F10 (bowlers)",
    "change": "Remove opposition Elo in the expected-value models",
-   "rankCorrelation": 0.999,
+   "rankCorrelation": 0.998,
    "top10Overlap": 10
   },
   {
@@ -475,13 +475,13 @@
   {
    "test": "Without F12 (batters)",
    "change": "Remove NRR race",
-   "rankCorrelation": 0.989,
-   "top10Overlap": 9
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
   },
   {
    "test": "Without F12 (bowlers)",
    "change": "Remove NRR race",
-   "rankCorrelation": 0.993,
+   "rankCorrelation": 0.994,
    "top10Overlap": 10
   },
   {
@@ -493,14 +493,14 @@
   {
    "test": "Without F13 (bowlers)",
    "change": "Remove pair-breaker",
-   "rankCorrelation": 0.958,
-   "top10Overlap": 10
+   "rankCorrelation": 0.99,
+   "top10Overlap": 9
   },
   {
    "test": "Without F14 (batters)",
    "change": "Remove collapse entry",
-   "rankCorrelation": 0.998,
-   "top10Overlap": 9
+   "rankCorrelation": 1.0,
+   "top10Overlap": 10
   },
   {
    "test": "Without F14 (bowlers)",
@@ -511,50 +511,50 @@
   {
    "test": "Without F18 (batters)",
    "change": "Favourite-under-threat bonus off",
-   "rankCorrelation": 0.99,
-   "top10Overlap": 9
+   "rankCorrelation": 0.999,
+   "top10Overlap": 10
   },
   {
    "test": "Without F18 (bowlers)",
    "change": "Favourite-under-threat bonus off",
-   "rankCorrelation": 0.99,
-   "top10Overlap": 10
+   "rankCorrelation": 0.994,
+   "top10Overlap": 9
   },
   {
    "test": "IPL only (batters)",
    "change": "Rate on IPL balls only",
-   "rankCorrelation": 0.947,
+   "rankCorrelation": 0.901,
    "top10Overlap": 5
   },
   {
    "test": "IPL only (bowlers)",
    "change": "Rate on IPL balls only",
-   "rankCorrelation": 0.912,
-   "top10Overlap": 5
+   "rankCorrelation": 0.924,
+   "top10Overlap": 4
   },
   {
    "test": "T20I only (batters)",
    "change": "Rate on international balls only",
-   "rankCorrelation": 0.847,
-   "top10Overlap": 5
+   "rankCorrelation": 0.91,
+   "top10Overlap": 6
   },
   {
    "test": "T20I only (bowlers)",
    "change": "Rate on international balls only",
-   "rankCorrelation": 0.858,
+   "rankCorrelation": 0.875,
    "top10Overlap": 6
   },
   {
    "test": "Rule-based pressure (batters)",
    "change": "Death overs / RRR >= 9 / collapse instead of leverage",
-   "rankCorrelation": 0.799,
-   "top10Overlap": 5
+   "rankCorrelation": 0.927,
+   "top10Overlap": 7
   },
   {
    "test": "Rule-based pressure (bowlers)",
    "change": "Death overs / RRR >= 9 / collapse instead of leverage",
-   "rankCorrelation": 0.869,
-   "top10Overlap": 6
+   "rankCorrelation": 0.888,
+   "top10Overlap": 7
   }
  ],
  "limitations": [

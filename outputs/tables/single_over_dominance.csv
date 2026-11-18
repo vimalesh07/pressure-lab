@@ -1,7 +1,7 @@
 list,scheme,median,mean,max
-batters,raw leverage x stakes (uncapped),0.0627,0.0607,0.1206
-batters,v1: uniform (x opp-Elo weight),0.0391,0.0441,0.085
-batters,v2: log1p(capped leverage x stakes),0.0448,0.0472,0.0767
-bowlers,raw leverage x stakes (uncapped),0.064,0.0805,0.191
-bowlers,v1: uniform (x opp-Elo weight),0.0525,0.0641,0.1309
-bowlers,v2: log1p(capped leverage x stakes),0.0579,0.0697,0.173
+batters,raw leverage x stakes (uncapped),0.0557,0.0574,0.1206
+batters,v1: uniform (x opp-Elo weight),0.0384,0.0408,0.0686
+batters,v2: log1p(capped leverage x stakes),0.0439,0.0451,0.0686
+bowlers,raw leverage x stakes (uncapped),0.0745,0.0886,0.191
+bowlers,v1: uniform (x opp-Elo weight),0.0606,0.0677,0.1309
+bowlers,v2: log1p(capped leverage x stakes),0.0678,0.0744,0.173

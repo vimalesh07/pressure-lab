@@ -54,19 +54,28 @@ export function RankRow({
   row,
   index = 0,
   lowerIsBetter = false,
+  sparkDomain = [0, 100],
+  highlighted = false,
 }: {
   row: LeaderboardRow;
   index?: number;
   lowerIsBetter?: boolean;
+  /** Shared y-scale for every sparkline in the table. */
+  sparkDomain?: [number, number];
+  /** Linked from the shirt rail (hover) or ?highlight=<playerId>. */
+  highlighted?: boolean;
 }) {
   return (
     <Link
       href={`/player/?id=${row.playerId}`}
+      id={`row-${row.playerId}`}
       role="row"
+      aria-current={highlighted || undefined}
       className={cx(
         RANK_GRID,
         "rise group rounded-2xl border border-transparent px-4 py-3 transition-colors hover:border-ink/10 hover:bg-bg-700/60",
         row.rank === 1 && "bg-gold-400/[0.045]",
+        highlighted && "border-pink-500/35! bg-pink-500/[0.07]! ring-2 ring-pink-500/20",
       )}
       style={{ ["--i" as string]: index }}
     >
@@ -76,7 +85,7 @@ export function RankRow({
       <span role="cell" className="min-w-0">
         <span className="block truncate font-display text-[15px] font-semibold text-text-100">{row.name}</span>
         <span className="mt-1 flex items-center gap-2">
-          <TeamChip code={row.team} />
+          <TeamChip code={row.team} secondary={row.team2} others={row.teamsOther} />
         </span>
       </span>
       <span role="cell" className="tnum text-right font-display text-[22px] font-semibold leading-none">
@@ -87,20 +96,22 @@ export function RankRow({
         <span className="sr-only">{lowerIsBetter ? "change in economy, sign adjusted so positive is better" : ""}</span>
       </span>
       <span role="cell">
-        <ConfidenceBand low={row.ciLow} high={row.ciHigh} value={row.rating} width="100%" />
-        <span className="tnum mt-1 flex justify-between text-[11px] text-text-400">
-          <span>
-            {row.ciLow.toFixed(0)}–{row.ciHigh.toFixed(0)}
-          </span>
-          <span aria-hidden>± {((row.ciHigh - row.ciLow) / 2).toFixed(1)}</span>
-        </span>
+        <ConfidenceBand low={row.ciLow} high={row.ciHigh} value={row.rating} width="100%" labels resamples={row.resamples} />
       </span>
       <span role="cell" className="tnum text-right text-[13px]">
         <span className="block font-semibold text-text-100">{fmtInt(row.pressureBalls)} balls</span>
         <span className="block text-[11.5px] text-text-400">{row.matches} matches</span>
       </span>
-      <span role="cell">
-        <Sparkline values={row.spark} width={104} />
+      <span role="cell" className="flex h-8 items-center">
+        <Sparkline
+          values={row.spark}
+          points={row.sparkPoints}
+          normal={row.sparkNormal}
+          width={104}
+          height={32}
+          min={sparkDomain[0]}
+          max={sparkDomain[1]}
+        />
       </span>
       <ChevronRight size={16} className="text-text-400 transition-transform group-hover:translate-x-0.5 group-hover:text-pink-300" />
     </Link>
@@ -108,11 +119,13 @@ export function RankRow({
 }
 
 /** Compact stacked row for phones: rank, name, rating, delta and interval. */
-export function RankRowCompact({ row, index = 0 }: { row: LeaderboardRow; index?: number }) {
+export function RankRowCompact({ row, index = 0, highlighted = false }: { row: LeaderboardRow; index?: number; highlighted?: boolean }) {
   return (
     <Link
       href={`/player/?id=${row.playerId}`}
-      className="rise block rounded-2xl border border-ink/[0.06] bg-ink/[0.02] p-3"
+      id={`crow-${row.playerId}`}
+      aria-current={highlighted || undefined}
+      className={cx("rise block rounded-2xl border p-3 transition-colors", highlighted ? "border-pink-500/40 bg-pink-500/[0.07]" : "border-ink/[0.06] bg-ink/[0.02]")}
       style={{ ["--i" as string]: index }}
     >
       <div className="flex items-center gap-3">
@@ -120,7 +133,7 @@ export function RankRowCompact({ row, index = 0 }: { row: LeaderboardRow; index?
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
             <span className="truncate font-display text-[15px] font-semibold">{row.name}</span>
-            <TeamChip code={row.team} />
+            <TeamChip code={row.team} secondary={row.team2} others={row.teamsOther} />
           </div>
           <div className="tnum mt-0.5 text-[11.5px] text-text-400">
             {fmtInt(row.pressureBalls)} balls · {row.matches} matches

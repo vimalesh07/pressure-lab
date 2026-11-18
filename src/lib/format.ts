@@ -41,3 +41,20 @@ export function ratingTier(r: number) {
   if (r >= 45) return "Neutral";
   return "Fragile";
 }
+
+/** Calm → extreme scale for the per-delivery pressure strip: blue → warm neutral → rose (no glow). */
+const PSCALE: [number, [number, number, number]][] = [
+  [0, [74, 115, 168]],
+  [0.5, [214, 202, 186]],
+  [1, [178, 58, 98]],
+];
+export function pressureScale(t: number) {
+  const v = Math.max(0, Math.min(1, t));
+  const i = v <= 0.5 ? 1 : 2;
+  const [p0, c0] = PSCALE[i - 1];
+  const [p1, c1] = PSCALE[i];
+  const k = (v - p0) / (p1 - p0);
+  const c = c0.map((x, j) => Math.round(x + (c1[j] - x) * k));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+export const PRESSURE_SCALE_CSS = "linear-gradient(90deg, rgb(74,115,168) 0%, rgb(214,202,186) 50%, rgb(178,58,98) 100%)";

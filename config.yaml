@@ -193,6 +193,16 @@ rating:
   # not repeat between halves of a player's matches count for less. Final weights are logged.
   reliability_weighting: true
   reliability_floor: 0.10
+  # v3 (chosen by out-of-time test, 3 folds 2024 / 2025-26 / 2026; scratch backtest3):
+  #  - recency: a ball's weight halves for every season before the latest one (half-life in seasons; 0 = off)
+  #  - pressure_prior "normal_skill": each pressure component is shrunk toward the player's own normal-ball
+  #    skill instead of the population mean (pressure skill is mostly overall skill)
+  # Batters: half-life 2 + normal_skill: rho 0.070 -> 0.150, beats the old model in 3/3 folds, top-10 hit rate
+  #          30% -> 37%, split-half reliability 0.45 -> 0.65 (most stable option). Half-life 1 scored rho 0.202
+  #          (within noise) but swung single seasons too hard (e.g. a negative-pressure-WPA batter into the top 10).
+  # Bowlers: half-life 1: rho 0.283 -> 0.312 (3/3 folds), top-10 hit rate equal, reliability 0.63 -> 0.74.
+  recency_half_life_seasons: { bat: 2, bowl: 1 }
+  pressure_prior: { bat: normal_skill, bowl: population }
   # rating = 100 * Phi(z / scale_divisor); 2.0 keeps the top of the scale readable
   # (with 1.0 every top-10 rating and its bootstrap interval saturate near 100).
   scale_divisor: 2.0
@@ -210,6 +220,12 @@ validation:
 export:
   replay_matches: 10
   evidence_matches: 3        # standout matches shown per top-10 player
+  # Pressure Proof "All-rounders" tab: players with at least this many pressure balls on BOTH sides.
+  # Rating = 100 * Phi(z / scale_divisor), z = standardised shrunk batting pressure WPA per ball
+  # + standardised shrunk bowling pressure WPA per ball (same EB priors as the two leaderboards).
+  allrounder_min_bat_pressure_balls: 75   # half the batter eligibility minimum
+  allrounder_min_bowl_pressure_balls: 60  # half the bowler eligibility minimum
+  allrounder_top_n: 10
   profiles_max: 160
   scout_min_cell_balls: 20
   leaderboard_slice_min_pressure_balls: 40

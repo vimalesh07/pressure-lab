@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+from scipy.stats import norm
 
 from utils import CHECK, log
 
@@ -99,7 +100,13 @@ def match_summary(X, mr) -> dict:
             "teamA": str(X.team_name.get(int(mr.team1), mr.team1)),
             "teamB": str(X.team_name.get(int(mr.team2), mr.team2)),
             "scoreA": _score(mr.total1, mr.wkts1, mr.legal1), "scoreB": _score(mr.total2, mr.wkts2, mr.legal2),
-            "result": str(mr.result)}
+            "result": str(mr.result),
+            # presentation only (match centre header / lookup)
+            "teamACode": X.tcode(mr.team1), "teamBCode": X.tcode(mr.team2),
+            "matchNumber": int(mr.match_number) if "match_number" in mr and pd.notna(mr.match_number) else None,
+            "season": str(mr.match_date.year),
+            "winner": ("A" if mr.win_team_id == mr.team1 else "B" if mr.win_team_id == mr.team2 else None)
+            if pd.notna(mr.win_team_id) else None}
 
 
 def player_in_match(C: dict, X, mid, pid, side: str, pct: dict, cache: MatchCache, outcome_text) -> dict | None:
@@ -139,6 +146,7 @@ def player_in_match(C: dict, X, mid, pid, side: str, pct: dict, cache: MatchCach
                  f"{int(r.score_before)}/{int(r.wkts_before)} after {int(r.legal_before) // 6}.{int(r.legal_before) % 6} ov")
         rows.append({
             "idx": pos[ix], "innings": int(r.innings), "over": r.over_label,
+            "batter": str(r.striker_name), "bowler": str(r.bowler_name), "legal": bool(r.legal),
             "opponent": str(r.bowler_name if side == "bat" else r.striker_name),
             "outcome": outcome_text(r), "runs": int(r.bat_runs if side == "bat" else r.bowler_runs),
             "wicket": bool(r.striker_out if side == "bat" else r.bowler_wkt),
@@ -160,6 +168,74 @@ def player_in_match(C: dict, X, mid, pid, side: str, pct: dict, cache: MatchCach
             "deliveries": rows}
 
 
+def _pressure_wpa_by_match(b, pid, side, ok) -> pd.DataFrame:
+    key, wcol, pcol, _, _ = SIDE_COLS[side]
+    x = b[(b[key] == pid) & b.match_id.isin(ok)]
+    if side == "bat":
+        x = x[x.faced]
+    return x[x[pcol]].groupby("match_id")[wcol].agg(["sum", "size"])
+
+
+def _compare(raw, pid, side) -> dict:
+    if side == "bat":
+        rp, rn = raw["bat_p"], raw["bat_n"]
+        return {"metric": "Strike rate", "pressure": round(float(rp.sr.get(pid, np.nan)), 1),
+                "normal": round(float(rn.sr.get(pid, np.nan)), 1), "higherIsBetter": True}
+    rp, rn = raw["bowl_p"], raw["bowl_n"]
+    return {"metric": "Economy", "pressure": round(float(rp.econ.get(pid, np.nan)), 2),
+            "normal": round(float(rn.econ.get(pid, np.nan)), 2), "higherIsBetter": False}
+
+
+def allrounder_table(C: dict) -> pd.DataFrame:
+    """All-rounder pressure rating: shrunk pressure WPA per ball on each side (the leaderboards' EB priors),
+    standardised by each side's true-talent SD and summed; 0-100 via 100 * Phi(z / sd / scale_divisor).
+    Bootstrap by resampling each player's matches (both sides together) gives the interval and P(top N)."""
+    cfg = C["cfg"]
+    ex = cfg["export"]
+    min_b, min_w = ex["allrounder_min_bat_pressure_balls"], ex["allrounder_min_bowl_pressure_balls"]
+    top_n = ex.get("allrounder_top_n", 10)
+    Rb, Rw = C["raters"]["bat"], C["raters"]["bowl"]
+    Sb, Sw = Rb.S, Rw.S
+    ids = Sb.index[Sb.p_balls >= min_b].intersection(Sw.index[Sw.p_balls >= min_w])
+    if len(ids) < 3:
+        return pd.DataFrame()
+    PMb, PMw = C["pm"]["bat"], C["pm"]["bowl"]
+    pri = {"bat": Rb.prior["wpa_p"], "bowl": Rw.prior["wpa_p"]}
+
+    def z(num, den, side):
+        mu, m, tau = pri[side]
+        return ((num + m * mu) / (den + m) - mu) / (tau if tau > 0 else 1.0)
+
+    zc = pd.Series({pid: z(Sb.wpa_p_num[pid], Sb.wpa_p_den[pid], "bat") + z(Sw.wpa_p_num[pid], Sw.wpa_p_den[pid], "bowl")
+                    for pid in ids})
+    sd = float(zc.std()) or 1.0
+    div = cfg["rating"]["scale_divisor"]
+    T = pd.DataFrame({"z": zc, "rating": 100 * norm.cdf(zc / sd / div),
+                      "p_balls_bat": Sb.p_balls.reindex(ids), "p_balls_bowl": Sw.p_balls.reindex(ids)})
+    # bootstrap: resample each player's matches (union of batting and bowling matches)
+    iters = cfg["bootstrap"]["iterations"]
+    rng = np.random.default_rng(cfg["seed"])
+    draws = np.empty((iters, len(ids)))
+    cols = ["wpa_p_num", "wpa_p_den"]
+    for j, pid in enumerate(ids):
+        a = PMb.loc[pid][cols].add_prefix("b_")
+        w = PMw.loc[pid][cols].add_prefix("w_")
+        M = a.join(w, how="outer").fillna(0.0).values  # matches x 4
+        cnt = rng.multinomial(len(M), np.full(len(M), 1 / len(M)), size=iters)
+        s = cnt @ M
+        draws[:, j] = 100 * norm.cdf((z(s[:, 0], s[:, 1], "bat") + z(s[:, 2], s[:, 3], "bowl")) / sd / div)
+    lo, hi = cfg["bootstrap"]["ci"]
+    T["rating_lo"] = np.percentile(draws, lo, axis=0)
+    T["rating_hi"] = np.percentile(draws, hi, axis=0)
+    ranks = (-draws).argsort(axis=1).argsort(axis=1) + 1
+    T["p_top10"] = (ranks <= top_n).mean(axis=0)
+    T = T.sort_values("rating", ascending=False)
+    T["rank"] = np.arange(1, len(T) + 1)
+    log(f"All-rounders: {len(T)} players with >= {min_b} batting and >= {min_w} bowling pressure balls; "
+        f"combined-WPA rating, {iters} match resamples; top {top_n} exported")
+    return T.head(top_n)
+
+
 def build(C: dict, X, outcome_text) -> dict:
     b, m, cfg = C["b"], X.m, C["cfg"]
     n_matches = cfg["export"].get("evidence_matches", 3)
@@ -170,43 +246,83 @@ def build(C: dict, X, outcome_text) -> dict:
     cache = C.setdefault("match_cache", MatchCache(b))
     out, curves = {}, {}
     for side in ["bat", "bowl"]:
-        key, wcol, pcol, tier, team_col = SIDE_COLS[side]
         top = C["top10"][side].join(C["boot"][side])
         for pid, t in top.iterrows():
-            x = b[(b[key] == pid) & b.match_id.isin(ok)]
-            if side == "bat":
-                x = x[x.faced]
-            pm = x[x[pcol]].groupby("match_id")[wcol].agg(["sum", "size"])
+            pm = _pressure_wpa_by_match(b, pid, side, ok)
             pick = pm[pm["size"] >= 2].sort_values("sum", ascending=False).head(n_matches).index
             matches = []
             for mid in pick:
                 mx, _ = cache.get(mid)
                 pim = player_in_match(C, X, mid, pid, side, pct, cache, outcome_text)
+                for d in pim["deliveries"]:
+                    d["side"] = side
                 curves[str(mid)] = curve(mx)
                 matches.append({"id": str(mid), **match_summary(X, m.loc[mid]), **pim})
-            if side == "bat":
-                rp, rn = raw["bat_p"], raw["bat_n"]
-                cmp_ = {"metric": "Strike rate", "pressure": round(float(rp.sr.get(pid, np.nan)), 1),
-                        "normal": round(float(rn.sr.get(pid, np.nan)), 1), "higherIsBetter": True}
-            else:
-                rp, rn = raw["bowl_p"], raw["bowl_n"]
-                cmp_ = {"metric": "Economy", "pressure": round(float(rp.econ.get(pid, np.nan)), 2),
-                        "normal": round(float(rn.econ.get(pid, np.nan)), 2), "higherIsBetter": False}
             slug = X.slug(pid)
-            out[slug] = {"playerId": slug, "name": X.names.get(pid, str(pid)), "team": X.cur_team(pid),
-                         "role": "batter" if side == "bat" else "bowler", "rank": int(t["rank"]),
-                         "rating": round(float(t.rating), 1), "ratingLo": round(float(t.rating_lo), 1),
-                         "ratingHi": round(float(t.rating_hi), 1), "pTop10": round(float(t.p_top10), 3),
-                         "pressureBalls": int(t.p_balls), "pressureMatches": int(len(pm)),
-                         "positiveMatchShare": round(float((pm["sum"] > 0).mean()) if len(pm) else 0.0, 3),
-                         "totalPressureWpa": round(100 * float(pm["sum"].sum()), 1), "compare": cmp_,
-                         "matches": matches}
+            key = slug if slug not in out else f"{slug}--{side}"
+            out[key] = {"key": key, "playerId": slug, "name": X.names.get(pid, str(pid)), "team": X.cur_team(pid),
+                        "role": "batter" if side == "bat" else "bowler", "rank": int(t["rank"]),
+                        "rating": round(float(t.rating), 1), "ratingLo": round(float(t.rating_lo), 1),
+                        "ratingHi": round(float(t.rating_hi), 1), "pTop10": round(float(t.p_top10), 3),
+                        "pressureBalls": int(t.p_balls), "pressureMatches": int(len(pm)),
+                        "positiveMatchShare": round(float((pm["sum"] > 0).mean()) if len(pm) else 0.0, 3),
+                        "totalPressureWpa": round(100 * float(pm["sum"].sum()), 1), "compare": _compare(raw, pid, side),
+                        "matches": matches}
             C["ref_ids"].add(pid)
+
+    # ---------------- all-rounders: batting + bowling pressure WPA combined
+    AR = allrounder_table(C)
+    for pid, t in AR.iterrows():
+        pb, pw = _pressure_wpa_by_match(b, pid, "bat", ok), _pressure_wpa_by_match(b, pid, "bowl", ok)
+        pm = pb.add(pw, fill_value=0)
+        pick = pm[pm["size"] >= 2].sort_values("sum", ascending=False).head(n_matches).index
+        matches = []
+        for mid in pick:
+            mx, _ = cache.get(mid)
+            parts = {}
+            for side in ["bat", "bowl"]:
+                pim = player_in_match(C, X, mid, pid, side, pct, cache, outcome_text)
+                if pim:
+                    for d in pim["deliveries"]:
+                        d["side"] = side
+                    parts[side] = pim
+            first = parts.get("bat") or parts.get("bowl")
+            curves[str(mid)] = curve(mx)
+            dl = sorted([d for v in parts.values() for d in v["deliveries"]], key=lambda d: d["idx"])
+            line = " & ".join(parts[s_]["line"] for s_ in ["bat", "bowl"] if s_ in parts)
+            matches.append({"id": str(mid), **match_summary(X, m.loc[mid]),
+                            "playerTeam": first["playerTeam"], "playerTeamIsA": first["playerTeamIsA"], "won": first["won"],
+                            "line": line, "pressureBalls": sum(v["pressureBalls"] for v in parts.values()),
+                            "pressureWpa": round(sum(v["pressureWpa"] for v in parts.values()), 1),
+                            "matchWpa": round(sum(v["matchWpa"] for v in parts.values()), 1),
+                            "batWpa": parts["bat"]["pressureWpa"] if "bat" in parts else 0.0,
+                            "bowlWpa": parts["bowl"]["pressureWpa"] if "bowl" in parts else 0.0,
+                            "deliveries": dl})
+        slug = X.slug(pid)
+        key = f"{slug}--ar"
+        from export import scope_team  # local import (export imports this module)
+        tside = "bat" if t.p_balls_bat >= t.p_balls_bowl else "bowl"
+        tinfo = scope_team(X, b, pid, tside, "All")
+        out[key] = {"key": key, "playerId": slug, "name": X.names.get(pid, str(pid)), "team": tinfo["team"],
+                    "team2": tinfo["team2"], "teamsOther": tinfo["teamsOther"],
+                    "role": "allrounder", "rank": int(t["rank"]),
+                    "rating": round(float(t.rating), 1), "ratingLo": round(float(t.rating_lo), 1),
+                    "ratingHi": round(float(t.rating_hi), 1), "pTop10": round(float(t.p_top10), 3),
+                    "pressureBalls": int(t.p_balls_bat + t.p_balls_bowl),
+                    "pressureBallsBat": int(t.p_balls_bat), "pressureBallsBowl": int(t.p_balls_bowl),
+                    "pressureMatches": int(len(pm)),
+                    "positiveMatchShare": round(float((pm["sum"] > 0).mean()) if len(pm) else 0.0, 3),
+                    "totalPressureWpa": round(100 * float(pm["sum"].sum()), 1),
+                    "totalPressureWpaBat": round(100 * float(pb["sum"].sum()), 1),
+                    "totalPressureWpaBowl": round(100 * float(pw["sum"].sum()), 1),
+                    "compare": _compare(raw, pid, "bat"), "compareBowl": _compare(raw, pid, "bowl"),
+                    "matches": matches}
+        C["ref_ids"].add(pid)
     n_m = sum(len(v["matches"]) for v in out.values())
     big = max((abs(d["wpa"]) for v in out.values() for mm in v["matches"] for d in mm["deliveries"]), default=0.0)
-    log(f"evidence.json: {len(out)} top-10 players, {n_m} standout matches (highest pressure-ball WPA, >= 2 pressure balls); "
+    log(f"evidence.json: {len(out)} top-10 entries ({len(AR)} all-rounders), {n_m} standout matches (highest pressure-ball WPA, >= 2 pressure balls); "
         f"largest single-ball swing {big:.1f} WP points")
-    n_top = len(C["top10"]["bat"]) + len(C["top10"]["bowl"])
+    n_top = len(C["top10"]["bat"]) + len(C["top10"]["bowl"]) + len(AR)
     CHECK.add("Evidence replay for every top-10 player", len(out) == n_top and all(v["matches"] for v in out.values()),
               f"{len(out)} players, {n_m} standout matches with ball-level pressure reasons")
     return {"levels": [{"min": c, "label": lab} for c, lab in LEVELS], "players": out, "curves": curves}

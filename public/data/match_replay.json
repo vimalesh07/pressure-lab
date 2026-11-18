@@ -1324,7 +1324,7 @@
      "wp": 37.7,
      "pressure": 0.893,
      "event": "W",
-     "note": "Naman Dhir vs Marco Jansen: wicket (Caught). WP 38% -> 54% (PK)"
+     "note": "Naman Dhir vs Marco Jansen: wicket (Caught). WP 38% -> 54% (PBKS)"
     },
     {
      "innings": 2,
@@ -1680,7 +1680,7 @@
      "wp": 60.9,
      "pressure": 0.999,
      "event": "W",
-     "note": "Sherfane Rutherford vs Azmatullah Omarzai: wicket (Caught). WP 61% -> 78% (PK)"
+     "note": "Sherfane Rutherford vs Azmatullah Omarzai: wicket (Caught). WP 61% -> 78% (PBKS)"
     },
     {
      "innings": 2,
@@ -1756,7 +1756,7 @@
      "wp": 73.6,
      "pressure": 0.999,
      "event": "6",
-     "note": "William Jacks vs Arshdeep Singh: six. WP 74% -> 55% (PK)"
+     "note": "William Jacks vs Arshdeep Singh: six. WP 74% -> 55% (PBKS)"
     },
     {
      "innings": 2,
@@ -1801,7 +1801,7 @@
      "wp": 70.9,
      "pressure": 0.999,
      "event": "6",
-     "note": "William Jacks vs Xavier Bartlett: six. WP 71% -> 42% (PK)"
+     "note": "William Jacks vs Xavier Bartlett: six. WP 71% -> 42% (PBKS)"
     },
     {
      "innings": 2,
@@ -1816,7 +1816,7 @@
      "idx": 246,
      "wp": 47.0,
      "pressure": 0.999,
-     "note": "Namboori Tilak Varma vs Xavier Bartlett: dot ball. WP 47% -> 65% (PK)"
+     "note": "Namboori Tilak Varma vs Xavier Bartlett: dot ball. WP 47% -> 65% (PBKS)"
     },
     {
      "innings": 2,
@@ -1825,7 +1825,7 @@
      "wp": 65.2,
      "pressure": 0.999,
      "event": "6",
-     "note": "Namboori Tilak Varma vs Xavier Bartlett: six. WP 65% -> 17% (PK)"
+     "note": "Namboori Tilak Varma vs Xavier Bartlett: six. WP 65% -> 17% (PBKS)"
     },
     {
      "innings": 2,
@@ -1848,7 +1848,7 @@
     {
      "playerId": "azmatullah-omarzai-6676",
      "name": "Azmatullah Omarzai",
-     "team": "PK",
+     "team": "PBKS",
      "role": "All-rounder",
      "line": "4.0-36-2 · 25 pressure balls",
      "wpa": 49.8
@@ -1864,7 +1864,7 @@
     {
      "playerId": "prabhsimran-singh-7216",
      "name": "Prabhsimran Singh",
-     "team": "PK",
+     "team": "PBKS",
      "role": "Batter",
      "line": "57 (32) · 18 pressure balls",
      "wpa": 19.3
@@ -5840,7 +5840,7 @@
      "wp": 57.8,
      "pressure": 0.97,
      "event": "W",
-     "note": "Atharwa Taide vs Navdeep Saini: wicket (Caught). WP 58% -> 39% (PK)"
+     "note": "Atharwa Taide vs Navdeep Saini: wicket (Caught). WP 58% -> 39% (PBKS)"
     },
     {
      "innings": 1,
@@ -5970,7 +5970,7 @@
      "wp": 38.0,
      "pressure": 0.898,
      "event": "W",
-     "note": "Liam Livingstone vs Navdeep Saini: wicket (Bowled). WP 38% -> 17% (PK)"
+     "note": "Liam Livingstone vs Navdeep Saini: wicket (Bowled). WP 38% -> 17% (PBKS)"
     },
     {
      "innings": 1,
@@ -6661,7 +6661,7 @@
      "wp": 42.4,
      "pressure": 0.79,
      "event": "W",
-     "note": "Jos Buttler vs Kagiso Rabada: wicket (LBW). WP 42% -> 58% (PK)"
+     "note": "Jos Buttler vs Kagiso Rabada: wicket (LBW). WP 42% -> 58% (PBKS)"
     },
     {
      "innings": 2,
@@ -7023,7 +7023,7 @@
      "wp": 23.5,
      "pressure": 0.721,
      "event": "W",
-     "note": "Devdutt Padikkal vs Arshdeep Singh: wicket (Caught). WP 24% -> 38% (PK)"
+     "note": "Devdutt Padikkal vs Arshdeep Singh: wicket (Caught). WP 24% -> 38% (PBKS)"
     },
     {
      "innings": 2,
@@ -7067,7 +7067,7 @@
      "wp": 38.9,
      "pressure": 0.86,
      "event": "W",
-     "note": "Sanju Samson vs Rahul Chahar: wicket (Caught). WP 39% -> 56% (PK)"
+     "note": "Sanju Samson vs Rahul Chahar: wicket (Caught). WP 39% -> 56% (PBKS)"
     },
     {
      "innings": 2,
@@ -7505,7 +7505,7 @@
      "wp": 41.4,
      "pressure": 0.997,
      "event": "6",
-     "note": "Dhruv Jurel vs Rahul Chahar: six. WP 41% -> 0% (PK)"
+     "note": "Dhruv Jurel vs Rahul Chahar: six. WP 41% -> 0% (PBKS)"
     }
    ],
    "performers": [
@@ -7528,7 +7528,7 @@
     {
      "playerId": "jitesh-sharma-3916",
      "name": "Jitesh Sharma",
-     "team": "PK",
+     "team": "PBKS",
      "role": "Batter",
      "line": "44 (28) · 7 pressure balls",
      "wpa": 16.3
@@ -7663,7 +7663,7 @@
      "wp": 57.8,
      "pressure": 0.996,
      "event": "W",
-     "note": "Abhishek Sharma vs Yudhvir Singh: wicket (Caught). WP 58% -> 41% (SH)"
+     "note": "Abhishek Sharma vs Yudhvir Singh: wicket (Caught). WP 58% -> 41% (SRH)"
     },
     {
      "innings": 1,
@@ -7820,7 +7820,7 @@
      "wp": 57.8,
      "pressure": 0.99,
      "event": "W",
-     "note": "Rahul Tripathi vs Yash Thakur: wicket (Caught). WP 58% -> 44% (SH)"
+     "note": "Rahul Tripathi vs Yash Thakur: wicket (Caught). WP 58% -> 44% (SRH)"
     },
     {
      "innings": 1,
@@ -8600,7 +8600,7 @@
      "wp": 46.0,
      "pressure": 0.864,
      "event": "W",
-     "note": "Kyle Mayers vs Glenn Phillips: wicket (Caught). WP 46% -> 61% (SH)"
+     "note": "Kyle Mayers vs Glenn Phillips: wicket (Caught). WP 46% -> 61% (SRH)"
     },
     {
      "innings": 2,
@@ -8818,7 +8818,7 @@
      "wp": 45.9,
      "pressure": 0.871,
      "event": "W",
-     "note": "Quinton de Kock vs Mayank Markande: wicket (Caught). WP 46% -> 62% (SH)"
+     "note": "Quinton de Kock vs Mayank Markande: wicket (Caught). WP 46% -> 62% (SRH)"
     },
     {
      "innings": 2,
@@ -9158,7 +9158,7 @@
      "wp": 25.0,
      "pressure": 0.976,
      "event": "W",
-     "note": "Marcus Stoinis vs Abhishek Sharma: wicket (Caught). WP 25% -> 43% (SH)"
+     "note": "Marcus Stoinis vs Abhishek Sharma: wicket (Caught). WP 25% -> 43% (SRH)"
     },
     {
      "innings": 2,
@@ -9307,7 +9307,7 @@
      "wp": 20.5,
      "pressure": 0.999,
      "event": "6",
-     "note": "Nicholas Pooran vs T Natarajan: six. WP 21% -> 3% (SH)"
+     "note": "Nicholas Pooran vs T Natarajan: six. WP 21% -> 3% (SRH)"
     },
     {
      "innings": 2,
@@ -9360,7 +9360,7 @@
     {
      "playerId": "aiden-markram-3605",
      "name": "Aiden Markram",
-     "team": "SH",
+     "team": "SRH",
      "role": "Batter",
      "line": "28 (20) · 8 pressure balls",
      "wpa": 9.7
@@ -10976,7 +10976,7 @@
      "wp": 34.5,
      "pressure": 0.974,
      "event": "W",
-     "note": "Nitish Rana vs Rahul Chahar: wicket (Caught). WP 34% -> 54% (PK)"
+     "note": "Nitish Rana vs Rahul Chahar: wicket (Caught). WP 34% -> 54% (PBKS)"
     },
     {
      "innings": 2,
@@ -11116,7 +11116,7 @@
      "wp": 69.6,
      "pressure": 0.997,
      "event": "6",
-     "note": "Andre Russell vs Sam Curran: six. WP 70% -> 50% (PK)"
+     "note": "Andre Russell vs Sam Curran: six. WP 70% -> 50% (PBKS)"
     },
     {
      "innings": 2,
@@ -11125,7 +11125,7 @@
      "wp": 50.2,
      "pressure": 0.997,
      "event": "6",
-     "note": "Andre Russell vs Sam Curran: six. WP 50% -> 26% (PK)"
+     "note": "Andre Russell vs Sam Curran: six. WP 50% -> 26% (PBKS)"
     },
     {
      "innings": 2,
@@ -11141,7 +11141,7 @@
      "wp": 35.9,
      "pressure": 0.998,
      "event": "6",
-     "note": "Andre Russell vs Sam Curran: six. WP 36% -> 10% (PK)"
+     "note": "Andre Russell vs Sam Curran: six. WP 36% -> 10% (PBKS)"
     },
     {
      "innings": 2,
@@ -11186,7 +11186,7 @@
      "wp": 16.6,
      "pressure": 0.998,
      "event": "W",
-     "note": "Andre Russell vs Arshdeep Singh: wicket (RunOut). WP 17% -> 44% (PK)"
+     "note": "Andre Russell vs Arshdeep Singh: wicket (RunOut). WP 17% -> 44% (PBKS)"
     },
     {
      "innings": 2,
@@ -11195,14 +11195,14 @@
      "wp": 43.6,
      "pressure": 0.997,
      "event": "4",
-     "note": "Rinku Singh vs Arshdeep Singh: four. WP 44% -> 0% (PK)"
+     "note": "Rinku Singh vs Arshdeep Singh: four. WP 44% -> 0% (PBKS)"
     }
    ],
    "performers": [
     {
      "playerId": "rahul-chahar-6161",
      "name": "Rahul Chahar",
-     "team": "PK",
+     "team": "PBKS",
      "role": "Bowler",
      "line": "4.0-23-2 · 24 pressure balls",
      "wpa": 36.9
@@ -11218,7 +11218,7 @@
     {
      "playerId": "harpreet-brar-7325",
      "name": "Harpreet Brar",
-     "team": "PK",
+     "team": "PBKS",
      "role": "Bowler",
      "line": "1.0-4-1 · 4 pressure balls",
      "wpa": 22.3
@@ -13075,7 +13075,7 @@
     {
      "playerId": "abdul-samad-7446",
      "name": "Abdul Samad",
-     "team": "SH",
+     "team": "SRH",
      "role": "Batter",
      "line": "17 (7) · 6 pressure balls",
      "wpa": 95.8
@@ -13099,7 +13099,7 @@
     {
      "playerId": "glenn-phillips-4853",
      "name": "Glenn Phillips",
-     "team": "SH",
+     "team": "SRH",
      "role": "Batter",
      "line": "25 (7) · 5 pressure balls",
      "wpa": 11.2
@@ -14957,7 +14957,7 @@
     {
      "playerId": "sikandar-raza-2984",
      "name": "Sikandar Raza",
-     "team": "PK",
+     "team": "PBKS",
      "role": "All-rounder",
      "line": "13 (7) · 7 pressure balls",
      "wpa": 50.7
@@ -14973,7 +14973,7 @@
     {
      "playerId": "liam-livingstone-4391",
      "name": "Liam Livingstone",
-     "team": "PK",
+     "team": "PBKS",
      "role": "All-rounder",
      "line": "40 (24) · 14 pressure balls",
      "wpa": 17.7
@@ -18647,7 +18647,7 @@
     {
      "playerId": "rahul-tripathi-1440",
      "name": "Rahul Tripathi",
-     "team": "SH",
+     "team": "SRH",
      "role": "Batter",
      "line": "44 (30) · 5 pressure balls",
      "wpa": 13.9

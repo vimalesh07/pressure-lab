@@ -6,10 +6,13 @@ import type {
   Kpis,
   Leaderboard,
   MatchFile,
+  MatchIndexEntry,
+  MatchLogFile,
   MatchReplayFile,
   MatchupsFile,
   MethodFile,
   Player,
+  PlayerPhotoInfo,
   PlayerProfile,
   ScoutingFile,
 } from "./types";
@@ -26,6 +29,7 @@ export interface DataFiles {
   "scouting.json": ScoutingFile;
   "method.json": MethodFile;
   "evidence.json": EvidenceFile;
+  "player_photos.json": Record<string, PlayerPhotoInfo>;
 }
 export type DataFile = keyof DataFiles;
 
@@ -56,6 +60,34 @@ export function loadMatch(id: string): Promise<MatchFile> {
     cache.set(key, p);
   }
   return cache.get(key) as Promise<MatchFile>;
+}
+
+/** Lookup index of every match file (public/data/matches/index.json). */
+export function loadMatchIndex(): Promise<MatchIndexEntry[]> {
+  const key = "matches/index.json";
+  if (!cache.has(key)) {
+    const p = fetch(`${BASE}/${key}`).then((r) => {
+      if (!r.ok) throw new Error(`Could not load the match index (${r.status})`);
+      return r.json();
+    });
+    p.catch(() => cache.delete(key));
+    cache.set(key, p);
+  }
+  return cache.get(key) as Promise<MatchIndexEntry[]>;
+}
+
+/** One player's match log (public/data/logs/<playerId>.json), fetched on demand and cached. */
+export function loadLog(id: string): Promise<MatchLogFile> {
+  const key = `logs/${id}.json`;
+  if (!cache.has(key)) {
+    const p = fetch(`${BASE}/${key}`).then((r) => {
+      if (!r.ok) throw new Error(r.status === 404 ? "No match log for this player yet." : `Could not load match log (${r.status})`);
+      return r.json();
+    });
+    p.catch(() => cache.delete(key));
+    cache.set(key, p);
+  }
+  return cache.get(key) as Promise<MatchLogFile>;
 }
 
 export interface DataState<T> {

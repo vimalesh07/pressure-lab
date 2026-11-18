@@ -20,7 +20,7 @@ import player_metrics as pmx
 from pressure_index import Options
 from ranking import RATING_COMPS, Rater, bootstrap
 from scouting import PHASE_NAME, bowler_group
-from utils import CHECK, log, section, slugify, team_code, write_json
+from utils import CHECK, IPL_CODES, log, section, slugify, team_code, write_json
 
 PHASES_UI = {"Powerplay": "PP", "Middle": "Middle", "Death": "Death"}
 BOWLER_ROWS = ["Right-arm pace", "Left-arm pace", "Off spin", "Leg spin", "Left-arm orthodox", "Left-arm wrist spin"]
@@ -257,7 +257,41 @@ def figures(C: dict, X: Ctx) -> None:
 # ====================================================================== JSON: leaderboards
 
 
-def _slice_rows(C, X, side, mask, label, iters=200) -> list[dict]:
+def _season_span(seasons) -> str:
+    """[2024, 2025] -> "2024–25"; [2022, 2024] -> "2022, 2024"."""
+    s = sorted({int(x) for x in seasons})
+    if not s:
+        return ""
+    if s == list(range(s[0], s[-1] + 1)):
+        return str(s[0]) if len(s) == 1 else f"{s[0]}–{str(s[-1])[2:]}"
+    return ", ".join(str(x) for x in s)
+
+
+def scope_team(X: "Ctx", b: pd.DataFrame, pid, side: str, fmt: str) -> dict:
+    """Team label for a player in a filtered scope (b = the balls in scope).
+    IPL / T20I: the team with the most balls in scope; other teams listed with their seasons.
+    All: the team with the most PRESSURE balls in scope, plus the main team of the other format as a secondary tag."""
+    key, tcol, pcol = ("striker_id", "batting_team_id", "p_bat") if side == "bat" else ("bowler_id", "bowling_team_id", "p_bowl")
+    x = b[b[key] == pid]
+    if side == "bat":
+        x = x[x.faced]
+    if not len(x):
+        return {"team": X.cur_team(pid), "team2": None, "teamsOther": []}
+    base = x[x[pcol]] if fmt == "All" and x[pcol].any() else x
+    main = base.groupby(tcol).size().idxmax()
+    main_fmt = x.loc[x[tcol] == main, "fmt"].iloc[0]
+    same = x[x.fmt == main_fmt]
+    others = [{"code": X.tcode(t), "seasons": _season_span(g.season)}
+              for t, g in same.groupby(tcol) if t != main]
+    team2 = None
+    if fmt == "All":
+        other = x[x.fmt != main_fmt]
+        if len(other):
+            team2 = X.tcode(other.groupby(tcol).size().idxmax())
+    return {"team": X.tcode(main), "team2": team2, "teamsOther": others}
+
+
+def _slice_rows(C, X, side, mask, label, iters=200, fmt="All") -> list[dict]:
     cfg = C["cfg"]
     b = C["b"]
     o = Options()
@@ -282,10 +316,14 @@ def _slice_rows(C, X, side, mask, label, iters=200) -> list[dict]:
     c2 = copy.deepcopy(cfg)
     c2["bootstrap"]["iterations"] = iters
     bs = bootstrap(c2, R, PM, cfg["seed"]) if len(T) >= 3 else pd.DataFrame(index=T.index, columns=["rating_lo", "rating_hi"])
-    return _rows(C, X, side, T.head(10), bs, PM, mask)
+    return _rows(C, X, side, T.head(EXPORT_TOP), bs, PM, mask, iters, fmt)
 
 
-def _rows(C, X, side, top, bs, PM, mask) -> list[dict]:
+EXPORT_TOP = 40  # rows per leaderboard view (the Leaderboards page shows 1-10, the Overview sphere up to 40)
+DETAIL_TOP = 10  # sparkline data only for the rows the table shows
+
+
+def _rows(C, X, side, top, bs, PM, mask, resamples: int, fmt: str = "All") -> list[dict]:
     b = C["b"] if mask is None else C["b"][mask]
     fb, fw = C["pflags"]
     if mask is not None:
@@ -309,15 +347,41 @@ def _rows(C, X, side, top, bs, PM, mask) -> list[dict]:
             ep = 6 * p.bowler_runs.sum() / max(p.legal.sum(), 1)
             en = 6 * n.bowler_runs.sum() / max(n.legal.sum(), 1)
             dp = 100 * (en - ep) / max(en, 1e-6)
-        sp = pct.loc[pid].sort_index().tail(12) if pid in pct.index.get_level_values(0) else pd.Series(dtype=float)
+        light = rank > DETAIL_TOP
+        if pid in pct.index.get_level_values(0) and not light:
+            sp = pct.loc[pid]
+            sp = sp.iloc[np.argsort(X.m.match_date.reindex(sp.index).values, kind="stable")].tail(12)
+        else:
+            sp = pd.Series(dtype=float)
+        # opponent of each sparkline match (from the side the player was on)
+        mine = (X.by_striker if side == "bat" else X.by_bowler).get(pid)
+        team_col = "batting_team_id" if side == "bat" else "bowling_team_id"
+        team_of = mine.groupby("match_id")[team_col].first() if mine is not None else pd.Series(dtype=float)
+        points = []
+        for mid, v in (sp.items() if not light else []):
+            mr = X.m.loc[mid]
+            t = team_of.get(mid)
+            opp = mr.team2 if pd.notna(t) and int(t) == int(mr.team1) else mr.team1
+            points.append({"matchId": str(mid), "date": mr.match_date.strftime("%Y-%m-%d"),
+                           "label": f"{X.tcode(t)} vs {X.tcode(opp)}" if pd.notna(t) else str(mr.comp_name),
+                           "score": int(round(v))})
+        # normal (non-pressure) per-ball value, placed on the same percentile scale as the pressure scores
+        nk = "nrae_n" if side == "bat" else "nrs_n"
+        if pid in PM.index.get_level_values(0) and not light:
+            g = PM.loc[pid]
+            nv = g[f"{nk}_num"].sum() / g[f"{nk}_den"].sum() if g[f"{nk}_den"].sum() > 0 else np.nan
+        else:
+            nv = np.nan
+        normal = int(round(100 * float((ms[ok] < nv).mean()))) if pd.notna(nv) else None
         lo = bs.rating_lo.get(pid, np.nan) if "rating_lo" in bs else np.nan
         hi = bs.rating_hi.get(pid, np.nan) if "rating_hi" in bs else np.nan
         rows.append({"rank": int(r.get("rank", rank)), "playerId": X.slug(pid), "name": X.names.get(pid, str(pid)),
-                     "team": X.cur_team(pid), "rating": round(float(r.rating), 1), "deltaPct": round(float(dp), 1),
+                     **scope_team(X, b, pid, side, fmt), "rating": round(float(r.rating), 1), "deltaPct": round(float(dp), 1),
                      "ciLow": round(float(lo if pd.notna(lo) else r.rating), 1),
                      "ciHigh": round(float(hi if pd.notna(hi) else r.rating), 1),
                      "pressureBalls": int(r.p_balls), "matches": int(r.matches_p),
-                     "spark": [int(round(v)) for v in sp.values]})
+                     "spark": [int(round(v)) for v in sp.values], "sparkPoints": points, "sparkNormal": normal,
+                     "resamples": int(resamples) if pd.notna(lo) else 0})
         card = C.get("cards", {}).get(side)
         if mask is None and card is not None and pid in set(card.player_id):  # FIX 9: overall view only
             cr = card.set_index("player_id").loc[pid]
@@ -339,8 +403,12 @@ def leaderboards(C: dict, X: Ctx) -> None:
             for season in ["All"] + seasons:
                 for ph in ["All", "Powerplay", "Middle", "Death"]:
                     if fmt == season == ph == "All":
-                        top = C["top10"][side]
-                        rows = _rows(C, X, side, top, C["boot"][side], C["pm"][side], None)
+                        t10 = C["top10"][side]
+                        rest = C["tables"][side].drop(t10.index, errors="ignore").sort_values("rating", ascending=False)
+                        rest = rest.head(EXPORT_TOP - len(t10)).assign(rank=np.arange(len(t10) + 1, min(EXPORT_TOP, len(t10) + len(rest)) + 1))
+                        top = pd.concat([t10, rest[t10.columns.intersection(rest.columns)]])
+                        rows = _rows(C, X, side, top, C["boot"][side], C["pm"][side], None,
+                                     C["cfg"]["bootstrap"]["iterations"], fmt)
                     else:
                         mask = np.ones(len(b), bool)
                         if fmt != "All":
@@ -349,12 +417,21 @@ def leaderboards(C: dict, X: Ctx) -> None:
                             mask &= (b.season.astype(str) == season).values
                         if ph != "All":
                             mask &= (b.phase == PHASES_UI[ph]).values
-                        rows = _slice_rows(C, X, side, mask, f"{fmt}/{season}/{ph}")
+                        rows = _slice_rows(C, X, side, mask, f"{fmt}/{season}/{ph}", fmt=fmt)
+                    ids = [r["playerId"] for r in rows]
+                    if len(ids) != len(set(ids)):  # a player may appear at most once per table
+                        raise RuntimeError(f"leaderboard_{lab} {fmt}/{season}/{ph}: duplicate player ids {ids}")
                     views.append({"format": fmt, "season": season, "phase": ph, "rows": rows})
         write_json({"discipline": "batting" if side == "bat" else "bowling", "keyStat": key, "seasons": seasons,
                     "views": views}, C["P"]["public"] / f"leaderboard_{lab}.json")
         n_rows = sum(len(v["rows"]) for v in views)
         log(f"leaderboard_{lab}.json: {len(views)} views, {n_rows} rows")
+        # team labels follow the scope: IPL views -> franchises only, T20I views -> national teams only
+        bad = [(v["format"], r["name"], r["team"]) for v in views for r in v["rows"]
+               if (v["format"] == "IPL" and r["team"] not in IPL_CODES) or (v["format"] == "T20I" and r["team"] in IPL_CODES)]
+        legacy = [r["team"] for v in views for r in v["rows"] if r["team"] in ("SH", "PK") or r.get("team2") in ("SH", "PK")]
+        CHECK.add(f"Leaderboard {lab}: team label matches the scope, official codes, no duplicates",
+                  not bad and not legacy, f"{len(views)} views checked; mismatches {bad[:3]}; legacy codes {legacy[:3]}")
 
 
 # ====================================================================== JSON: profiles
@@ -373,11 +450,17 @@ def heatmap_bat(X: Ctx, pid, cfg) -> dict:
             if n == 0:
                 cells.append({"row": r, "col": ph_ui, "value": None, "balls": 0})
                 continue
-            exp = g.e_bat_runs.sum()
-            v = 100 * g.bat_runs.sum() / max(exp, 1e-6)
-            cells.append({"row": r, "col": ph_ui, "value": int(round(min(v, 250))), "balls": n})
+            exp = float(g.e_bat_runs.sum())
+            runs = int(g.bat_runs.sum())
+            v = 100 * runs / max(exp, 1e-6)
+            cells.append({"row": r, "col": ph_ui, "value": int(round(min(v, 250))), "balls": n,
+                          "runs": runs, "expRuns": round(exp, 1), "rate": round(100 * runs / n, 1),
+                          "dismissals": int(g.striker_out.sum())})
     return {"rowLabel": "Bowler type", "colLabel": "Phase", "rows": BOWLER_ROWS, "cols": list(PHASES_UI),
             "metricLabel": "Runs vs expected under pressure (100 = expected)", "minBalls": cfg["export"]["scout_min_cell_balls"],
+            "formula": "Pressure run index = (actual runs scored ÷ expected runs for those balls) × 100. "
+                       "100 = as expected, above 100 = stronger, below 100 = weaker.",
+            "ballsLabel": "Balls faced", "runsLabel": "Runs", "rateLabel": "Strike rate", "dismissalsLabel": "Dismissals",
             "cells": cells}
 
 
@@ -393,11 +476,109 @@ def heatmap_bowl(X: Ctx, pid, cfg) -> dict:
             if n == 0:
                 cells.append({"row": r, "col": ph_ui, "value": None, "balls": 0})
                 continue
-            v = 100 * g.e_bowl_runs.sum() / max(g.bowler_runs.sum(), 1)
-            cells.append({"row": r, "col": ph_ui, "value": int(round(min(v, 250))), "balls": n})
+            exp = float(g.e_bowl_runs.sum())
+            runs = int(g.bowler_runs.sum())
+            v = 100 * exp / max(runs, 1)
+            cells.append({"row": r, "col": ph_ui, "value": int(round(min(v, 250))), "balls": n,
+                          "runs": runs, "expRuns": round(exp, 1), "rate": round(6 * runs / n, 2),
+                          "dismissals": int(g.bowler_wkt.sum())})
     return {"rowLabel": "Batter tier", "colLabel": "Phase", "rows": rows, "cols": list(PHASES_UI),
             "metricLabel": "Expected vs actual runs conceded under pressure (100 = expected)",
+            "formula": "Pressure run index = (expected runs for those balls ÷ actual runs conceded) × 100. "
+                       "100 = as expected, above 100 = stronger, below 100 = weaker.",
+            "ballsLabel": "Balls bowled", "runsLabel": "Runs conceded", "rateLabel": "Economy", "dismissalsLabel": "Wickets",
             "minBalls": cfg["export"]["scout_min_cell_balls"], "cells": cells}
+
+
+def _overs(balls: int) -> str:
+    return f"{balls // 6}.{balls % 6}"
+
+
+def match_log(X: "Ctx", pid, side: str, rk: pd.Series, nrk: pd.Series) -> list[dict]:
+    """Every match the player batted or bowled in: match score + result, the player's full line and the
+    part of it on pressure balls (newest first). Written to public/data/logs/<slug>.json."""
+    if not hasattr(X, "_dismissals"):  # (match_id, player_id) -> how out, built once
+        d = X.b[X.b.dismissed_player_id.notna()]
+        X._dismissals = {(m, int(p)): str(t) for m, p, t in zip(d.match_id, d.dismissed_player_id, d.dismissal_type)}
+    dis = X._dismissals
+    bat = X.by_striker.get(pid)
+    bowl = X.by_bowler.get(pid)
+    mids = set(bat.match_id.unique() if bat is not None else []) | set(bowl.match_id.unique() if bowl is not None else [])
+    bat_g = dict(tuple(bat.groupby("match_id"))) if bat is not None else {}
+    bowl_g = dict(tuple(bowl.groupby("match_id"))) if bowl is not None else {}
+    rows = []
+    for mid in mids:
+        if mid not in X.m.index:
+            continue
+        mr = X.m.loc[mid]
+        summ = evx.match_summary(X, mr)
+        row = {"matchId": str(mid), **summ}
+        team = None
+        g = bat_g.get(mid)
+        if g is not None and g.faced.any():
+            team = g.batting_team_id.iloc[0]
+            f = g[g.faced]
+            how = dis.get((mid, int(pid)))
+            pb = f[f.p_bat]
+            row["bat"] = {"runs": int(f.bat_runs.sum()), "balls": int(len(f)), "fours": int(f.is_four.sum()),
+                          "sixes": int(f.is_six.sum()), "out": how is not None,
+                          "how": how,
+                          "pRuns": int(pb.bat_runs.sum()), "pBalls": int(len(pb)), "pOut": bool(pb.striker_out.any())}
+        g = bowl_g.get(mid)
+        if g is not None and len(g):
+            team = team if team is not None else g.bowling_team_id.iloc[0]
+            pw = g[g.p_bowl]
+            row["bowl"] = {"balls": int(g.legal.sum()), "runs": int(g.bowler_runs.sum()), "wkts": int(g.bowler_wkt.sum()),
+                           "dots": int(g.is_dot.sum()), "pBalls": int(pw.legal.sum()), "pRuns": int(pw.bowler_runs.sum()),
+                           "pWkts": int(pw.bowler_wkt.sum())}
+        if team is None:
+            continue
+        opp = mr.team2 if int(team) == int(mr.team1) else mr.team1
+        row["team"] = X.tcode(team)
+        row["opponent"] = X.tcode(opp)
+        row["won"] = bool(mr.win_team_id == team) if pd.notna(mr.win_team_id) else None
+        ps = rk.get((pid, mid), np.nan)
+        ns = nrk.get((pid, mid), np.nan)
+        row["pressureScore"] = int(round(ps)) if pd.notna(ps) else None
+        row["normalScore"] = int(round(ns)) if pd.notna(ns) else None
+        row["hasDetail"] = False
+        rows.append(row)
+    rows.sort(key=lambda r: r["date"], reverse=True)
+    return rows
+
+
+def best_performances(rows: list[dict], side: str) -> list[dict]:
+    """Best line overall and best line on pressure balls only (min. 6 pressure balls)."""
+    out = []
+    if side == "bat":
+        b = [r for r in rows if "bat" in r]
+        if b:
+            r = max(b, key=lambda r: (r["bat"]["runs"], -r["bat"]["balls"]))
+            x = r["bat"]
+            out.append({"kind": "overall", "label": "Best innings", "line": f"{x['runs']}{'' if x['out'] else '*'} ({x['balls']})",
+                        "matchId": r["matchId"], "opponent": r["opponent"], "date": r["date"], "competition": r["competition"]})
+        bp = [r for r in b if r["bat"]["pBalls"] >= 6]
+        if bp:
+            r = max(bp, key=lambda r: (r["bat"]["pRuns"], -r["bat"]["pBalls"]))
+            x = r["bat"]
+            out.append({"kind": "pressure", "label": "Best under pressure",
+                        "line": f"{x['pRuns']}{'' if x['pOut'] else '*'} ({x['pBalls']})",
+                        "matchId": r["matchId"], "opponent": r["opponent"], "date": r["date"], "competition": r["competition"]})
+    else:
+        b = [r for r in rows if "bowl" in r and r["bowl"]["balls"] > 0]
+        if b:
+            r = max(b, key=lambda r: (r["bowl"]["wkts"], -r["bowl"]["runs"]))
+            x = r["bowl"]
+            out.append({"kind": "overall", "label": "Best bowling", "line": f"{x['wkts']}/{x['runs']} ({_overs(x['balls'])})",
+                        "matchId": r["matchId"], "opponent": r["opponent"], "date": r["date"], "competition": r["competition"]})
+        bp = [r for r in b if r["bowl"]["pBalls"] >= 6]
+        if bp:
+            r = max(bp, key=lambda r: (r["bowl"]["pWkts"], -r["bowl"]["pRuns"]))
+            x = r["bowl"]
+            out.append({"kind": "pressure", "label": "Best under pressure",
+                        "line": f"{x['pWkts']}/{x['pRuns']} ({_overs(x['pBalls'])})",
+                        "matchId": r["matchId"], "opponent": r["opponent"], "date": r["date"], "competition": r["competition"]})
+    return out
 
 
 def _pctile(series: pd.Series, val: float) -> int:
@@ -424,11 +605,13 @@ def profile(C: dict, X: Ctx, pid, disc: str) -> dict:
 
         def m(g):
             fcd = max(g.faced.sum(), 1)
-            return {"sr": 100 * g.bat_runs.sum() / fcd, "dot": 100 * (g.faced & (g.bat_runs == 0)).sum() / fcd,
+            outs = int(g.striker_out.sum())
+            return {"avg": (g.bat_runs.sum() / outs) if outs else None,
+                    "sr": 100 * g.bat_runs.sum() / fcd, "dot": 100 * (g.faced & (g.bat_runs == 0)).sum() / fcd,
                     "bnd": 100 * (g.is_four | g.is_six).sum() / fcd, "dis": 100 * g.striker_out.sum() / fcd,
                     "nrae": g.nrae.sum() / fcd, "wpa": 100 * g.wpa_bat.sum() / fcd}
         mn, mp = m(n), m(p)
-        comp = [("sr", "Strike rate", "", "higher"), ("dot", "Dot-ball %", "%", "lower"), ("bnd", "Boundary %", "%", "higher"),
+        comp = [("avg", "Batting average", "", "higher"), ("sr", "Strike rate", "", "higher"), ("dot", "Dot-ball %", "%", "lower"), ("bnd", "Boundary %", "%", "higher"),
                 ("dis", "Dismissal % per ball", "%", "lower"), ("nrae", "Net runs above expected / ball", "", "higher"),
                 ("wpa", "Win prob. added / ball", "wpa", "higher")]
         radar_def = [("Ball Pressure (WPA)", "wpa_p"), ("Run Value", "nrae_p"), ("Pressure Delta", "delta"),
@@ -440,17 +623,21 @@ def profile(C: dict, X: Ctx, pid, disc: str) -> dict:
 
         def m(g):
             lg = max(g.legal.sum(), 1)
-            return {"econ": 6 * g.bowler_runs.sum() / lg, "dot": 100 * g.is_dot.sum() / lg,
+            wk = int(g.bowler_wkt.sum())
+            return {"avg": (g.bowler_runs.sum() / wk) if wk else None, "srb": (g.legal.sum() / wk) if wk else None,
+                    "econ": 6 * g.bowler_runs.sum() / lg, "dot": 100 * g.is_dot.sum() / lg,
                     "bnd": 100 * (g.is_four | g.is_six).sum() / lg, "wkt": 100 * g.bowler_wkt.sum() / lg,
                     "nrs": g.nrs.sum() / lg, "wpa": 100 * g.wpa_bowl.sum() / lg}
         mn, mp = m(n), m(p)
-        comp = [("econ", "Economy", "rpo", "lower"), ("dot", "Dot-ball %", "%", "higher"), ("bnd", "Boundary % conceded", "%", "lower"),
+        comp = [("avg", "Bowling average", "", "lower"), ("srb", "Bowling strike rate (balls / wkt)", "", "lower"),
+                ("econ", "Economy", "rpo", "lower"), ("dot", "Dot-ball %", "%", "higher"), ("bnd", "Boundary % conceded", "%", "lower"),
                 ("wkt", "Wicket % per ball", "%", "higher"), ("nrs", "Net runs saved / ball", "", "higher"),
                 ("wpa", "Win prob. added / ball", "wpa", "higher")]
         radar_def = [("Ball Pressure (WPA)", "wpa_p"), ("Runs Saved", "rsae_p"), ("Pressure Delta", "delta"),
                      ("Death Clamp", "death_clamp"), ("Powerplay Control", "pp_control"), ("Control vs Teammates", "control"),
                      ("Heist", "heist"), ("Pair-breaker", "pair_breaker"), ("Stakes", "_stakes"), ("Consistency", "consistency")]
-    comparison = [{"key": k, "label": lab, "normal": round(float(mn[k]), 2), "pressure": round(float(mp[k]), 2), "unit": u,
+    r2 = lambda v: None if v is None or not np.isfinite(v) else round(float(v), 2)  # noqa: E731
+    comparison = [{"key": k, "label": lab, "normal": r2(mn[k]), "pressure": r2(mp[k]), "unit": u,
                    "better": bt} for k, lab, u, bt in comp]
     extra = C["extra"][side]
     radar = []
@@ -466,6 +653,12 @@ def profile(C: dict, X: Ctx, pid, disc: str) -> dict:
     PM = C["pm"][side]
     allms = PM.match_score[PM.p_balls >= 3]
     rk = allms.rank(pct=True) * 100
+    # same-match normal-ball (non-pressure) score, on the same percentile scale as the pressure score
+    nk = "nrae_n" if side == "bat" else "nrs_n"
+    nden = PM[f"{nk}_den"]
+    nsc = (PM[f"{nk}_num"] / nden.replace(0, np.nan))[nden >= 6]
+    nrk = pd.Series(np.searchsorted(np.sort(allms.dropna().values), nsc.values) / max(allms.notna().sum(), 1) * 100,
+                    index=nsc.index)
     cons = []
     if pid in PM.index.get_level_values(0):
         mm = PM.loc[pid]
@@ -477,9 +670,14 @@ def profile(C: dict, X: Ctx, pid, disc: str) -> dict:
                 my_team = (x[x.match_id == mid].batting_team_id if side == "bat" else x[x.match_id == mid].bowling_team_id)
                 my_team = my_team.iloc[0] if len(my_team) else None
                 opp = mr.away_team_id if my_team == mr.home_team_id else mr.home_team_id
+                nv = nrk.get((pid, mid), np.nan)
                 inns.append({"matchId": str(mid), "label": f"vs {X.tcode(opp)} · {mr.match_date.strftime('%d %b')}",
-                             "score": int(round(rk.get((pid, mid), 50))), "balls": int(r.p_balls)})
+                             "date": mr.match_date.strftime("%Y-%m-%d"),
+                             "score": int(round(rk.get((pid, mid), 50))), "balls": int(r.p_balls),
+                             "normalScore": int(round(nv)) if pd.notna(nv) else None})
             cons.append({"season": str(season), "innings": inns})
+    log_rows = match_log(X, pid, side, rk, nrk)
+    bests = best_performances(log_rows, side)
     # matchups by opponent tier (pressure balls)
     mus = []
     if side == "bat":
@@ -509,7 +707,8 @@ def profile(C: dict, X: Ctx, pid, disc: str) -> dict:
             "ciLow": round(float(bs.rating_lo.get(pid, rating)), 1), "ciHigh": round(float(bs.rating_hi.get(pid, rating)), 1),
             "rank": rank, "rankOf": int(len(tbl)), "pressureBalls": int(me.p_balls) if me is not None else 0,
             "matches": int(me.matches_p) if me is not None else 0, "comparison": comparison, "radar": radar,
-            "consistency": cons, "matchups": mus, "heatmap": hm, "signatureMoments": sig}
+            "consistency": cons, "matchups": mus, "heatmap": hm, "signatureMoments": sig, "bests": bests,
+            "_log": log_rows}
 
 
 def _outcome_text(r) -> str:
@@ -731,7 +930,7 @@ def method_json(C: dict) -> dict:
 # ====================================================================== orchestration
 
 
-def match_files(C: dict, X: Ctx, profiles: dict, pid_of: dict) -> None:
+def match_files(C: dict, X: Ctx, profiles: dict, pid_of: dict) -> set:
     """public/data/matches/<matchId>.json for every match a profile links to: the player's highest-scoring
     pressure innings and their signature moments. Each file holds the match summary, the ball-by-ball
     win-probability curve and, per linked player, their line and every delivery with its pressure reasons.
@@ -749,11 +948,14 @@ def match_files(C: dict, X: Ctx, profiles: dict, pid_of: dict) -> None:
         inns = [i for s in prof["consistency"] for i in s["innings"]]
         best = max(inns, key=lambda i: (i["score"], i["balls"]), default=None)
         mids = ([best["matchId"]] if best else []) + [s["matchId"] for s in prof["signatureMoments"]]
+        if 1 <= prof["rank"] <= 10:  # top-10 players: ball-by-ball for every match in their log
+            mids += [r["matchId"] for r in prof.get("_log", [])]
         for mid in mids:
             want.setdefault(mid, set()).add(slug)
     have = set(X.m.index.astype(str))
     n_files = n_links = 0
     missing = 0
+    links: set = set()
     for mid_s, slugs in want.items():
         if mid_s not in have:
             missing += len(slugs)
@@ -769,15 +971,31 @@ def match_files(C: dict, X: Ctx, profiles: dict, pid_of: dict) -> None:
             pim = evx.player_in_match(C, X, mid, pid_of[slug], side, pct, cache, _outcome_text)
             if pim:
                 players[slug] = {"name": profiles[slug]["name"], "discipline": profiles[slug]["discipline"], **pim}
+                links.add((mid_s, slug))
         doc = {"id": mid_s, **evx.match_summary(X, X.m.loc[mid]), "curve": evx.curve(mx), "players": players}
         with open(out_dir / f"{mid_s}.json", "w", encoding="utf-8") as fh:
             json.dump(doc, fh, ensure_ascii=False, separators=(",", ":"))
         n_files += 1
         n_links += len(players)
+    # lookup index for the match centre: every match file and the players it holds ball data for
+    index = []
+    for f in sorted(out_dir.glob("*.json")):
+        if f.stem == "index":
+            continue
+        with open(f, encoding="utf-8") as fh:
+            doc = json.load(fh)
+        index.append({k: doc.get(k) for k in ["id", "competition", "stage", "date", "season", "matchNumber", "teamA",
+                                                "teamB", "teamACode", "teamBCode", "scoreA", "scoreB", "result"]}
+                     | {"players": [{"id": k, "name": v["name"], "discipline": v["discipline"]}
+                                    for k, v in doc["players"].items()]})
+    index.sort(key=lambda r: r["date"] or "", reverse=True)
+    with open(out_dir / "index.json", "w", encoding="utf-8") as fh:
+        json.dump(index, fh, ensure_ascii=False, separators=(",", ":"))
     size = sum(f.stat().st_size for f in out_dir.glob("*.json")) / 1e6
     log(f"matches/*.json: {n_files} match files ({size:.1f} MB), {n_links} player-match links; {missing} unresolved links")
     CHECK.add("Match info files for every best innings + signature moment", n_files > 0 and missing == 0,
               f"{n_files} files, {n_links} player-match links, {size:.1f} MB in public/data/matches/")
+    return links
 
 
 def run(C: dict) -> None:
@@ -826,7 +1044,20 @@ def run(C: dict) -> None:
         players.append({k: prof[k] for k in ["id", "name", "role", "discipline", "style", "teams", "formats"]}
                        | {"rank": prof["rank"], "rating": prof["rating"]})
     C["profiles_cache"] = profiles
-    match_files(C, X, profiles, {X.slug(pid): pid for pid in ids})
+    links = match_files(C, X, profiles, {X.slug(pid): pid for pid in ids})
+    log_dir = P["public"] / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    for f in log_dir.glob("*.json"):
+        f.unlink()
+    n_rows = 0
+    for slug, prof in profiles.items():
+        rows = prof.pop("_log", [])
+        for r in rows:
+            r["hasDetail"] = (r["matchId"], slug) in links
+        n_rows += len(rows)
+        write_json({"id": slug, "matches": rows}, log_dir / f"{slug}.json")
+    log(f"logs/*.json: {len(profiles)} player match logs, {n_rows} player-match rows "
+        f"({len(links)} with ball-by-ball detail)")
     figures(C, X)
     pub = P["public"]
     write_json(C["kpis"], pub / "kpis.json")

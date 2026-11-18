@@ -163,6 +163,9 @@ A missing combination shows the "No players meet the minimum sample" empty state
 | `ciLow`, `ciHigh` | number | Bootstrap interval of `rating` (the UI labels it 90%) |
 | `pressureBalls`, `matches` | int | Sample size |
 | `spark` | number[] | Match-by-match pressure scores 0–100, oldest → newest (UI shows up to 12) |
+| `sparkPoints` | `{ matchId, date, label, score }[]` | Same scores with the match behind each point (sparkline tooltips) |
+| `sparkNormal` | number \| null | Player's normal (non-pressure) per-ball value on the same 0–100 percentile scale (dashed baseline) |
+| `resamples` | number | Bootstrap resamples behind `ciLow`/`ciHigh` (1,000 for the overall view, 200 for filtered slices, 0 = none) |
 
 ### `player_profiles.json` (object keyed by player id → `PlayerProfile`)
 
@@ -197,9 +200,14 @@ A missing combination shows the "No players meet the minimum sample" empty state
   "cols": ["Powerplay", "Middle", "Death"],
   "metricLabel": "Performance index (100 = expected)",
   "minBalls": 18,                       // cells below this are hatched and greyed
-  "cells": [{ "row": "Off spin", "col": "Death", "value": 87, "balls": 42 }]  // value null = no data
+  "formula": "Pressure run index = (actual runs scored ÷ expected runs for those balls) × 100. ...",
+  "ballsLabel": "Balls faced", "runsLabel": "Runs", "rateLabel": "Strike rate", "dismissalsLabel": "Dismissals",
+  "cells": [{ "row": "Off spin", "col": "Death", "value": 87, "balls": 42,   // value null = no data
+              "runs": 51, "expRuns": 58.6, "rate": 121.4, "dismissals": 3 }]
 }
 ```
+
+For bowlers the index is (expected runs ÷ runs conceded) × 100, `rate` is the economy and `dismissals` the wickets.
 
 `SignatureMoment`: `matchId`, `match` ("HBR vs DSR"), `competition` ("IPL 2025"), `date` (ISO), `over` ("19.2"), `description`, `wpSwing` (percentage points, + = toward the player's team).
 
@@ -325,3 +333,33 @@ F7–F14 are shrunk toward the population mean, standardised by the true-talent 
 combined. Each weight is the prior in `config.yaml` × that component's split-half reliability.
 The result is shown on a 0–100 scale (50 = average eligible player) with a bootstrap interval
 and P(top 10).
+
+
+### evidence.json: all-rounders
+
+`players` also holds an **All-rounders** list (`role: "allrounder"`, key `<slug>--ar`): players with at least
+`export.allrounder_min_bat_pressure_balls` batting and `export.allrounder_min_bowl_pressure_balls` bowling pressure
+balls (config.yaml). Rating = 100 × Φ(z / sd / scale_divisor), where z = standardised shrunk batting pressure WPA per
+ball + standardised shrunk bowling pressure WPA per ball (the two leaderboards' EB priors); interval and top-10 chance
+from 1,000 match resamples. Extra fields: `compareBowl` (economy), `pressureBallsBat`, `pressureBallsBowl`,
+`totalPressureWpaBat`, `totalPressureWpaBowl`; standout matches add `batWpa` / `bowlWpa` and every delivery carries
+`side` (`"bat"` / `"bowl"`). Every entry carries `key`, the id used in `/evidence/?player=<key>`.
+
+### logs/<playerId>.json and profile additions
+
+`player_profiles.json` comparisons now include batting average (batters) and bowling average + bowling strike rate
+(bowlers); a value is `null` when it is undefined (no dismissals / wickets in that situation). `bests` holds the best
+line overall and on pressure balls only (min. 6 pressure balls). `logs/<playerId>.json` (one per profile, loaded on
+demand) lists every match the player batted or bowled in, newest first: match summary and result, the player's full
+line and the pressure-ball part (`bat` / `bowl`), the match's pressure and normal scores, and `hasDetail` = a
+`matches/<id>.json` ball-by-ball file includes this player (every match of the top-10 players, plus best innings and
+signature moments for everyone).
+
+### Player photos (Wikimedia Commons)
+
+`py scripts/fetch_player_photos.py` (add `--all` for every profiled player) looks each leaderboard player up on
+Wikidata (occupation = cricketer), takes their Commons image if it has a free licence (CC BY / BY-SA / CC0 /
+public domain / GODL-India), saves a 330 px copy to `public/players/<playerId>.jpg` and records author, licence and
+source page in `public/data/player_photos.json`. The dashboard shows the credit on hover and falls back to
+team-coloured initials. Files checked by eye and rejected are listed in `REJECT` in the script. Players without a
+free photo can be given one by hand: put a photo you have the rights to in `public/players/` and add an entry.

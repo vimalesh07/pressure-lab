@@ -8,6 +8,7 @@ import { NAV } from "@/lib/nav";
 import { cx } from "@/lib/format";
 import { useData } from "@/lib/data";
 import { FilterBar, FilterProvider } from "./Filters";
+import { GlobalSearch } from "./GlobalSearch";
 
 /** Abstract brand mark: two overlapping diamonds (original artwork, no franchise marks). */
 export function BrandMark({ size = 34 }: { size?: number }) {
@@ -42,11 +43,17 @@ function Sidebar({
   onToggle,
   mobileOpen,
   onClose,
+  hoverOpen,
+  onEnter,
+  onLeave,
 }: {
   collapsed: boolean;
   onToggle: () => void;
   mobileOpen: boolean;
   onClose: () => void;
+  hoverOpen: boolean;
+  onEnter: () => void;
+  onLeave: () => void;
 }) {
   const path = normalise(usePathname() || "/");
   return (
@@ -54,25 +61,31 @@ function Sidebar({
       {mobileOpen && <div className="fixed inset-0 z-40 bg-ink/30 md:hidden" onClick={onClose} aria-hidden />}
       <aside
         className={cx(
-          "fixed inset-y-0 left-0 z-50 flex flex-col border-r border-ink/[0.07] bg-bg-800/80 backdrop-blur-xl transition-[width,transform] duration-300",
+          // glass rail: icons sit in a fixed 52px column (same x when collapsed or open); labels fade, never re-wrap
+          "glass-nav fixed inset-y-0 left-0 z-50 flex flex-col overflow-hidden transition-[width,transform,box-shadow] duration-300 ease-out",
           collapsed ? "md:w-[76px]" : "md:w-[248px]",
           "w-[264px]",
           mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
+          (mobileOpen || hoverOpen) && "shadow-[16px_0_48px_-18px_rgba(60,40,20,0.35)]",
         )}
+        onMouseEnter={onEnter}
+        onMouseLeave={onLeave}
         aria-label="Main navigation"
       >
-        <div className={cx("flex h-[72px] items-center gap-3 px-5", collapsed && "md:justify-center md:px-0")}>
-          <BrandMark />
-          <div className={cx("leading-tight", collapsed && "md:hidden")}>
+        <div className="flex h-[72px] shrink-0 items-center px-3">
+          <span className="grid h-[52px] w-[52px] shrink-0 place-items-center">
+            <BrandMark />
+          </span>
+          <div className={cx("min-w-0 whitespace-nowrap leading-tight transition-opacity duration-200", collapsed ? "md:opacity-0" : "opacity-100 delay-100")}>
             <div className="font-display text-[17px] font-bold tracking-tight">Pressure Lab</div>
-            <div className="text-[10.5px] uppercase tracking-[0.16em] text-text-400">T20 high-pressure analytics</div>
+            <div className="text-[9.5px] uppercase tracking-[0.1em] text-text-400">T20 pressure analytics</div>
           </div>
-          <button className="ml-auto text-text-400 md:hidden" onClick={onClose} aria-label="Close navigation">
+          <button className="ml-auto shrink-0 text-text-400 md:hidden" onClick={onClose} aria-label="Close navigation">
             <X size={18} />
           </button>
         </div>
 
-        <nav className="mt-2 flex-1 space-y-1 px-3">
+        <nav className="mt-2 flex-1 space-y-1.5 px-3">
           {NAV.map((item) => {
             const active = item.href === "/" ? path === "/" : path.startsWith(item.href);
             const Icon = item.icon;
@@ -84,39 +97,26 @@ function Sidebar({
                 title={collapsed ? item.label : undefined}
                 aria-current={active ? "page" : undefined}
                 className={cx(
-                  "group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors",
-                  collapsed && "md:justify-center md:px-0",
-                  active
-                    ? "bg-gradient-to-r from-pink-500/20 via-pink-500/[0.08] to-transparent text-text-100"
-                    : "text-text-400 hover:bg-ink/[0.04] hover:text-text-100",
+                  "group relative flex h-11 items-center rounded-2xl text-[14px] font-medium transition-colors",
+                  active ? "glass-chip text-text-100" : "text-text-100/75 hover:bg-white/50 hover:text-text-100",
                 )}
               >
-                {active && <span className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-pink-500" />}
-                <Icon size={18} className={active ? "text-pink-300" : ""} />
-                <span className={cx(collapsed && "md:hidden")}>{item.label}</span>
+                <span className="grid h-11 w-[52px] shrink-0 place-items-center">
+                  <span
+                    className={cx(
+                      "grid h-9 w-9 place-items-center rounded-xl transition",
+                      active ? "bg-gradient-to-br from-pink-500 to-[#8E2C52] text-white shadow-[0_6px_16px_-6px_rgba(178,58,98,0.7)]" : "group-hover:bg-white/70",
+                    )}
+                  >
+                    <Icon size={18} />
+                  </span>
+                </span>
+                <span className={cx("whitespace-nowrap transition-opacity duration-200", collapsed ? "md:opacity-0" : "opacity-100 delay-100")}>{item.label}</span>
               </Link>
             );
           })}
         </nav>
 
-        <div className={cx("m-3 rounded-2xl border border-ink/[0.07] bg-ink/[0.03] p-3", collapsed && "md:hidden")}>
-          <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-400">
-            <span className="live-dot h-2 w-2 rounded-full bg-pink-500" />
-            Model output
-          </div>
-          <p className="mt-1.5 text-[11.5px] leading-snug text-text-400">
-            Ratings from IPL + T20I ball-by-ball data. Regenerate with <code className="text-text-100">run_all.py</code>.
-          </p>
-        </div>
-
-        <button
-          onClick={onToggle}
-          className="mx-3 mb-4 hidden items-center gap-2 rounded-xl px-3 py-2 text-[12.5px] text-text-400 hover:bg-ink/[0.04] hover:text-text-100 md:flex"
-          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-        >
-          {collapsed ? <PanelLeftOpen size={16} className="mx-auto" /> : <PanelLeftClose size={16} />}
-          <span className={cx(collapsed && "hidden")}>Collapse</span>
-        </button>
       </aside>
     </>
   );
@@ -125,10 +125,28 @@ function Sidebar({
 function TopBar({ onMenu }: { onMenu: () => void }) {
   const path = normalise(usePathname() || "/");
   const item = NAV.find((n) => (n.href === "/" ? path === "/" : path.startsWith(n.href))) ?? NAV[0];
-  const showFilters = PAGES_WITH_FILTERS.some((p) => path.startsWith(p));
+  const showFilters = path === "/" || PAGES_WITH_FILTERS.some((p) => path.startsWith(p));
   const kpis = useData("kpis.json").data;
+  // hide on scroll down, show again on scroll up (or near the top)
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    let last = window.scrollY;
+    const on = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - last) < 6) return;
+      setHidden(y > last && y > 80);
+      last = y;
+    };
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
   return (
-    <header className="sticky top-0 z-30 border-b border-ink/[0.06] bg-bg-900/70 backdrop-blur-xl">
+    <header
+      className={cx(
+        "glass-bar sticky top-0 z-30 transition-transform duration-300 ease-out",
+        hidden && "-translate-y-full focus-within:translate-y-0",
+      )}
+    >
       <div className="mx-auto flex min-h-[72px] max-w-[1440px] flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3 md:px-8">
         <button className="text-text-400 md:hidden" onClick={onMenu} aria-label="Open navigation">
           <Menu size={20} />
@@ -138,6 +156,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
           <div className="truncate text-[13.5px] text-text-100">{item.blurb}</div>
         </div>
         <div className="ml-auto flex flex-wrap items-center gap-3">
+          <GlobalSearch />
           {showFilters ? (
             <FilterBar />
           ) : (
@@ -157,8 +176,15 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
 }
 
 export function AppShell({ children }: { children: ReactNode }) {
+  // Overview: full-viewport landing, no top bar / footer / page scrollbar
+  const isHome = normalise(usePathname() || "/") === "/";
+  useEffect(() => {
+    document.documentElement.style.overflow = isHome ? "hidden" : "";
+    return () => void (document.documentElement.style.overflow = "");
+  }, [isHome]);
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hoverOpen, setHoverOpen] = useState(false); // desktop: floating sidebar, opens at the left edge
   useEffect(() => {
     try {
       const saved = localStorage.getItem("pl-sidebar");
@@ -168,6 +194,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       if (window.innerWidth < 1280) setCollapsed(true);
     }
   }, []);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const toggle = () =>
     setCollapsed((c) => {
       try {
@@ -178,14 +205,28 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <FilterProvider>
       <div className="backdrop" aria-hidden />
-      <Sidebar collapsed={collapsed} onToggle={toggle} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
-      <div className={cx("relative z-10 transition-[padding] duration-300", collapsed ? "md:pl-[76px]" : "md:pl-[248px]")}>
-        <TopBar onMenu={() => setMobileOpen(true)} />
-        <main className="mx-auto max-w-[1440px] px-4 pb-10 pt-8 md:px-8">{children}</main>
-        <footer className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-2 border-t border-ink/[0.06] px-4 py-5 text-[12px] text-text-400 md:px-8">
+      {/* desktop: a mini icon bar is always visible; hovering it opens the full sidebar and pushes the page */}
+      <Sidebar
+        collapsed={!hoverOpen}
+        onToggle={toggle}
+        mobileOpen={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+        hoverOpen={hoverOpen}
+        onEnter={() => setHoverOpen(true)}
+        onLeave={() => setHoverOpen(false)}
+      />
+      <div className={cx("relative z-10 transition-[padding] duration-300 ease-out", hoverOpen ? "md:pl-[248px]" : "md:pl-[76px]")}>
+        {!isHome && <TopBar onMenu={() => setMobileOpen(true)} />}
+        {isHome && (
+          <button className="fixed left-3 top-3 z-30 rounded-lg p-2 text-text-400 md:hidden" onClick={() => setMobileOpen(true)} aria-label="Open navigation">
+            <Menu size={20} />
+          </button>
+        )}
+        <main className={isHome ? "mx-auto h-[100dvh] max-w-[1440px] overflow-hidden px-4 md:px-8" : "mx-auto max-w-[1440px] px-4 pb-10 pt-8 md:px-8"}>{children}</main>
+        {!isHome && <footer className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-2 border-t border-ink/[0.06] px-4 py-5 text-[12px] text-text-400 md:px-8">
           <span>Unofficial fan analytics project. Not affiliated with Rajasthan Royals.</span>
           <span>Pressure Lab · SupeRR Selector Season 2 · Round 1</span>
-        </footer>
+        </footer>}
       </div>
     </FilterProvider>
   );

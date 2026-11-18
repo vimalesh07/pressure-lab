@@ -26,6 +26,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { DataGate, PageSkeleton } from "@/components/ui/Skeleton";
 import { TooltipBox, TooltipRow } from "@/components/charts/ChartTooltip";
 import { useReducedMotion } from "@/components/charts/useReducedMotion";
+import { MethodAlgorithm } from "@/components/MethodAlgorithm";
 
 const ICONS = [Gauge, Flame, ShieldAlert, Crosshair, Sigma];
 /** Plain-language summary of each stage (moved here from the Overview page). */
@@ -76,6 +77,8 @@ function Method({ d, kpis }: { d: MethodFile; kpis?: Kpis }) {
           <KpiCard index={4} label="Players rated" value={kpis.playersRated} icon={<Users size={18} />} hint="Minimum sample applied before ranking" accent="blue" />
         </div>
       )}
+
+      <MethodAlgorithm />
 
       {/* Pipeline */}
       <Card index={1} glow="blue" className="p-6">
@@ -191,7 +194,7 @@ function Method({ d, kpis }: { d: MethodFile; kpis?: Kpis }) {
         </Card>
 
         {/* Sensitivity */}
-        <Card index={4} className="col-span-12 p-5 lg:col-span-7">
+        <Card index={4} className="col-span-12 p-6">
           <CardHeader icon={<SlidersHorizontal size={16} />} title="Sensitivity tests" subtitle="How much the ranking moves when one modelling choice changes" right={<PlaceholderTag />} />
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] text-left text-[13px]">
@@ -233,9 +236,9 @@ function Method({ d, kpis }: { d: MethodFile; kpis?: Kpis }) {
         </Card>
 
         {/* Limitations */}
-        <Card index={5} className="col-span-12 p-5 lg:col-span-5">
+        <Card index={5} className="col-span-12 p-6">
           <CardHeader icon={<Microscope size={16} />} title="Limitations" subtitle="What the rating does not capture" />
-          <ul className="space-y-2.5">
+          <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {d.limitations.map((l, i) => (
               <li key={i} className="rise flex gap-3 rounded-xl bg-ink/[0.02] p-3 ring-1 ring-ink/[0.05]" style={{ ["--i" as string]: i }}>
                 <AlertTriangle size={15} className="mt-0.5 shrink-0 text-gold-400" />

@@ -66,6 +66,18 @@ export interface LeaderboardRow {
   pressureBalls: number;
   matches: number;
   spark: number[]; // match-by-match pressure scores (0–100), oldest → newest
+  team2?: string | null; // All view: muted secondary team (the other format's team)
+  teamsOther?: { code: string; seasons: string }[]; // other teams in scope, e.g. SRH 2024–25
+  sparkPoints?: SparkPoint[]; // same scores with the match behind each point
+  sparkNormal?: number | null; // player's normal (non-pressure) per-ball value on the same 0–100 scale
+  resamples?: number; // bootstrap resamples behind ciLow / ciHigh (0 = no interval)
+}
+
+export interface SparkPoint {
+  matchId: string;
+  date: string; // ISO
+  label: string; // "RR vs MI"
+  score: number; // 0–100
 }
 
 export interface LeaderboardView {
@@ -86,8 +98,8 @@ export interface Leaderboard {
 export interface ComparisonMetric {
   key: string;
   label: string;
-  normal: number;
-  pressure: number;
+  normal: number | null; // null = not defined (e.g. an average with no dismissals / wickets)
+  pressure: number | null;
   unit: "" | "%" | "rpo" | "wpa";
   better: "higher" | "lower";
 }
@@ -103,6 +115,8 @@ export interface PressureInnings {
   label: string; // "vs HBR · 14 May"
   score: number; // 0–100 performance vs expected
   balls: number;
+  date?: string; // ISO match date
+  normalScore?: number | null; // same match, normal (non-pressure) balls, same 0–100 scale; null = too few balls
 }
 
 export interface ConsistencySeason {
@@ -124,6 +138,10 @@ export interface HeatmapCell {
   col: string;
   value: number | null; // performance index (100 = expected); null = no data
   balls: number;
+  runs?: number; // runs scored (batter) / conceded (bowler)
+  expRuns?: number; // expected runs for those balls
+  rate?: number; // strike rate (batter) / economy (bowler)
+  dismissals?: number; // dismissals (batter) / wickets (bowler)
 }
 
 export interface Heatmap {
@@ -133,6 +151,11 @@ export interface Heatmap {
   cols: string[];
   metricLabel: string;
   minBalls: number; // cells below this are hatched / greyed
+  formula?: string; // exact definition of the index
+  ballsLabel?: string;
+  runsLabel?: string;
+  rateLabel?: string;
+  dismissalsLabel?: string;
   cells: HeatmapCell[];
 }
 
@@ -168,6 +191,67 @@ export interface PlayerProfile {
   matchups: MatchupTier[];
   heatmap: Heatmap;
   signatureMoments: SignatureMoment[];
+  bests?: BestPerformance[];
+}
+
+/** Best line overall and on pressure balls only. */
+export interface BestPerformance {
+  kind: "overall" | "pressure";
+  label: string;
+  line: string; // "54* (31)" or "4/18 (4.0)"
+  matchId: string;
+  opponent: string;
+  date: string;
+  competition: string;
+}
+
+/* ---------- logs/<playerId>.json (loaded on demand) ---------- */
+export interface MatchLogBat {
+  runs: number;
+  balls: number;
+  fours: number;
+  sixes: number;
+  out: boolean;
+  how: string | null;
+  pRuns: number;
+  pBalls: number;
+  pOut: boolean;
+}
+
+export interface MatchLogBowl {
+  balls: number;
+  runs: number;
+  wkts: number;
+  dots: number;
+  pBalls: number;
+  pRuns: number;
+  pWkts: number;
+}
+
+export interface MatchLogRow {
+  matchId: string;
+  competition: string;
+  stage: string;
+  date: string;
+  venue: string;
+  teamA: string; // batting first
+  teamB: string;
+  scoreA: string;
+  scoreB: string;
+  result: string;
+  team: string; // player's team code
+  opponent: string;
+  won: boolean | null;
+  bat?: MatchLogBat;
+  bowl?: MatchLogBowl;
+  pressureScore: number | null;
+  normalScore: number | null;
+  hasDetail: boolean; // a matches/<id>.json file holds this player's ball-by-ball
+}
+
+export interface MatchLogFile {
+  id: string;
+  matches: MatchLogRow[];
 }
 
 /* ---------- match_replay.json ---------- */
@@ -314,9 +398,40 @@ export interface EvidenceDelivery {
   situation: string;
   tags: string[];
   factors: { leverage: number; stakes: number; threat: number; threatTier: string };
+  side?: "bat" | "bowl"; // which side of the ball the player was on
+  batter?: string; // presentation: striker and bowler names, legal delivery
+  bowler?: string;
+  legal?: boolean;
 }
 
-export interface EvidenceMatch {
+/** Presentation fields on a match summary (match centre header / lookup). */
+export interface MatchSummaryExtra {
+  teamACode?: string;
+  teamBCode?: string;
+  matchNumber?: number | null;
+  season?: string;
+  winner?: "A" | "B" | null;
+}
+
+/* ---------- matches/index.json ---------- */
+export interface MatchIndexEntry {
+  id: string;
+  competition: string;
+  stage: string;
+  date: string;
+  season?: string;
+  matchNumber?: number | null;
+  teamA: string;
+  teamB: string;
+  teamACode?: string;
+  teamBCode?: string;
+  scoreA: string;
+  scoreB: string;
+  result: string;
+  players: { id: string; name: string; discipline: Discipline }[];
+}
+
+export interface EvidenceMatch extends MatchSummaryExtra {
   id: string;
   competition: string;
   stage: string;
@@ -334,14 +449,28 @@ export interface EvidenceMatch {
   pressureBalls: number;
   pressureWpa: number;
   matchWpa: number;
+  batWpa?: number; // all-rounders: pressure WPA split
+  bowlWpa?: number;
   deliveries: EvidenceDelivery[];
 }
 
+export type EvidenceRole = "batter" | "bowler" | "allrounder";
+
+export interface EvidenceCompare {
+  metric: string;
+  pressure: number;
+  normal: number;
+  higherIsBetter: boolean;
+}
+
 export interface EvidencePlayer {
-  playerId: string;
+  key?: string; // key in EvidenceFile.players (unique per tab)
+  playerId: string; // profile slug
   name: string;
   team: string;
-  role: "batter" | "bowler";
+  team2?: string | null;
+  teamsOther?: { code: string; seasons: string }[];
+  role: EvidenceRole;
   rank: number;
   rating: number;
   ratingLo: number;
@@ -351,7 +480,12 @@ export interface EvidencePlayer {
   pressureMatches: number;
   positiveMatchShare: number;
   totalPressureWpa: number;
-  compare: { metric: string; pressure: number; normal: number; higherIsBetter: boolean };
+  compare: EvidenceCompare; // batting SR for batters and all-rounders, economy for bowlers
+  compareBowl?: EvidenceCompare; // all-rounders: bowling economy
+  pressureBallsBat?: number;
+  pressureBallsBowl?: number;
+  totalPressureWpaBat?: number;
+  totalPressureWpaBowl?: number;
   matches: EvidenceMatch[];
 }
 
@@ -369,7 +503,7 @@ export interface MatchPlayerDetail {
   deliveries: EvidenceDelivery[];
 }
 
-export interface MatchFile {
+export interface MatchFile extends MatchSummaryExtra {
   id: string;
   competition: string;
   stage: string;
@@ -388,4 +522,14 @@ export interface EvidenceFile {
   levels: { min: number; label: string }[];
   players: Record<string, EvidencePlayer>;
   curves: Record<string, ReplayBall[]>;
+}
+
+/* ---------- player_photos.json (scripts/fetch_player_photos.py, Wikimedia Commons) ---------- */
+export interface PlayerPhotoInfo {
+  file: string; // public/players/<file>
+  name: string;
+  source: string; // Commons file page
+  license: string;
+  licenseUrl: string;
+  artist: string;
 }

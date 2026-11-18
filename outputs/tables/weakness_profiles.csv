@@ -1,4 +1,289 @@
 player_id,dimension,value,balls,sr,dot_pct,dismissal_pct,dismissals,perf_index,confidence,name,plan
+3648,pace_or_spin,Pace,94,129.8,31.9,5.32,5,79.5,Medium,Deepak Hooda,Attack plan
+3648,pace_or_spin,Spin,58,134.5,20.7,5.17,3,87.7,Medium,Deepak Hooda,Attack plan
+3648,bowling_type,Right-arm Leg-Break,23,130.4,21.7,8.7,2,59.6,Low,Deepak Hooda,Attack plan
+3648,bowling_type,Right-arm medium-fast,31,122.6,22.6,9.68,3,39.1,Low,Deepak Hooda,Attack plan
+3648,on_or_off,Off-side,78,116.7,32.1,2.56,2,89.5,Medium,Deepak Hooda,Attack plan
+3648,on_or_off,On-side,74,147.3,23.0,8.11,6,75.2,Medium,Deepak Hooda,Attack plan
+3648,over_or_around,Around,22,154.5,13.6,0.0,0,139.3,Low,Deepak Hooda,Attack plan
+3648,over_or_around,Over,130,127.7,30.0,6.15,8,72.5,High,Deepak Hooda,Attack plan
+3648,phase,Death,26,169.2,30.8,15.38,4,37.4,Low,Deepak Hooda,Attack plan
+3648,phase,Middle,81,117.3,21.0,4.94,4,73.4,Medium,Deepak Hooda,Attack plan
+3648,phase,PP,45,135.6,37.8,0.0,0,124.9,Low,Deepak Hooda,Attack plan
+3648,bowler_group,Left-arm pace,24,145.8,25.0,0.0,0,140.5,Low,Deepak Hooda,Attack plan
+3648,bowler_group,Leg spin,23,130.4,21.7,8.7,2,59.6,Low,Deepak Hooda,Attack plan
+3648,bowler_group,Right-arm pace,70,124.3,34.3,7.14,5,59.5,Medium,Deepak Hooda,Attack plan
+6674,pace_or_spin,Pace,198,107.1,53.0,5.56,11,70.0,High,Rahmanullah Gurbaz,Attack plan
+6674,pace_or_spin,Spin,58,146.6,39.7,8.62,5,80.6,Medium,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Left-arm Fast,36,80.6,61.1,5.56,2,39.4,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Left-arm fast-medium,27,77.8,59.3,3.7,1,55.1,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Left-arm medium-fast,21,104.8,57.1,0.0,0,130.0,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Right-arm Fast,35,140.0,42.9,2.86,1,134.9,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Right-arm fast-medium,31,125.8,41.9,6.45,2,94.8,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Right-arm medium,20,90.0,60.0,25.0,5,0.0,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Right-arm medium-fast,28,121.4,53.6,0.0,0,122.8,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowling_type,Slow left-arm orthodox,24,137.5,37.5,0.0,0,156.9,Low,Rahmanullah Gurbaz,Attack plan
+6674,delivery_style,Inswing,39,153.8,38.5,2.56,1,160.3,Low,Rahmanullah Gurbaz,Attack plan
+6674,delivery_style,Orthodox,20,140.0,35.0,0.0,0,160.5,Low,Rahmanullah Gurbaz,Attack plan
+6674,delivery_style,Out Swing,51,70.6,70.6,9.8,5,0.0,Medium,Rahmanullah Gurbaz,Attack plan
+6674,delivery_style,Seamed In,42,97.6,42.9,2.38,1,83.3,Low,Rahmanullah Gurbaz,Attack plan
+6674,delivery_style,Seamed Out,26,130.8,50.0,0.0,0,144.4,Low,Rahmanullah Gurbaz,Attack plan
+6674,on_or_off,Off-side,156,84.0,59.6,5.77,9,42.2,High,Rahmanullah Gurbaz,Attack plan
+6674,on_or_off,On-side,100,166.0,35.0,7.0,7,115.9,Medium,Rahmanullah Gurbaz,Attack plan
+6674,over_or_around,Around,28,117.9,39.3,0.0,0,131.9,Low,Rahmanullah Gurbaz,Attack plan
+6674,over_or_around,Over,228,115.8,51.3,7.02,16,65.1,High,Rahmanullah Gurbaz,Attack plan
+6674,phase,Middle,46,108.7,43.5,6.52,3,57.4,Low,Rahmanullah Gurbaz,Attack plan
+6674,phase,PP,203,115.8,52.7,5.91,12,77.0,High,Rahmanullah Gurbaz,Attack plan
+6674,bowler_group,Left-arm orthodox,24,137.5,37.5,0.0,0,156.9,Low,Rahmanullah Gurbaz,Attack plan
+6674,bowler_group,Left-arm pace,84,85.7,59.5,3.57,3,66.0,Medium,Rahmanullah Gurbaz,Attack plan
+6674,bowler_group,Right-arm pace,114,122.8,48.2,7.02,8,72.7,Medium,Rahmanullah Gurbaz,Attack plan
+109,pace_or_spin,Pace,137,122.6,56.2,6.57,9,68.2,High,Wriddhiman Saha,Attack plan
+109,pace_or_spin,Spin,47,100.0,42.6,8.51,4,25.9,Low,Wriddhiman Saha,Attack plan
+109,bowling_type,Right-arm medium,35,131.4,48.6,5.71,2,78.5,Low,Wriddhiman Saha,Attack plan
+109,bowling_type,Right-arm medium-fast,36,119.4,61.1,5.56,2,74.2,Low,Wriddhiman Saha,Attack plan
+109,delivery_style,Inswing,31,109.7,61.3,6.45,2,60.9,Low,Wriddhiman Saha,Attack plan
+109,delivery_style,Out Swing,32,100.0,65.6,3.12,1,83.9,Low,Wriddhiman Saha,Attack plan
+109,delivery_style,Seamed In,33,93.9,60.6,6.06,2,39.8,Low,Wriddhiman Saha,Attack plan
+109,on_or_off,Off-side,117,88.9,62.4,6.84,8,31.6,Medium,Wriddhiman Saha,Attack plan
+109,on_or_off,On-side,67,165.7,35.8,7.46,5,97.6,Medium,Wriddhiman Saha,Attack plan
+109,over_or_around,Around,28,117.9,46.4,7.14,2,53.2,Low,Wriddhiman Saha,Attack plan
+109,over_or_around,Over,156,116.7,53.8,7.05,11,56.9,High,Wriddhiman Saha,Attack plan
+109,phase,Middle,32,125.0,25.0,12.5,4,18.4,Low,Wriddhiman Saha,Attack plan
+109,phase,PP,152,115.1,58.6,5.92,9,65.4,High,Wriddhiman Saha,Attack plan
+109,bowler_group,Left-arm pace,43,132.6,55.8,6.98,3,81.1,Low,Wriddhiman Saha,Attack plan
+109,bowler_group,Right-arm pace,94,118.1,56.4,6.38,6,62.9,Medium,Wriddhiman Saha,Attack plan
+4895,pace_or_spin,Pace,75,100.0,50.7,4.0,3,72.2,Medium,Charith Asalanka,Attack plan
+4895,pace_or_spin,Spin,75,90.7,45.3,12.0,9,0.0,Medium,Charith Asalanka,Attack plan
+4895,bowling_type,Right-arm Fast,20,90.0,55.0,0.0,0,88.8,Low,Charith Asalanka,Attack plan
+4895,bowling_type,Right-arm Leg-Break,24,58.3,58.3,8.33,2,0.0,Low,Charith Asalanka,Attack plan
+4895,bowling_type,Right-arm fast-medium,23,69.6,69.6,0.0,0,84.1,Low,Charith Asalanka,Attack plan
+4895,bowling_type,Right-arm offbreak,29,93.1,44.8,13.79,4,0.0,Low,Charith Asalanka,Attack plan
+4895,delivery_style,Off Break,22,100.0,36.4,9.09,2,28.6,Low,Charith Asalanka,Attack plan
+4895,on_or_off,Off-side,76,86.8,53.9,5.26,4,49.0,Medium,Charith Asalanka,Attack plan
+4895,on_or_off,On-side,74,104.1,41.9,10.81,8,15.3,Medium,Charith Asalanka,Attack plan
+4895,over_or_around,Around,44,102.3,43.2,9.09,4,30.3,Low,Charith Asalanka,Attack plan
+4895,over_or_around,Over,106,92.5,50.0,7.55,8,32.7,Medium,Charith Asalanka,Attack plan
+4895,phase,Death,40,102.5,47.5,12.5,5,0.0,Low,Charith Asalanka,Attack plan
+4895,phase,Middle,84,106.0,40.5,7.14,6,55.6,Medium,Charith Asalanka,Attack plan
+4895,phase,PP,26,50.0,73.1,3.85,1,20.6,Low,Charith Asalanka,Attack plan
+4895,bowler_group,Left-arm pace,25,136.0,32.0,4.0,1,105.6,Low,Charith Asalanka,Attack plan
+4895,bowler_group,Leg spin,24,58.3,58.3,8.33,2,0.0,Low,Charith Asalanka,Attack plan
+4895,bowler_group,Off spin,29,93.1,44.8,13.79,4,0.0,Low,Charith Asalanka,Attack plan
+4895,bowler_group,Right-arm pace,50,82.0,60.0,4.0,2,54.2,Medium,Charith Asalanka,Attack plan
+2876,pace_or_spin,Pace,157,149.0,26.8,4.46,7,125.2,High,Axar Patel,Attack plan
+2876,pace_or_spin,Spin,58,134.5,25.9,5.17,3,99.7,Medium,Axar Patel,Attack plan
+2876,bowling_type,Right-arm Fast,23,160.9,34.8,8.7,2,97.0,Low,Axar Patel,Attack plan
+2876,bowling_type,Right-arm Leg-Break,34,132.4,23.5,5.88,2,94.3,Low,Axar Patel,Attack plan
+2876,bowling_type,Right-arm fast-medium,23,160.9,17.4,0.0,0,185.1,Low,Axar Patel,Attack plan
+2876,bowling_type,Right-arm medium,46,130.4,37.0,6.52,3,83.7,Low,Axar Patel,Attack plan
+2876,bowling_type,Right-arm medium-fast,47,131.9,25.5,2.13,1,125.9,Low,Axar Patel,Attack plan
+2876,delivery_style,Off Cutter,22,127.3,40.9,18.18,4,0.0,Low,Axar Patel,Attack plan
+2876,delivery_style,Seamed Out,27,144.4,33.3,3.7,1,135.1,Low,Axar Patel,Attack plan
+2876,on_or_off,Off-side,119,134.5,32.8,3.36,4,116.4,Medium,Axar Patel,Attack plan
+2876,on_or_off,On-side,96,158.3,18.8,6.25,6,120.5,Medium,Axar Patel,Attack plan
+2876,over_or_around,Around,70,132.9,25.7,5.71,4,89.1,Medium,Axar Patel,Attack plan
+2876,over_or_around,Over,145,151.0,26.9,4.14,6,133.6,High,Axar Patel,Attack plan
+2876,phase,Death,105,156.2,19.0,3.81,4,141.1,Medium,Axar Patel,Attack plan
+2876,phase,Middle,100,136.0,33.0,6.0,6,96.8,Medium,Axar Patel,Attack plan
+2876,bowler_group,Leg spin,34,132.4,23.5,5.88,2,94.3,Low,Axar Patel,Attack plan
+2876,bowler_group,Right-arm pace,139,141.0,29.5,4.32,6,116.4,High,Axar Patel,Attack plan
+1440,pace_or_spin,Pace,106,148.1,41.5,5.66,6,90.2,Medium,Rahul Tripathi,Attack plan
+1440,pace_or_spin,Spin,65,143.1,32.3,4.62,3,96.9,Medium,Rahul Tripathi,Attack plan
+1440,bowling_type,Right-arm Fast,26,134.6,38.5,0.0,0,120.1,Low,Rahul Tripathi,Attack plan
+1440,bowling_type,Right-arm Leg-Break,21,138.1,23.8,4.76,1,97.8,Low,Rahul Tripathi,Attack plan
+1440,bowling_type,Right-arm medium-fast,21,114.3,61.9,14.29,3,0.0,Low,Rahul Tripathi,Attack plan
+1440,bowling_type,Right-arm offbreak,29,172.4,27.6,3.45,1,127.7,Low,Rahul Tripathi,Attack plan
+1440,delivery_style,Inswing,30,156.7,36.7,0.0,0,146.6,Low,Rahul Tripathi,Attack plan
+1440,delivery_style,Seamed In,20,145.0,60.0,5.0,1,89.3,Low,Rahul Tripathi,Attack plan
+1440,on_or_off,Off-side,96,119.8,43.8,5.21,5,68.5,Medium,Rahul Tripathi,Attack plan
+1440,on_or_off,On-side,75,180.0,30.7,5.33,4,124.4,Medium,Rahul Tripathi,Attack plan
+1440,over_or_around,Over,155,151.6,36.8,5.16,8,98.2,High,Rahul Tripathi,Attack plan
+1440,phase,Middle,48,129.2,25.0,4.17,2,92.0,Low,Rahul Tripathi,Attack plan
+1440,phase,PP,117,153.8,42.7,5.13,6,97.5,Medium,Rahul Tripathi,Attack plan
+1440,bowler_group,Left-arm pace,36,158.3,36.1,5.56,2,107.2,Low,Rahul Tripathi,Attack plan
+1440,bowler_group,Leg spin,21,138.1,23.8,4.76,1,97.8,Low,Rahul Tripathi,Attack plan
+1440,bowler_group,Off spin,29,172.4,27.6,3.45,1,127.7,Low,Rahul Tripathi,Attack plan
+1440,bowler_group,Right-arm pace,70,142.9,44.3,5.71,4,82.3,Medium,Rahul Tripathi,Attack plan
+2671,pace_or_spin,Pace,110,153.6,38.2,2.73,3,144.5,Medium,Liton Das,Attack plan
+2671,pace_or_spin,Spin,80,115.0,38.8,6.25,5,66.0,Medium,Liton Das,Attack plan
+2671,bowling_type,Right-arm Leg-Break,29,93.1,37.9,6.9,2,34.5,Low,Liton Das,Attack plan
+2671,bowling_type,Right-arm fast-medium,25,216.0,36.0,0.0,0,236.0,Low,Liton Das,Attack plan
+2671,bowling_type,Right-arm medium-fast,29,117.2,41.4,0.0,0,128.2,Low,Liton Das,Attack plan
+2671,bowling_type,Slow left-arm orthodox,34,132.4,44.1,5.88,2,91.7,Low,Liton Das,Attack plan
+2671,delivery_style,Inswing,24,154.2,33.3,0.0,0,178.2,Low,Liton Das,Attack plan
+2671,delivery_style,Leg Break,24,91.7,41.7,8.33,2,21.7,Low,Liton Das,Attack plan
+2671,delivery_style,Orthodox,30,146.7,40.0,6.67,2,99.5,Low,Liton Das,Attack plan
+2671,delivery_style,Out Swing,23,126.1,43.5,0.0,0,143.2,Low,Liton Das,Attack plan
+2671,delivery_style,Seamed In,25,156.0,32.0,0.0,0,169.1,Low,Liton Das,Attack plan
+2671,on_or_off,Off-side,104,121.2,47.1,1.92,2,114.7,Medium,Liton Das,Attack plan
+2671,on_or_off,On-side,86,157.0,27.9,6.98,6,105.4,Medium,Liton Das,Attack plan
+2671,over_or_around,Around,38,144.7,39.5,5.26,2,112.4,Low,Liton Das,Attack plan
+2671,over_or_around,Over,150,137.3,37.3,4.0,6,111.6,High,Liton Das,Attack plan
+2671,phase,Middle,45,115.6,37.8,6.67,3,60.1,Low,Liton Das,Attack plan
+2671,phase,PP,138,137.7,40.6,3.62,5,118.4,High,Liton Das,Attack plan
+2671,bowler_group,Left-arm orthodox,34,132.4,44.1,5.88,2,91.7,Low,Liton Das,Attack plan
+2671,bowler_group,Leg spin,29,93.1,37.9,6.9,2,34.5,Low,Liton Das,Attack plan
+2671,bowler_group,Right-arm pace,91,163.7,36.3,1.1,1,169.0,Medium,Liton Das,Attack plan
+4246,pace_or_spin,Pace,134,153.7,41.0,3.73,5,108.0,High,Nitish Rana,Attack plan
+4246,pace_or_spin,Spin,97,167.0,26.8,5.15,5,110.9,Medium,Nitish Rana,Attack plan
+4246,bowling_type,Right-arm Fast,29,172.4,37.9,3.45,1,118.4,Low,Nitish Rana,Attack plan
+4246,bowling_type,Right-arm Leg-Break,45,148.9,33.3,8.89,4,64.3,Low,Nitish Rana,Attack plan
+4246,bowling_type,Right-arm medium,28,150.0,39.3,0.0,0,146.7,Low,Nitish Rana,Attack plan
+4246,bowling_type,Right-arm offbreak,24,166.7,20.8,0.0,0,155.4,Low,Nitish Rana,Attack plan
+4246,bowling_type,Slow left-arm orthodox,20,180.0,30.0,5.0,1,129.2,Low,Nitish Rana,Attack plan
+4246,delivery_style,Off Break,27,185.2,22.2,0.0,0,170.0,Low,Nitish Rana,Attack plan
+4246,delivery_style,Seamed Out,24,150.0,45.8,4.17,1,110.1,Low,Nitish Rana,Attack plan
+4246,delivery_style,Straight,20,140.0,40.0,5.0,1,78.2,Low,Nitish Rana,Attack plan
+4246,on_or_off,Off-side,112,150.0,44.6,4.46,5,101.4,Medium,Nitish Rana,Attack plan
+4246,on_or_off,On-side,119,168.1,26.1,4.2,5,116.4,Medium,Nitish Rana,Attack plan
+4246,over_or_around,Around,62,167.7,25.8,1.61,1,144.4,Medium,Nitish Rana,Attack plan
+4246,over_or_around,Over,169,156.2,38.5,5.33,9,97.2,High,Nitish Rana,Attack plan
+4246,phase,Death,27,192.6,33.3,11.11,3,88.9,Low,Nitish Rana,Attack plan
+4246,phase,Middle,127,166.9,26.8,3.94,5,118.5,High,Nitish Rana,Attack plan
+4246,phase,PP,77,135.1,49.4,2.6,2,100.9,Medium,Nitish Rana,Attack plan
+4246,bowler_group,Left-arm orthodox,20,180.0,30.0,5.0,1,129.2,Low,Nitish Rana,Attack plan
+4246,bowler_group,Left-arm pace,53,158.5,39.6,3.77,2,113.7,Medium,Nitish Rana,Attack plan
+4246,bowler_group,Leg spin,45,148.9,33.3,8.89,4,64.3,Low,Nitish Rana,Attack plan
+4246,bowler_group,Off spin,24,166.7,20.8,0.0,0,155.4,Low,Nitish Rana,Attack plan
+4246,bowler_group,Right-arm pace,81,150.6,42.0,3.7,3,104.4,Medium,Nitish Rana,Attack plan
+2416,pace_or_spin,Pace,118,124.6,55.9,3.39,4,106.7,Medium,Kyle Mayers,Attack plan
+2416,pace_or_spin,Spin,60,126.7,51.7,3.33,2,97.3,Medium,Kyle Mayers,Attack plan
+2416,bowling_type,Right-arm medium,27,114.8,63.0,0.0,0,133.6,Low,Kyle Mayers,Attack plan
+2416,bowling_type,Right-arm offbreak,25,76.0,68.0,4.0,1,46.7,Low,Kyle Mayers,Attack plan
+2416,delivery_style,Off Break,23,65.2,69.6,4.35,1,32.1,Low,Kyle Mayers,Attack plan
+2416,delivery_style,Out Swing,27,100.0,66.7,0.0,0,125.4,Low,Kyle Mayers,Attack plan
+2416,delivery_style,Seamed In,20,120.0,55.0,5.0,1,85.1,Low,Kyle Mayers,Attack plan
+2416,delivery_style,Seamed Out,25,164.0,44.0,4.0,1,147.7,Low,Kyle Mayers,Attack plan
+2416,on_or_off,Off-side,100,100.0,65.0,2.0,2,90.0,Medium,Kyle Mayers,Attack plan
+2416,on_or_off,On-side,78,157.7,41.0,5.13,4,119.7,Medium,Kyle Mayers,Attack plan
+2416,over_or_around,Around,45,115.6,57.8,6.67,3,63.1,Low,Kyle Mayers,Attack plan
+2416,over_or_around,Over,133,128.6,53.4,2.26,3,117.1,High,Kyle Mayers,Attack plan
+2416,phase,Middle,25,168.0,32.0,8.0,2,97.2,Low,Kyle Mayers,Attack plan
+2416,phase,PP,152,116.4,58.6,2.63,4,102.4,High,Kyle Mayers,Attack plan
+2416,bowler_group,Left-arm pace,49,106.1,59.2,4.08,2,81.7,Low,Kyle Mayers,Attack plan
+2416,bowler_group,Off spin,25,76.0,68.0,4.0,1,46.7,Low,Kyle Mayers,Attack plan
+2416,bowler_group,Right-arm pace,69,137.7,53.6,2.9,2,123.9,Medium,Kyle Mayers,Attack plan
+7690,pace_or_spin,Pace,135,155.6,43.0,5.19,7,130.1,High,Saim Ayub,Attack plan
+7690,pace_or_spin,Spin,74,117.6,36.5,5.41,4,78.8,Medium,Saim Ayub,Attack plan
+7690,bowling_type,Right-arm Fast,25,220.0,40.0,12.0,3,131.6,Low,Saim Ayub,Attack plan
+7690,bowling_type,Right-arm fast-medium,24,187.5,33.3,4.17,1,193.9,Low,Saim Ayub,Attack plan
+7690,bowling_type,Right-arm medium,26,126.9,50.0,0.0,0,140.7,Low,Saim Ayub,Attack plan
+7690,bowling_type,Right-arm medium-fast,31,87.1,58.1,3.23,1,69.9,Low,Saim Ayub,Attack plan
+7690,bowling_type,Right-arm offbreak,37,108.1,43.2,8.11,3,45.0,Low,Saim Ayub,Attack plan
+7690,bowling_type,Slow left-arm orthodox,31,132.3,29.0,0.0,0,142.4,Low,Saim Ayub,Attack plan
+7690,delivery_style,Inswing,31,154.8,51.6,3.23,1,159.5,Low,Saim Ayub,Attack plan
+7690,delivery_style,Off Break,24,108.3,33.3,4.17,1,80.1,Low,Saim Ayub,Attack plan
+7690,delivery_style,Orthodox,26,126.9,34.6,0.0,0,133.6,Low,Saim Ayub,Attack plan
+7690,delivery_style,Out Swing,27,96.3,48.1,11.11,3,4.8,Low,Saim Ayub,Attack plan
+7690,on_or_off,Off-side,109,110.1,52.3,8.26,9,46.2,Medium,Saim Ayub,Attack plan
+7690,on_or_off,On-side,100,177.0,28.0,2.0,2,184.1,Medium,Saim Ayub,Attack plan
+7690,over_or_around,Around,72,155.6,41.7,5.56,4,117.9,Medium,Saim Ayub,Attack plan
+7690,over_or_around,Over,135,137.0,39.3,5.19,7,108.7,High,Saim Ayub,Attack plan
+7690,phase,Middle,29,134.5,34.5,3.45,1,109.2,Low,Saim Ayub,Attack plan
+7690,phase,PP,178,142.1,42.1,5.62,10,109.9,High,Saim Ayub,Attack plan
+7690,bowler_group,Left-arm orthodox,31,132.3,29.0,0.0,0,142.4,Low,Saim Ayub,Attack plan
+7690,bowler_group,Left-arm pace,29,172.4,31.0,6.9,2,134.8,Low,Saim Ayub,Attack plan
+7690,bowler_group,Off spin,37,108.1,43.2,8.11,3,45.0,Low,Saim Ayub,Attack plan
+7690,bowler_group,Right-arm pace,106,150.9,46.2,4.72,5,128.8,Medium,Saim Ayub,Attack plan
+1596,pace_or_spin,Pace,108,112.0,47.2,5.56,6,75.7,Medium,Moeen Ali,Attack plan
+1596,pace_or_spin,Spin,50,122.0,36.0,6.0,3,69.9,Medium,Moeen Ali,Attack plan
+1596,bowling_type,Right-arm Fast,26,138.5,42.3,0.0,0,198.6,Low,Moeen Ali,Attack plan
+1596,bowling_type,Right-arm Leg-Break,27,140.7,33.3,3.7,1,103.0,Low,Moeen Ali,Attack plan
+1596,bowling_type,Right-arm fast-medium,22,63.6,50.0,4.55,1,27.6,Low,Moeen Ali,Attack plan
+1596,bowling_type,Right-arm medium-fast,34,111.8,50.0,8.82,3,40.1,Low,Moeen Ali,Attack plan
+1596,delivery_style,Off Cutter,23,121.7,47.8,8.7,2,61.5,Low,Moeen Ali,Attack plan
+1596,delivery_style,Seamed Out,21,81.0,52.4,4.76,1,43.2,Low,Moeen Ali,Attack plan
+1596,on_or_off,Off-side,88,69.3,56.8,5.68,5,24.2,Medium,Moeen Ali,Attack plan
+1596,on_or_off,On-side,70,172.9,27.1,5.71,4,134.4,Medium,Moeen Ali,Attack plan
+1596,over_or_around,Around,46,141.3,41.3,2.17,1,144.1,Low,Moeen Ali,Attack plan
+1596,over_or_around,Over,111,105.4,44.1,7.21,8,47.7,Medium,Moeen Ali,Attack plan
+1596,phase,Death,50,152.0,44.0,4.0,2,156.3,Medium,Moeen Ali,Attack plan
+1596,phase,Middle,69,100.0,37.7,7.25,5,42.5,Medium,Moeen Ali,Attack plan
+1596,phase,PP,39,94.9,53.8,5.13,2,47.4,Low,Moeen Ali,Attack plan
+1596,bowler_group,Leg spin,27,140.7,33.3,3.7,1,103.0,Low,Moeen Ali,Attack plan
+1596,bowler_group,Right-arm pace,93,116.1,46.2,4.3,4,95.0,Medium,Moeen Ali,Attack plan
+6314,pace_or_spin,Pace,151,152.3,43.0,5.96,9,91.0,High,Devdutt Padikkal,Attack plan
+6314,pace_or_spin,Spin,64,128.1,43.8,3.12,2,91.5,Medium,Devdutt Padikkal,Attack plan
+6314,bowling_type,Right-arm Fast,41,178.0,31.7,4.88,2,121.9,Low,Devdutt Padikkal,Attack plan
+6314,bowling_type,Right-arm Leg-Break,21,123.8,33.3,4.76,1,77.4,Low,Devdutt Padikkal,Attack plan
+6314,bowling_type,Right-arm medium,29,158.6,48.3,3.45,1,114.7,Low,Devdutt Padikkal,Attack plan
+6314,bowling_type,Right-arm medium-fast,36,161.1,41.7,5.56,2,98.4,Low,Devdutt Padikkal,Attack plan
+6314,bowling_type,Slow left-arm orthodox,25,120.0,52.0,0.0,0,107.0,Low,Devdutt Padikkal,Attack plan
+6314,delivery_style,Orthodox,24,125.0,50.0,0.0,0,112.5,Low,Devdutt Padikkal,Attack plan
+6314,delivery_style,Out Swing,22,150.0,54.5,4.55,1,114.2,Low,Devdutt Padikkal,Attack plan
+6314,delivery_style,Seamed In,20,255.0,15.0,5.0,1,178.8,Low,Devdutt Padikkal,Attack plan
+6314,delivery_style,Seamed Out,39,161.5,38.5,2.56,1,122.2,Low,Devdutt Padikkal,Attack plan
+6314,on_or_off,Off-side,128,121.1,53.9,6.25,8,62.0,High,Devdutt Padikkal,Attack plan
+6314,on_or_off,On-side,87,180.5,27.6,3.45,3,132.9,Medium,Devdutt Padikkal,Attack plan
+6314,over_or_around,Around,44,125.0,43.2,2.27,1,90.5,Low,Devdutt Padikkal,Attack plan
+6314,over_or_around,Over,171,150.3,43.3,5.85,10,91.3,High,Devdutt Padikkal,Attack plan
+6314,phase,Death,37,116.2,40.5,5.41,2,59.0,Low,Devdutt Padikkal,Attack plan
+6314,phase,Middle,61,152.5,32.8,4.92,3,101.4,Medium,Devdutt Padikkal,Attack plan
+6314,phase,PP,117,150.4,49.6,5.13,6,96.9,Medium,Devdutt Padikkal,Attack plan
+6314,bowler_group,Left-arm orthodox,25,120.0,52.0,0.0,0,107.0,Low,Devdutt Padikkal,Attack plan
+6314,bowler_group,Left-arm pace,39,130.8,46.2,7.69,3,60.1,Low,Devdutt Padikkal,Attack plan
+6314,bowler_group,Leg spin,21,123.8,33.3,4.76,1,77.4,Low,Devdutt Padikkal,Attack plan
+6314,bowler_group,Right-arm pace,112,159.8,42.0,5.36,6,101.5,Medium,Devdutt Padikkal,Attack plan
+4219,pace_or_spin,Pace,100,144.0,25.0,3.0,3,114.6,Medium,Krunal Pandya,Attack plan
+4219,pace_or_spin,Spin,54,133.3,44.4,7.41,4,72.9,Medium,Krunal Pandya,Attack plan
+4219,bowling_type,Right-arm Fast,22,222.7,18.2,0.0,0,228.6,Low,Krunal Pandya,Attack plan
+4219,bowling_type,Right-arm medium-fast,21,128.6,33.3,0.0,0,128.3,Low,Krunal Pandya,Attack plan
+4219,bowling_type,Right-arm offbreak,35,134.3,45.7,5.71,2,87.9,Low,Krunal Pandya,Attack plan
+4219,on_or_off,Off-side,78,100.0,41.0,1.28,1,87.6,Medium,Krunal Pandya,Attack plan
+4219,on_or_off,On-side,76,181.6,22.4,7.89,6,113.7,Medium,Krunal Pandya,Attack plan
+4219,over_or_around,Around,67,143.3,34.3,2.99,2,117.2,Medium,Krunal Pandya,Attack plan
+4219,over_or_around,Over,87,137.9,29.9,5.75,5,87.8,Medium,Krunal Pandya,Attack plan
+4219,phase,Death,54,172.2,22.2,5.56,3,119.9,Medium,Krunal Pandya,Attack plan
+4219,phase,Middle,82,134.1,32.9,4.88,4,96.1,Medium,Krunal Pandya,Attack plan
+4219,bowler_group,Left-arm pace,27,148.1,18.5,7.41,2,79.4,Low,Krunal Pandya,Attack plan
+4219,bowler_group,Off spin,35,134.3,45.7,5.71,2,87.9,Low,Krunal Pandya,Attack plan
+4219,bowler_group,Right-arm pace,73,142.5,27.4,1.37,1,128.5,Medium,Krunal Pandya,Attack plan
+1941,pace_or_spin,Pace,282,123.8,43.6,3.55,10,95.6,High,Devon Conway,Attack plan
+1941,pace_or_spin,Spin,101,128.7,34.7,5.94,6,73.9,Medium,Devon Conway,Attack plan
+1941,bowling_type,Left-arm Chinaman,21,114.3,23.8,4.76,1,67.1,Low,Devon Conway,Attack plan
+1941,bowling_type,Left-arm medium-fast,39,184.6,23.1,0.0,0,175.4,Low,Devon Conway,Attack plan
+1941,bowling_type,Right-arm Fast,61,121.3,45.9,6.56,4,69.7,Medium,Devon Conway,Attack plan
+1941,bowling_type,Right-arm Leg-Break,36,138.9,41.7,8.33,3,65.9,Low,Devon Conway,Attack plan
+1941,bowling_type,Right-arm fast-medium,21,114.3,42.9,4.76,1,70.8,Low,Devon Conway,Attack plan
+1941,bowling_type,Right-arm medium,63,100.0,58.7,1.59,1,96.0,Medium,Devon Conway,Attack plan
+1941,bowling_type,Right-arm medium-fast,58,110.3,41.4,1.72,1,92.9,Medium,Devon Conway,Attack plan
+1941,bowling_type,Right-arm offbreak,33,121.2,36.4,3.03,1,88.8,Low,Devon Conway,Attack plan
+1941,delivery_style,Googly,26,111.5,42.3,7.69,2,43.4,Low,Devon Conway,Attack plan
+1941,delivery_style,Inswing,40,152.5,35.0,7.5,3,97.1,Low,Devon Conway,Attack plan
+1941,delivery_style,Off Break,31,129.0,32.3,0.0,0,119.9,Low,Devon Conway,Attack plan
+1941,delivery_style,Off Cutter,24,125.0,25.0,0.0,0,114.3,Low,Devon Conway,Attack plan
+1941,delivery_style,Out Swing,66,128.8,54.5,4.55,3,104.2,Medium,Devon Conway,Attack plan
+1941,delivery_style,Seamed In,38,155.3,23.7,5.26,2,110.1,Low,Devon Conway,Attack plan
+1941,delivery_style,Seamed Out,65,69.2,61.5,3.08,2,44.0,Medium,Devon Conway,Attack plan
+1941,on_or_off,Off-side,205,110.7,49.3,4.39,9,74.1,High,Devon Conway,Attack plan
+1941,on_or_off,On-side,178,141.6,32.0,3.93,7,107.1,High,Devon Conway,Attack plan
+1941,over_or_around,Around,93,130.1,34.4,3.23,3,101.5,Medium,Devon Conway,Attack plan
+1941,over_or_around,Over,288,124.3,43.1,4.51,13,86.2,High,Devon Conway,Attack plan
+1941,phase,Middle,101,130.7,31.7,4.95,5,85.3,Medium,Devon Conway,Attack plan
+1941,phase,PP,273,123.8,45.4,4.03,11,91.2,High,Devon Conway,Attack plan
+1941,bowler_group,Left-arm pace,79,157.0,31.6,3.8,3,123.1,Medium,Devon Conway,Attack plan
+1941,bowler_group,Left-arm wrist spin,21,114.3,23.8,4.76,1,67.1,Low,Devon Conway,Attack plan
+1941,bowler_group,Leg spin,36,138.9,41.7,8.33,3,65.9,Low,Devon Conway,Attack plan
+1941,bowler_group,Off spin,33,121.2,36.4,3.03,1,88.8,Low,Devon Conway,Attack plan
+1941,bowler_group,Right-arm pace,203,110.8,48.3,3.45,7,84.4,High,Devon Conway,Attack plan
+4703,pace_or_spin,Pace,116,158.6,33.6,6.9,8,91.2,Medium,Rishabh Pant,Attack plan
+4703,pace_or_spin,Spin,65,155.4,24.6,6.15,4,101.9,Medium,Rishabh Pant,Attack plan
+4703,bowling_type,Right-arm Fast,28,117.9,39.3,3.57,1,83.6,Low,Rishabh Pant,Attack plan
+4703,bowling_type,Right-arm Leg-Break,30,170.0,23.3,6.67,2,116.1,Low,Rishabh Pant,Attack plan
+4703,bowling_type,Right-arm medium,25,160.0,32.0,8.0,2,82.1,Low,Rishabh Pant,Attack plan
+4703,bowling_type,Right-arm medium-fast,37,145.9,35.1,5.41,2,90.2,Low,Rishabh Pant,Attack plan
+4703,bowling_type,Right-arm offbreak,21,147.6,23.8,9.52,2,67.8,Low,Rishabh Pant,Attack plan
+4703,delivery_style,Off Break,20,130.0,30.0,15.0,3,5.2,Low,Rishabh Pant,Attack plan
+4703,on_or_off,Off-side,92,116.3,41.3,9.78,9,32.3,Medium,Rishabh Pant,Attack plan
+4703,on_or_off,On-side,89,200.0,19.1,3.37,3,159.8,Medium,Rishabh Pant,Attack plan
+4703,over_or_around,Around,41,124.4,31.7,9.76,4,41.2,Low,Rishabh Pant,Attack plan
+4703,over_or_around,Over,140,167.1,30.0,5.71,8,110.0,High,Rishabh Pant,Attack plan
+4703,phase,Death,37,245.9,18.9,8.11,3,151.4,Low,Rishabh Pant,Attack plan
+4703,phase,Middle,93,129.0,28.0,7.53,7,63.7,Medium,Rishabh Pant,Attack plan
+4703,phase,PP,51,145.1,43.1,3.92,2,104.9,Medium,Rishabh Pant,Attack plan
+4703,bowler_group,Leg spin,30,170.0,23.3,6.67,2,116.1,Low,Rishabh Pant,Attack plan
+4703,bowler_group,Off spin,21,147.6,23.8,9.52,2,67.8,Low,Rishabh Pant,Attack plan
+4703,bowler_group,Right-arm pace,99,148.5,34.3,7.07,7,80.9,Medium,Rishabh Pant,Attack plan
 88,pace_or_spin,Pace,202,117.8,50.0,6.44,13,61.4,High,Faf du Plessis,Attack plan
 88,pace_or_spin,Spin,132,97.7,35.6,3.79,5,59.9,High,Faf du Plessis,Attack plan
 88,bowling_type,Left-arm fast-medium,32,109.4,46.9,3.12,1,85.1,Low,Faf du Plessis,Attack plan
@@ -25,305 +310,40 @@ player_id,dimension,value,balls,sr,dot_pct,dismissal_pct,dismissals,perf_index,c
 88,bowler_group,Leg spin,38,118.4,21.1,2.63,1,87.7,Low,Faf du Plessis,Attack plan
 88,bowler_group,Off spin,38,97.4,39.5,7.89,3,28.2,Low,Faf du Plessis,Attack plan
 88,bowler_group,Right-arm pace,114,137.7,45.6,6.14,7,81.9,Medium,Faf du Plessis,Attack plan
-1596,pace_or_spin,Pace,108,112.0,47.2,5.56,6,75.7,Medium,Moeen Ali,Attack plan
-1596,pace_or_spin,Spin,50,122.0,36.0,6.0,3,69.9,Medium,Moeen Ali,Attack plan
-1596,bowling_type,Right-arm Fast,26,138.5,42.3,0.0,0,198.6,Low,Moeen Ali,Attack plan
-1596,bowling_type,Right-arm Leg-Break,27,140.7,33.3,3.7,1,103.0,Low,Moeen Ali,Attack plan
-1596,bowling_type,Right-arm fast-medium,22,63.6,50.0,4.55,1,27.6,Low,Moeen Ali,Attack plan
-1596,bowling_type,Right-arm medium-fast,34,111.8,50.0,8.82,3,40.1,Low,Moeen Ali,Attack plan
-1596,delivery_style,Off Cutter,23,121.7,47.8,8.7,2,61.5,Low,Moeen Ali,Attack plan
-1596,delivery_style,Seamed Out,21,81.0,52.4,4.76,1,43.2,Low,Moeen Ali,Attack plan
-1596,on_or_off,Off-side,88,69.3,56.8,5.68,5,24.2,Medium,Moeen Ali,Attack plan
-1596,on_or_off,On-side,70,172.9,27.1,5.71,4,134.4,Medium,Moeen Ali,Attack plan
-1596,over_or_around,Around,46,141.3,41.3,2.17,1,144.1,Low,Moeen Ali,Attack plan
-1596,over_or_around,Over,111,105.4,44.1,7.21,8,47.7,Medium,Moeen Ali,Attack plan
-1596,phase,Death,50,152.0,44.0,4.0,2,156.3,Medium,Moeen Ali,Attack plan
-1596,phase,Middle,69,100.0,37.7,7.25,5,42.5,Medium,Moeen Ali,Attack plan
-1596,phase,PP,39,94.9,53.8,5.13,2,47.4,Low,Moeen Ali,Attack plan
-1596,bowler_group,Leg spin,27,140.7,33.3,3.7,1,103.0,Low,Moeen Ali,Attack plan
-1596,bowler_group,Right-arm pace,93,116.1,46.2,4.3,4,95.0,Medium,Moeen Ali,Attack plan
-2101,pace_or_spin,Pace,224,121.4,46.9,5.8,13,75.8,High,Quinton de Kock,Attack plan
-2101,pace_or_spin,Spin,72,151.4,27.8,5.56,4,97.8,Medium,Quinton de Kock,Attack plan
-2101,bowling_type,Left-arm medium,20,115.0,50.0,5.0,1,78.8,Low,Quinton de Kock,Attack plan
-2101,bowling_type,Left-arm medium-fast,32,112.5,50.0,3.12,1,94.9,Low,Quinton de Kock,Attack plan
-2101,bowling_type,Right-arm Leg-Break,22,177.3,22.7,4.55,1,120.0,Low,Quinton de Kock,Attack plan
-2101,bowling_type,Right-arm fast-medium,36,127.8,41.7,5.56,2,79.8,Low,Quinton de Kock,Attack plan
-2101,bowling_type,Right-arm medium,27,96.3,44.4,7.41,2,36.4,Low,Quinton de Kock,Attack plan
-2101,bowling_type,Right-arm medium-fast,65,138.5,44.6,3.08,2,108.8,Medium,Quinton de Kock,Attack plan
-2101,bowling_type,Right-arm offbreak,30,136.7,30.0,3.33,1,99.4,Low,Quinton de Kock,Attack plan
-2101,delivery_style,Inswing,47,127.7,57.4,8.51,4,65.7,Low,Quinton de Kock,Attack plan
-2101,delivery_style,Off Break,23,108.7,30.4,4.35,1,67.3,Low,Quinton de Kock,Attack plan
-2101,delivery_style,Off Cutter,23,165.2,26.1,13.04,3,51.9,Low,Quinton de Kock,Attack plan
-2101,delivery_style,Out Swing,76,115.8,52.6,3.95,3,94.8,Medium,Quinton de Kock,Attack plan
-2101,on_or_off,Off-side,177,101.1,49.2,6.21,11,50.3,High,Quinton de Kock,Attack plan
-2101,on_or_off,On-side,119,169.7,31.9,5.04,6,127.2,Medium,Quinton de Kock,Attack plan
-2101,over_or_around,Around,79,122.8,32.9,7.59,6,56.7,Medium,Quinton de Kock,Attack plan
-2101,over_or_around,Over,217,130.9,45.6,5.07,11,91.5,High,Quinton de Kock,Attack plan
-2101,phase,Middle,79,141.8,29.1,7.59,6,72.4,Medium,Quinton de Kock,Attack plan
-2101,phase,PP,212,123.1,47.6,5.19,11,84.2,High,Quinton de Kock,Attack plan
-2101,bowler_group,Left-arm pace,78,111.5,51.3,5.13,4,77.3,Medium,Quinton de Kock,Attack plan
-2101,bowler_group,Leg spin,22,177.3,22.7,4.55,1,120.0,Low,Quinton de Kock,Attack plan
-2101,bowler_group,Off spin,30,136.7,30.0,3.33,1,99.4,Low,Quinton de Kock,Attack plan
-2101,bowler_group,Right-arm pace,146,126.7,44.5,6.16,9,75.1,High,Quinton de Kock,Attack plan
-4895,pace_or_spin,Pace,75,100.0,50.7,4.0,3,72.2,Medium,Charith Asalanka,Attack plan
-4895,pace_or_spin,Spin,75,90.7,45.3,12.0,9,0.0,Medium,Charith Asalanka,Attack plan
-4895,bowling_type,Right-arm Fast,20,90.0,55.0,0.0,0,88.8,Low,Charith Asalanka,Attack plan
-4895,bowling_type,Right-arm Leg-Break,24,58.3,58.3,8.33,2,0.0,Low,Charith Asalanka,Attack plan
-4895,bowling_type,Right-arm fast-medium,23,69.6,69.6,0.0,0,84.1,Low,Charith Asalanka,Attack plan
-4895,bowling_type,Right-arm offbreak,29,93.1,44.8,13.79,4,0.0,Low,Charith Asalanka,Attack plan
-4895,delivery_style,Off Break,22,100.0,36.4,9.09,2,28.6,Low,Charith Asalanka,Attack plan
-4895,on_or_off,Off-side,76,86.8,53.9,5.26,4,49.0,Medium,Charith Asalanka,Attack plan
-4895,on_or_off,On-side,74,104.1,41.9,10.81,8,15.3,Medium,Charith Asalanka,Attack plan
-4895,over_or_around,Around,44,102.3,43.2,9.09,4,30.3,Low,Charith Asalanka,Attack plan
-4895,over_or_around,Over,106,92.5,50.0,7.55,8,32.7,Medium,Charith Asalanka,Attack plan
-4895,phase,Death,40,102.5,47.5,12.5,5,0.0,Low,Charith Asalanka,Attack plan
-4895,phase,Middle,84,106.0,40.5,7.14,6,55.6,Medium,Charith Asalanka,Attack plan
-4895,phase,PP,26,50.0,73.1,3.85,1,20.6,Low,Charith Asalanka,Attack plan
-4895,bowler_group,Left-arm pace,25,136.0,32.0,4.0,1,105.6,Low,Charith Asalanka,Attack plan
-4895,bowler_group,Leg spin,24,58.3,58.3,8.33,2,0.0,Low,Charith Asalanka,Attack plan
-4895,bowler_group,Off spin,29,93.1,44.8,13.79,4,0.0,Low,Charith Asalanka,Attack plan
-4895,bowler_group,Right-arm pace,50,82.0,60.0,4.0,2,54.2,Medium,Charith Asalanka,Attack plan
-4391,pace_or_spin,Pace,119,174.8,30.3,8.4,10,101.5,Medium,Liam Livingstone,Attack plan
-4391,pace_or_spin,Spin,76,105.3,32.9,5.26,4,64.5,Medium,Liam Livingstone,Attack plan
-4391,bowling_type,Right-arm Leg-Break,22,150.0,27.3,4.55,1,102.5,Low,Liam Livingstone,Attack plan
-4391,bowling_type,Right-arm fast-medium,25,144.0,24.0,8.0,2,77.0,Low,Liam Livingstone,Attack plan
-4391,bowling_type,Right-arm medium,24,204.2,33.3,8.33,2,131.8,Low,Liam Livingstone,Attack plan
-4391,bowling_type,Right-arm medium-fast,33,190.9,24.2,12.12,4,86.7,Low,Liam Livingstone,Attack plan
-4391,bowling_type,Slow left-arm orthodox,33,84.8,36.4,6.06,2,40.0,Low,Liam Livingstone,Attack plan
-4391,delivery_style,Off Cutter,24,212.5,20.8,4.17,1,177.0,Low,Liam Livingstone,Attack plan
-4391,delivery_style,Orthodox,26,88.5,34.6,7.69,2,28.1,Low,Liam Livingstone,Attack plan
-4391,delivery_style,Straight,23,273.9,8.7,8.7,2,182.8,Low,Liam Livingstone,Attack plan
-4391,on_or_off,Off-side,106,100.9,41.5,8.49,9,29.3,Medium,Liam Livingstone,Attack plan
-4391,on_or_off,On-side,89,203.4,19.1,5.62,5,162.9,Medium,Liam Livingstone,Attack plan
-4391,over_or_around,Around,41,124.4,29.3,4.88,2,94.9,Low,Liam Livingstone,Attack plan
-4391,over_or_around,Over,154,153.9,31.8,7.79,12,86.2,High,Liam Livingstone,Attack plan
-4391,phase,Death,60,190.0,26.7,10.0,6,110.0,Medium,Liam Livingstone,Attack plan
-4391,phase,Middle,104,132.7,27.9,5.77,6,88.5,Medium,Liam Livingstone,Attack plan
-4391,phase,PP,31,116.1,51.6,6.45,2,51.4,Low,Liam Livingstone,Attack plan
-4391,bowler_group,Left-arm orthodox,33,84.8,36.4,6.06,2,40.0,Low,Liam Livingstone,Attack plan
-4391,bowler_group,Leg spin,22,150.0,27.3,4.55,1,102.5,Low,Liam Livingstone,Attack plan
-4391,bowler_group,Right-arm pace,101,182.2,28.7,9.9,10,98.0,Medium,Liam Livingstone,Attack plan
-5039,pace_or_spin,Pace,127,123.6,42.5,7.09,9,56.8,High,Rajat Patidar,Attack plan
-5039,pace_or_spin,Spin,88,179.5,19.3,0.0,0,163.5,Medium,Rajat Patidar,Attack plan
-5039,bowling_type,Right-arm Fast,41,122.0,36.6,2.44,1,88.7,Low,Rajat Patidar,Attack plan
-5039,bowling_type,Right-arm Leg-Break,28,207.1,10.7,0.0,0,182.0,Low,Rajat Patidar,Attack plan
-5039,bowling_type,Right-arm medium,26,153.8,46.2,11.54,3,49.9,Low,Rajat Patidar,Attack plan
-5039,bowling_type,Right-arm medium-fast,28,146.4,39.3,0.0,0,125.0,Low,Rajat Patidar,Attack plan
-5039,bowling_type,Right-arm offbreak,20,155.0,30.0,0.0,0,142.3,Low,Rajat Patidar,Attack plan
-5039,bowling_type,Slow left-arm orthodox,32,196.9,18.8,0.0,0,180.9,Low,Rajat Patidar,Attack plan
-5039,delivery_style,Leg Break,22,186.4,13.6,0.0,0,163.1,Low,Rajat Patidar,Attack plan
-5039,delivery_style,Orthodox,24,225.0,12.5,0.0,0,211.8,Low,Rajat Patidar,Attack plan
-5039,delivery_style,Seamed In,37,143.2,51.4,2.7,1,102.1,Low,Rajat Patidar,Attack plan
-5039,on_or_off,Off-side,113,118.6,46.9,6.19,7,59.8,Medium,Rajat Patidar,Attack plan
-5039,on_or_off,On-side,102,177.5,17.6,1.96,2,143.3,Medium,Rajat Patidar,Attack plan
-5039,over_or_around,Around,37,186.5,16.2,0.0,0,171.6,Low,Rajat Patidar,Attack plan
-5039,over_or_around,Over,178,138.2,36.5,5.06,9,85.1,High,Rajat Patidar,Attack plan
-5039,phase,Middle,127,163.0,22.8,3.94,5,122.3,High,Rajat Patidar,Attack plan
-5039,phase,PP,73,121.9,49.3,2.74,2,81.5,Medium,Rajat Patidar,Attack plan
-5039,bowler_group,Left-arm orthodox,32,196.9,18.8,0.0,0,180.9,Low,Rajat Patidar,Attack plan
-5039,bowler_group,Left-arm pace,22,100.0,40.9,4.55,1,55.5,Low,Rajat Patidar,Attack plan
-5039,bowler_group,Leg spin,28,207.1,10.7,0.0,0,182.0,Low,Rajat Patidar,Attack plan
-5039,bowler_group,Off spin,20,155.0,30.0,0.0,0,142.3,Low,Rajat Patidar,Attack plan
-5039,bowler_group,Right-arm pace,105,128.6,42.9,7.62,8,57.0,Medium,Rajat Patidar,Attack plan
-2258,pace_or_spin,Pace,344,129.9,47.1,6.4,22,74.9,High,Sanju Samson,Attack plan
-2258,pace_or_spin,Spin,146,171.2,29.5,4.79,7,127.4,High,Sanju Samson,Attack plan
-2258,bowling_type,Left-arm fast-medium,26,119.2,42.3,3.85,1,91.1,Low,Sanju Samson,Attack plan
-2258,bowling_type,Left-arm medium,29,82.8,65.5,3.45,1,49.2,Low,Sanju Samson,Attack plan
-2258,bowling_type,Left-arm medium-fast,63,134.9,44.4,4.76,3,89.8,Medium,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm Fast,90,143.3,46.7,7.78,7,82.4,Medium,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm Leg-Break,58,186.2,24.1,5.17,3,134.5,Medium,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm fast-medium,31,80.6,71.0,12.9,4,0.0,Low,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm medium,51,164.7,29.4,1.96,1,135.0,Medium,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm medium-fast,48,137.5,45.8,8.33,4,64.3,Low,Sanju Samson,Attack plan
-2258,bowling_type,Right-arm offbreak,34,155.9,35.3,0.0,0,164.2,Low,Sanju Samson,Attack plan
-2258,bowling_type,Slow left-arm orthodox,48,162.5,29.2,4.17,2,118.3,Low,Sanju Samson,Attack plan
-2258,delivery_style,Carrom,21,128.6,33.3,4.76,1,99.1,Low,Sanju Samson,Attack plan
-2258,delivery_style,Googly,20,125.0,35.0,10.0,2,40.0,Low,Sanju Samson,Attack plan
-2258,delivery_style,Inswing,77,105.2,57.1,6.49,5,52.6,Medium,Sanju Samson,Attack plan
-2258,delivery_style,Leg Break,27,218.5,22.2,3.7,1,167.5,Low,Sanju Samson,Attack plan
-2258,delivery_style,Off Cutter,30,206.7,26.7,3.33,1,167.0,Low,Sanju Samson,Attack plan
-2258,delivery_style,Orthodox,33,154.5,30.3,6.06,2,96.0,Low,Sanju Samson,Attack plan
-2258,delivery_style,Out Swing,74,86.5,58.1,8.11,6,19.9,Medium,Sanju Samson,Attack plan
-2258,delivery_style,Seamed In,47,151.1,48.9,4.26,2,111.1,Low,Sanju Samson,Attack plan
-2258,delivery_style,Seamed Out,30,146.7,40.0,10.0,3,60.9,Low,Sanju Samson,Attack plan
-2258,delivery_style,Straight,21,157.1,38.1,4.76,1,107.0,Low,Sanju Samson,Attack plan
-2258,on_or_off,Off-side,305,123.9,48.2,6.56,20,67.8,High,Sanju Samson,Attack plan
-2258,on_or_off,On-side,185,172.4,31.4,4.86,9,127.9,High,Sanju Samson,Attack plan
-2258,over_or_around,Around,65,164.6,32.3,6.15,4,100.0,Medium,Sanju Samson,Attack plan
-2258,over_or_around,Over,425,138.8,43.3,5.88,25,89.0,High,Sanju Samson,Attack plan
-2258,phase,Death,35,214.3,25.7,11.43,4,100.7,Low,Sanju Samson,Attack plan
-2258,phase,Middle,165,141.2,30.3,6.67,11,85.5,High,Sanju Samson,Attack plan
-2258,phase,PP,290,134.1,50.3,4.83,14,92.0,High,Sanju Samson,Attack plan
-2258,bowler_group,Left-arm orthodox,48,162.5,29.2,4.17,2,118.3,Low,Sanju Samson,Attack plan
-2258,bowler_group,Left-arm pace,124,115.3,49.2,4.84,6,71.6,High,Sanju Samson,Attack plan
-2258,bowler_group,Leg spin,58,186.2,24.1,5.17,3,134.5,Medium,Sanju Samson,Attack plan
-2258,bowler_group,Off spin,34,155.9,35.3,0.0,0,164.2,Low,Sanju Samson,Attack plan
-2258,bowler_group,Right-arm pace,220,138.2,45.9,7.27,16,76.8,High,Sanju Samson,Attack plan
-7900,pace_or_spin,Pace,105,97.1,58.1,6.67,7,49.0,Medium,Tanzid Hasan,Attack plan
-7900,pace_or_spin,Spin,45,151.1,46.7,2.22,1,153.2,Low,Tanzid Hasan,Attack plan
-7900,bowling_type,Right-arm fast-medium,20,135.0,35.0,5.0,1,112.4,Low,Tanzid Hasan,Attack plan
-7900,bowling_type,Right-arm medium-fast,47,95.7,66.0,8.51,4,30.2,Low,Tanzid Hasan,Attack plan
-7900,bowling_type,Slow left-arm orthodox,23,165.2,47.8,4.35,1,139.9,Low,Tanzid Hasan,Attack plan
-7900,delivery_style,Inswing,26,76.9,73.1,7.69,2,16.6,Low,Tanzid Hasan,Attack plan
-7900,delivery_style,Out Swing,23,104.3,65.2,13.04,3,0.0,Low,Tanzid Hasan,Attack plan
-7900,on_or_off,Off-side,92,81.5,62.0,5.43,5,43.1,Medium,Tanzid Hasan,Attack plan
-7900,on_or_off,On-side,58,163.8,43.1,5.17,3,138.0,Medium,Tanzid Hasan,Attack plan
-7900,over_or_around,Around,38,150.0,47.4,2.63,1,147.1,Low,Tanzid Hasan,Attack plan
-7900,over_or_around,Over,112,100.9,57.1,6.25,7,57.6,Medium,Tanzid Hasan,Attack plan
-7900,phase,PP,125,107.2,60.0,4.8,6,79.2,High,Tanzid Hasan,Attack plan
-7900,bowler_group,Left-arm orthodox,23,165.2,47.8,4.35,1,139.9,Low,Tanzid Hasan,Attack plan
-7900,bowler_group,Left-arm pace,24,83.3,62.5,4.17,1,54.5,Low,Tanzid Hasan,Attack plan
-7900,bowler_group,Right-arm pace,81,101.2,56.8,7.41,6,47.3,Medium,Tanzid Hasan,Attack plan
-20702,pace_or_spin,Pace,132,143.9,25.0,4.55,6,107.4,High,Tristan Stubbs,Attack plan
-20702,pace_or_spin,Spin,59,145.8,23.7,3.39,2,123.4,Medium,Tristan Stubbs,Attack plan
-20702,bowling_type,Right-arm Fast,24,87.5,33.3,4.17,1,55.9,Low,Tristan Stubbs,Attack plan
-20702,bowling_type,Right-arm Leg-Break,27,144.4,22.2,3.7,1,119.9,Low,Tristan Stubbs,Attack plan
-20702,bowling_type,Right-arm medium,32,156.2,18.8,6.25,2,97.9,Low,Tristan Stubbs,Attack plan
-20702,bowling_type,Right-arm medium-fast,37,156.8,21.6,0.0,0,145.9,Low,Tristan Stubbs,Attack plan
-20702,delivery_style,Full Toss,23,208.7,8.7,0.0,0,199.7,Low,Tristan Stubbs,Attack plan
-20702,delivery_style,Leg Break,23,156.5,17.4,0.0,0,167.0,Low,Tristan Stubbs,Attack plan
-20702,delivery_style,Seamed In,23,65.2,47.8,4.35,1,32.7,Low,Tristan Stubbs,Attack plan
-20702,on_or_off,Off-side,98,138.8,30.6,6.12,6,92.7,Medium,Tristan Stubbs,Attack plan
-20702,on_or_off,On-side,93,150.5,18.3,2.15,2,131.6,Medium,Tristan Stubbs,Attack plan
-20702,over_or_around,Around,26,169.2,23.1,3.85,1,148.0,Low,Tristan Stubbs,Attack plan
-20702,over_or_around,Over,165,140.6,24.8,4.24,7,106.9,High,Tristan Stubbs,Attack plan
-20702,phase,Death,113,169.0,16.8,3.54,4,135.5,Medium,Tristan Stubbs,Attack plan
-20702,phase,Middle,76,111.8,34.2,5.26,4,75.8,Medium,Tristan Stubbs,Attack plan
-20702,bowler_group,Left-arm pace,22,177.3,22.7,4.55,1,153.4,Low,Tristan Stubbs,Attack plan
-20702,bowler_group,Leg spin,27,144.4,22.2,3.7,1,119.9,Low,Tristan Stubbs,Attack plan
-20702,bowler_group,Right-arm pace,110,137.3,25.5,4.55,5,99.1,Medium,Tristan Stubbs,Attack plan
-7544,pace_or_spin,Pace,128,143.0,32.8,7.03,9,87.3,High,Venkatesh Iyer,Attack plan
-7544,pace_or_spin,Spin,72,131.9,34.7,8.33,6,58.9,Medium,Venkatesh Iyer,Attack plan
-7544,bowling_type,Left-arm fast-medium,22,81.8,36.4,4.55,1,44.0,Low,Venkatesh Iyer,Attack plan
-7544,bowling_type,Right-arm Leg-Break,42,107.1,38.1,9.52,4,26.4,Low,Venkatesh Iyer,Attack plan
-7544,bowling_type,Right-arm medium,31,116.1,29.0,3.23,1,94.8,Low,Venkatesh Iyer,Attack plan
-7544,bowling_type,Right-arm medium-fast,24,191.7,37.5,8.33,2,127.3,Low,Venkatesh Iyer,Attack plan
-7544,delivery_style,Googly,25,132.0,44.0,12.0,3,30.1,Low,Venkatesh Iyer,Attack plan
-7544,delivery_style,Inswing,20,105.0,60.0,10.0,2,23.5,Low,Venkatesh Iyer,Attack plan
-7544,delivery_style,Seamed In,20,200.0,20.0,5.0,1,158.5,Low,Venkatesh Iyer,Attack plan
-7544,on_or_off,Off-side,117,110.3,41.9,5.98,7,60.3,Medium,Venkatesh Iyer,Attack plan
-7544,on_or_off,On-side,83,179.5,21.7,9.64,8,99.4,Medium,Venkatesh Iyer,Attack plan
-7544,over_or_around,Around,34,176.5,26.5,5.88,2,116.5,Low,Venkatesh Iyer,Attack plan
-7544,over_or_around,Over,166,131.3,34.9,7.83,13,67.3,High,Venkatesh Iyer,Attack plan
-7544,phase,Death,35,134.3,37.1,20.0,7,0.0,Low,Venkatesh Iyer,Attack plan
-7544,phase,Middle,103,156.3,21.4,2.91,3,129.7,Medium,Venkatesh Iyer,Attack plan
-7544,phase,PP,62,112.9,51.6,8.06,5,44.8,Medium,Venkatesh Iyer,Attack plan
-7544,bowler_group,Left-arm pace,50,124.0,36.0,8.0,4,56.7,Medium,Venkatesh Iyer,Attack plan
-7544,bowler_group,Leg spin,42,107.1,38.1,9.52,4,26.4,Low,Venkatesh Iyer,Attack plan
-7544,bowler_group,Right-arm pace,78,155.1,30.8,6.41,5,108.4,Medium,Venkatesh Iyer,Attack plan
-4755,pace_or_spin,Pace,156,140.4,26.9,5.77,9,89.7,High,Shivam Dube,Attack plan
-4755,pace_or_spin,Spin,76,128.9,36.8,5.26,4,86.1,Medium,Shivam Dube,Attack plan
-4755,bowling_type,Right-arm Fast,51,141.2,31.4,5.88,3,93.8,Medium,Shivam Dube,Attack plan
-4755,bowling_type,Right-arm Leg-Break,32,140.6,34.4,3.12,1,114.8,Low,Shivam Dube,Attack plan
-4755,bowling_type,Right-arm fast-medium,23,113.0,30.4,8.7,2,37.0,Low,Shivam Dube,Attack plan
-4755,bowling_type,Right-arm medium-fast,38,134.2,23.7,5.26,2,95.3,Low,Shivam Dube,Attack plan
-4755,bowling_type,Right-arm offbreak,28,142.9,39.3,0.0,0,139.4,Low,Shivam Dube,Attack plan
-4755,delivery_style,Full Toss,28,117.9,25.0,0.0,0,108.6,Low,Shivam Dube,Attack plan
-4755,delivery_style,Off Break,20,175.0,40.0,0.0,0,173.0,Low,Shivam Dube,Attack plan
-4755,delivery_style,Off Cutter,24,179.2,25.0,4.17,1,147.4,Low,Shivam Dube,Attack plan
-4755,delivery_style,Seamed Out,22,159.1,18.2,13.64,3,46.6,Low,Shivam Dube,Attack plan
-4755,on_or_off,Off-side,120,111.7,42.5,7.5,9,48.9,High,Shivam Dube,Attack plan
-4755,on_or_off,On-side,112,163.4,17.0,3.57,4,130.5,Medium,Shivam Dube,Attack plan
-4755,over_or_around,Around,61,132.8,34.4,4.92,3,95.5,Medium,Shivam Dube,Attack plan
-4755,over_or_around,Over,171,138.0,28.7,5.85,10,86.3,High,Shivam Dube,Attack plan
-4755,phase,Death,92,150.0,32.6,7.61,7,83.0,Medium,Shivam Dube,Attack plan
-4755,phase,Middle,139,128.8,28.1,4.32,6,93.1,High,Shivam Dube,Attack plan
-4755,bowler_group,Left-arm pace,26,142.3,23.1,7.69,2,72.9,Low,Shivam Dube,Attack plan
-4755,bowler_group,Leg spin,32,140.6,34.4,3.12,1,114.8,Low,Shivam Dube,Attack plan
-4755,bowler_group,Off spin,28,142.9,39.3,0.0,0,139.4,Low,Shivam Dube,Attack plan
-4755,bowler_group,Right-arm pace,130,140.0,27.7,5.38,7,93.3,High,Shivam Dube,Attack plan
-3672,pace_or_spin,Pace,221,134.4,44.3,6.33,14,91.2,High,Kusal Mendis,Attack plan
-3672,pace_or_spin,Spin,91,138.5,28.6,5.49,5,102.0,Medium,Kusal Mendis,Attack plan
-3672,bowling_type,Left-arm fast-medium,21,71.4,57.1,4.76,1,35.3,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Left-arm medium,22,140.9,40.9,9.09,2,74.4,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Left-arm medium-fast,25,164.0,36.0,8.0,2,117.7,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Right-arm Fast,63,106.3,46.0,6.35,4,58.6,Medium,Kusal Mendis,Attack plan
-3672,bowling_type,Right-arm Leg-Break,33,145.5,21.2,9.09,3,73.4,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Right-arm fast-medium,37,137.8,48.6,2.7,1,123.5,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Right-arm medium,24,195.8,37.5,8.33,2,143.5,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Right-arm medium-fast,25,176.0,36.0,4.0,1,160.8,Low,Kusal Mendis,Attack plan
-3672,bowling_type,Slow left-arm orthodox,35,111.4,40.0,5.71,2,72.3,Low,Kusal Mendis,Attack plan
-3672,delivery_style,Inswing,59,155.9,47.5,11.86,7,68.9,Medium,Kusal Mendis,Attack plan
-3672,delivery_style,Off Cutter,29,155.2,37.9,10.34,3,68.9,Low,Kusal Mendis,Attack plan
-3672,delivery_style,Orthodox,27,125.9,37.0,7.41,2,72.9,Low,Kusal Mendis,Attack plan
-3672,delivery_style,Out Swing,42,102.4,54.8,2.38,1,101.6,Low,Kusal Mendis,Attack plan
-3672,delivery_style,Seamed In,49,128.6,34.7,2.04,1,117.7,Low,Kusal Mendis,Attack plan
-3672,on_or_off,Off-side,158,103.2,48.1,5.7,9,62.0,High,Kusal Mendis,Attack plan
-3672,on_or_off,On-side,154,168.8,31.2,6.49,10,127.5,High,Kusal Mendis,Attack plan
-3672,over_or_around,Around,44,118.2,34.1,4.55,2,91.6,Low,Kusal Mendis,Attack plan
-3672,over_or_around,Over,267,139.0,40.4,6.37,17,95.1,High,Kusal Mendis,Attack plan
-3672,phase,Death,21,142.9,19.0,0.0,0,134.2,Low,Kusal Mendis,Attack plan
-3672,phase,Middle,79,141.8,29.1,10.13,8,65.1,Medium,Kusal Mendis,Attack plan
-3672,phase,PP,212,132.5,45.8,5.19,11,100.5,High,Kusal Mendis,Attack plan
-3672,bowler_group,Left-arm orthodox,35,111.4,40.0,5.71,2,72.3,Low,Kusal Mendis,Attack plan
-3672,bowler_group,Left-arm pace,72,122.2,45.8,8.33,6,61.0,Medium,Kusal Mendis,Attack plan
-3672,bowler_group,Leg spin,33,145.5,21.2,9.09,3,73.4,Low,Kusal Mendis,Attack plan
-3672,bowler_group,Right-arm pace,149,140.3,43.6,5.37,8,105.1,High,Kusal Mendis,Attack plan
-3091,pace_or_spin,Pace,140,128.6,53.6,4.29,6,108.8,High,Sahibzada Farhan,Attack plan
-3091,pace_or_spin,Spin,63,88.9,54.0,3.17,2,68.2,Medium,Sahibzada Farhan,Attack plan
-3091,bowling_type,Right-arm Fast,56,141.1,53.6,3.57,2,125.9,Medium,Sahibzada Farhan,Attack plan
-3091,bowling_type,Right-arm medium-fast,23,121.7,39.1,4.35,1,99.9,Low,Sahibzada Farhan,Attack plan
-3091,bowling_type,Slow left-arm orthodox,29,58.6,62.1,3.45,1,32.7,Low,Sahibzada Farhan,Attack plan
-3091,delivery_style,Inswing,33,109.1,54.5,3.03,1,101.0,Low,Sahibzada Farhan,Attack plan
-3091,delivery_style,Out Swing,55,110.9,58.2,5.45,3,84.3,Medium,Sahibzada Farhan,Attack plan
-3091,on_or_off,Off-side,116,84.5,67.2,2.59,3,73.1,Medium,Sahibzada Farhan,Attack plan
-3091,on_or_off,On-side,87,158.6,35.6,5.75,5,124.7,Medium,Sahibzada Farhan,Attack plan
-3091,over_or_around,Around,31,74.2,61.3,3.23,1,52.0,Low,Sahibzada Farhan,Attack plan
-3091,over_or_around,Over,172,123.8,52.3,4.07,7,103.9,High,Sahibzada Farhan,Attack plan
-3091,phase,PP,189,121.2,54.0,4.23,8,99.4,High,Sahibzada Farhan,Attack plan
-3091,bowler_group,Left-arm orthodox,29,58.6,62.1,3.45,1,32.7,Low,Sahibzada Farhan,Attack plan
-3091,bowler_group,Left-arm pace,40,135.0,57.5,5.0,2,118.2,Low,Sahibzada Farhan,Attack plan
-3091,bowler_group,Right-arm pace,100,126.0,52.0,4.0,4,105.4,Medium,Sahibzada Farhan,Attack plan
-1699,pace_or_spin,Pace,389,163.8,39.3,5.14,20,116.7,High,Suryakumar Yadav,Attack plan
-1699,pace_or_spin,Spin,180,155.6,27.2,0.56,1,151.2,High,Suryakumar Yadav,Attack plan
-1699,bowling_type,Left-arm fast-medium,38,171.1,47.4,10.53,4,85.9,Low,Suryakumar Yadav,Attack plan
-1699,bowling_type,Left-arm medium-fast,58,163.8,41.4,5.17,3,118.3,Medium,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm Fast,88,172.7,37.5,3.41,3,133.0,Medium,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm Leg-Break,100,158.0,26.0,1.0,1,148.8,Medium,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm fast-medium,35,148.6,54.3,11.43,4,55.2,Low,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm medium,83,162.7,32.5,2.41,2,134.3,Medium,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm medium-fast,71,164.8,35.2,4.23,3,127.9,Medium,Suryakumar Yadav,Attack plan
-1699,bowling_type,Right-arm offbreak,31,138.7,22.6,0.0,0,144.7,Low,Suryakumar Yadav,Attack plan
-1699,bowling_type,Slow left-arm orthodox,37,194.6,24.3,0.0,0,188.3,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Full Toss,28,175.0,35.7,14.29,4,52.1,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Googly,33,115.2,36.4,0.0,0,115.9,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Inswing,42,152.4,40.5,7.14,3,93.0,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Leg Break,64,160.9,28.1,1.56,1,145.5,Medium,Suryakumar Yadav,Attack plan
-1699,delivery_style,Off Break,20,145.0,15.0,0.0,0,152.1,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Off Cutter,53,177.4,26.4,9.43,5,92.5,Medium,Suryakumar Yadav,Attack plan
-1699,delivery_style,Orthodox,34,191.2,23.5,0.0,0,184.2,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Out Swing,27,129.6,63.0,3.7,1,104.2,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Seamed In,65,141.5,49.2,1.54,1,129.8,Medium,Suryakumar Yadav,Attack plan
-1699,delivery_style,Seamed Out,37,127.0,54.1,0.0,0,126.6,Low,Suryakumar Yadav,Attack plan
-1699,delivery_style,Straight,39,230.8,20.5,5.13,2,179.0,Low,Suryakumar Yadav,Attack plan
-1699,on_or_off,Off-side,286,137.8,45.5,2.8,8,113.1,High,Suryakumar Yadav,Attack plan
-1699,on_or_off,On-side,283,184.8,25.4,4.59,13,141.4,High,Suryakumar Yadav,Attack plan
-1699,over_or_around,Around,59,172.9,27.1,3.39,2,147.7,Medium,Suryakumar Yadav,Attack plan
-1699,over_or_around,Over,510,159.8,36.5,3.73,19,125.1,High,Suryakumar Yadav,Attack plan
-1699,phase,Death,87,178.2,33.3,9.2,8,94.5,Medium,Suryakumar Yadav,Attack plan
-1699,phase,Middle,294,179.3,26.5,1.7,5,161.7,High,Suryakumar Yadav,Attack plan
-1699,phase,PP,188,125.0,50.5,4.26,8,89.0,High,Suryakumar Yadav,Attack plan
-1699,bowler_group,Left-arm orthodox,37,194.6,24.3,0.0,0,188.3,Low,Suryakumar Yadav,Attack plan
-1699,bowler_group,Left-arm pace,112,161.6,43.8,7.14,8,100.6,Medium,Suryakumar Yadav,Attack plan
-1699,bowler_group,Leg spin,100,158.0,26.0,1.0,1,148.8,Medium,Suryakumar Yadav,Attack plan
-1699,bowler_group,Off spin,31,138.7,22.6,0.0,0,144.7,Low,Suryakumar Yadav,Attack plan
-1699,bowler_group,Right-arm pace,277,164.6,37.5,4.33,12,123.0,High,Suryakumar Yadav,Attack plan
-4007,pace_or_spin,Pace,121,131.4,48.8,6.61,8,77.1,High,Ryan Rickelton,Attack plan
-4007,pace_or_spin,Spin,48,141.7,33.3,6.25,3,90.7,Low,Ryan Rickelton,Attack plan
-4007,bowling_type,Right-arm Fast,44,136.4,50.0,4.55,2,97.0,Low,Ryan Rickelton,Attack plan
-4007,bowling_type,Right-arm fast-medium,20,120.0,35.0,0.0,0,118.0,Low,Ryan Rickelton,Attack plan
-4007,bowling_type,Slow left-arm orthodox,23,156.5,43.5,4.35,1,127.9,Low,Ryan Rickelton,Attack plan
-4007,delivery_style,Inswing,30,136.7,50.0,6.67,2,89.0,Low,Ryan Rickelton,Attack plan
-4007,delivery_style,Out Swing,37,91.9,59.5,10.81,4,2.1,Low,Ryan Rickelton,Attack plan
-4007,on_or_off,Off-side,90,85.6,57.8,6.67,6,31.3,Medium,Ryan Rickelton,Attack plan
-4007,on_or_off,On-side,79,189.9,29.1,6.33,5,134.2,Medium,Ryan Rickelton,Attack plan
-4007,over_or_around,Around,33,163.6,30.3,6.06,2,116.4,Low,Ryan Rickelton,Attack plan
-4007,over_or_around,Over,136,127.2,47.8,6.62,9,72.6,High,Ryan Rickelton,Attack plan
-4007,phase,Middle,25,124.0,20.0,8.0,2,62.3,Low,Ryan Rickelton,Attack plan
-4007,phase,PP,141,134.8,49.6,6.38,9,81.6,High,Ryan Rickelton,Attack plan
-4007,bowler_group,Left-arm orthodox,23,156.5,43.5,4.35,1,127.9,Low,Ryan Rickelton,Attack plan
-4007,bowler_group,Left-arm pace,33,139.4,54.5,9.09,3,65.4,Low,Ryan Rickelton,Attack plan
-4007,bowler_group,Right-arm pace,88,128.4,46.6,5.68,5,81.4,Medium,Ryan Rickelton,Attack plan
+4812,pace_or_spin,Pace,126,124.6,45.2,2.38,3,113.6,High,Harry Tector,Attack plan
+4812,pace_or_spin,Spin,71,107.0,31.0,2.82,2,94.6,Medium,Harry Tector,Attack plan
+4812,bowling_type,Right-arm Leg-Break,31,106.5,22.6,0.0,0,118.7,Low,Harry Tector,Attack plan
+4812,bowling_type,Right-arm medium,34,114.7,47.1,2.94,1,97.4,Low,Harry Tector,Attack plan
+4812,bowling_type,Right-arm medium-fast,24,187.5,33.3,0.0,0,195.2,Low,Harry Tector,Attack plan
+4812,bowling_type,Slow left-arm orthodox,35,102.9,40.0,5.71,2,62.7,Low,Harry Tector,Attack plan
+4812,delivery_style,Leg Break,23,113.0,21.7,0.0,0,121.7,Low,Harry Tector,Attack plan
+4812,delivery_style,Orthodox,28,110.7,32.1,7.14,2,58.4,Low,Harry Tector,Attack plan
+4812,delivery_style,Seamed In,26,103.8,42.3,0.0,0,112.6,Low,Harry Tector,Attack plan
+4812,on_or_off,Off-side,114,107.9,47.4,0.88,1,108.3,Medium,Harry Tector,Attack plan
+4812,on_or_off,On-side,83,132.5,30.1,4.82,4,105.1,Medium,Harry Tector,Attack plan
+4812,over_or_around,Around,46,117.4,34.8,4.35,2,88.0,Low,Harry Tector,Attack plan
+4812,over_or_around,Over,149,118.1,42.3,2.01,3,112.0,High,Harry Tector,Attack plan
+4812,phase,Death,32,162.5,18.8,6.25,2,112.6,Low,Harry Tector,Attack plan
+4812,phase,Middle,69,108.7,31.9,1.45,1,112.4,Medium,Harry Tector,Attack plan
+4812,phase,PP,96,110.4,53.1,2.08,2,101.3,Medium,Harry Tector,Attack plan
+4812,bowler_group,Left-arm orthodox,35,102.9,40.0,5.71,2,62.7,Low,Harry Tector,Attack plan
+4812,bowler_group,Left-arm pace,34,100.0,50.0,5.88,2,54.2,Low,Harry Tector,Attack plan
+4812,bowler_group,Leg spin,31,106.5,22.6,0.0,0,118.7,Low,Harry Tector,Attack plan
+4812,bowler_group,Right-arm pace,92,133.7,43.5,1.09,1,136.3,Medium,Harry Tector,Attack plan
+167,pace_or_spin,Pace,137,143.1,45.3,2.92,4,112.3,High,Ajinkya Rahane,Attack plan
+167,pace_or_spin,Spin,54,120.4,31.5,7.41,4,54.6,Medium,Ajinkya Rahane,Attack plan
+167,bowling_type,Left-arm medium-fast,21,195.2,28.6,0.0,0,167.3,Low,Ajinkya Rahane,Attack plan
+167,bowling_type,Right-arm Fast,30,93.3,53.3,3.33,1,64.9,Low,Ajinkya Rahane,Attack plan
+167,bowling_type,Right-arm medium,31,93.5,51.6,3.23,1,60.6,Low,Ajinkya Rahane,Attack plan
+167,delivery_style,Inswing,39,120.5,51.3,0.0,0,124.1,Low,Ajinkya Rahane,Attack plan
+167,delivery_style,Out Swing,45,120.0,55.6,2.22,1,105.9,Low,Ajinkya Rahane,Attack plan
+167,on_or_off,Off-side,101,93.1,56.4,4.95,5,49.7,Medium,Ajinkya Rahane,Attack plan
+167,on_or_off,On-side,90,185.6,24.4,3.33,3,145.6,Medium,Ajinkya Rahane,Attack plan
+167,over_or_around,Over,173,138.7,42.2,3.47,6,103.9,High,Ajinkya Rahane,Attack plan
+167,phase,Middle,65,123.1,32.3,10.77,7,29.1,Medium,Ajinkya Rahane,Attack plan
+167,phase,PP,126,143.7,46.0,0.79,1,134.5,High,Ajinkya Rahane,Attack plan
+167,bowler_group,Left-arm pace,46,200.0,32.6,0.0,0,185.4,Low,Ajinkya Rahane,Attack plan
+167,bowler_group,Right-arm pace,91,114.3,51.6,4.4,4,74.2,Medium,Ajinkya Rahane,Attack plan
 3605,pace_or_spin,Pace,191,142.9,36.6,4.19,8,108.1,High,Aiden Markram,Attack plan
 3605,pace_or_spin,Spin,89,124.7,30.3,7.87,7,58.4,Medium,Aiden Markram,Attack plan
 3605,bowling_type,Left-arm medium-fast,20,200.0,25.0,5.0,1,177.7,Low,Aiden Markram,Attack plan
@@ -348,90 +368,84 @@ player_id,dimension,value,balls,sr,dot_pct,dismissal_pct,dismissals,perf_index,c
 3605,bowler_group,Left-arm pace,47,163.8,38.3,4.26,2,132.8,Low,Aiden Markram,Attack plan
 3605,bowler_group,Leg spin,38,128.9,39.5,10.53,4,41.0,Low,Aiden Markram,Attack plan
 3605,bowler_group,Right-arm pace,144,136.1,36.1,4.17,6,100.4,High,Aiden Markram,Attack plan
-6059,pace_or_spin,Pace,319,116.0,46.1,2.82,9,93.0,High,Ruturaj Gaikwad,Attack plan
-6059,pace_or_spin,Spin,109,155.0,27.5,6.42,7,92.5,Medium,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Left-arm medium-fast,48,170.8,35.4,4.17,2,123.3,Low,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm Fast,80,101.2,53.8,2.5,2,89.1,Medium,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm Leg-Break,46,137.0,32.6,8.7,4,58.0,Low,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm fast-medium,50,106.0,46.0,2.0,1,87.1,Medium,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm medium,42,114.3,33.3,0.0,0,116.5,Low,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm medium-fast,53,122.6,54.7,5.66,3,72.9,Medium,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Right-arm offbreak,20,185.0,25.0,5.0,1,128.9,Low,Ruturaj Gaikwad,Attack plan
-6059,bowling_type,Slow left-arm orthodox,24,191.7,29.2,4.17,1,144.5,Low,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Googly,23,134.8,21.7,8.7,2,55.7,Low,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Inswing,69,79.7,52.2,4.35,3,44.4,Medium,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Leg Break,32,134.4,37.5,9.38,3,51.3,Low,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Orthodox,20,220.0,25.0,5.0,1,161.6,Low,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Out Swing,78,107.7,51.3,2.56,2,93.8,Medium,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Seamed In,84,120.2,36.9,1.19,1,104.7,Medium,Ruturaj Gaikwad,Attack plan
-6059,delivery_style,Seamed Out,36,125.0,52.8,0.0,0,128.0,Low,Ruturaj Gaikwad,Attack plan
-6059,on_or_off,Off-side,264,97.0,50.4,3.41,9,68.1,High,Ruturaj Gaikwad,Attack plan
-6059,on_or_off,On-side,164,172.6,26.8,4.27,7,131.5,High,Ruturaj Gaikwad,Attack plan
-6059,over_or_around,Around,35,188.6,34.3,2.86,1,147.2,Low,Ruturaj Gaikwad,Attack plan
-6059,over_or_around,Over,388,121.4,41.8,3.87,15,88.0,High,Ruturaj Gaikwad,Attack plan
-6059,phase,Middle,93,159.1,28.0,6.45,6,101.4,Medium,Ruturaj Gaikwad,Attack plan
-6059,phase,PP,328,112.8,45.7,2.74,9,88.5,High,Ruturaj Gaikwad,Attack plan
-6059,bowler_group,Left-arm orthodox,24,191.7,29.2,4.17,1,144.5,Low,Ruturaj Gaikwad,Attack plan
-6059,bowler_group,Left-arm pace,94,130.9,40.4,3.19,3,100.6,Medium,Ruturaj Gaikwad,Attack plan
-6059,bowler_group,Leg spin,46,137.0,32.6,8.7,4,58.0,Low,Ruturaj Gaikwad,Attack plan
-6059,bowler_group,Off spin,20,185.0,25.0,5.0,1,128.9,Low,Ruturaj Gaikwad,Attack plan
-6059,bowler_group,Right-arm pace,225,109.8,48.4,2.67,6,89.7,High,Ruturaj Gaikwad,Attack plan
-4260,pace_or_spin,Pace,108,173.1,23.1,6.48,7,119.3,Medium,Heinrich Klaasen,Attack plan
-4260,pace_or_spin,Spin,86,183.7,29.1,5.81,5,128.2,Medium,Heinrich Klaasen,Attack plan
-4260,bowling_type,Right-arm Fast,35,194.3,20.0,5.71,2,137.9,Low,Heinrich Klaasen,Attack plan
-4260,bowling_type,Right-arm Leg-Break,29,231.0,31.0,13.79,4,113.5,Low,Heinrich Klaasen,Attack plan
-4260,bowling_type,Right-arm medium-fast,39,171.8,25.6,10.26,4,91.7,Low,Heinrich Klaasen,Attack plan
-4260,bowling_type,Slow left-arm orthodox,26,146.2,26.9,3.85,1,101.7,Low,Heinrich Klaasen,Attack plan
-4260,delivery_style,Leg Break,20,265.0,20.0,5.0,1,217.9,Low,Heinrich Klaasen,Attack plan
-4260,delivery_style,Orthodox,21,138.1,28.6,0.0,0,124.6,Low,Heinrich Klaasen,Attack plan
-4260,delivery_style,Seamed In,22,177.3,27.3,4.55,1,168.2,Low,Heinrich Klaasen,Attack plan
-4260,on_or_off,Off-side,105,173.3,32.4,6.67,7,115.5,Medium,Heinrich Klaasen,Attack plan
-4260,on_or_off,On-side,89,183.1,18.0,5.62,5,132.6,Medium,Heinrich Klaasen,Attack plan
-4260,over_or_around,Around,40,182.5,25.0,5.0,2,120.0,Low,Heinrich Klaasen,Attack plan
-4260,over_or_around,Over,154,176.6,26.0,6.49,10,124.4,High,Heinrich Klaasen,Attack plan
-4260,phase,Death,58,201.7,20.7,12.07,7,89.6,Medium,Heinrich Klaasen,Attack plan
-4260,phase,Middle,119,164.7,26.1,4.2,5,131.9,Medium,Heinrich Klaasen,Attack plan
-4260,bowler_group,Left-arm orthodox,26,146.2,26.9,3.85,1,101.7,Low,Heinrich Klaasen,Attack plan
-4260,bowler_group,Leg spin,29,231.0,31.0,13.79,4,113.5,Low,Heinrich Klaasen,Attack plan
-4260,bowler_group,Right-arm pace,89,169.7,24.7,7.87,7,105.9,Medium,Heinrich Klaasen,Attack plan
-6651,pace_or_spin,Pace,83,110.8,38.6,2.41,2,97.1,Medium,Towhid Hridoy,Attack plan
-6651,pace_or_spin,Spin,90,115.6,35.6,5.56,5,80.6,Medium,Towhid Hridoy,Attack plan
-6651,bowling_type,Right-arm Leg-Break,38,113.2,34.2,2.63,1,109.4,Low,Towhid Hridoy,Attack plan
-6651,bowling_type,Right-arm medium,32,96.9,37.5,0.0,0,110.6,Low,Towhid Hridoy,Attack plan
-6651,bowling_type,Slow left-arm orthodox,31,119.4,38.7,12.9,4,14.5,Low,Towhid Hridoy,Attack plan
-6651,delivery_style,Leg Break,27,122.2,33.3,3.7,1,113.2,Low,Towhid Hridoy,Attack plan
-6651,delivery_style,Orthodox,25,104.0,44.0,16.0,4,0.0,Low,Towhid Hridoy,Attack plan
-6651,on_or_off,Off-side,91,100.0,42.9,3.3,3,82.9,Medium,Towhid Hridoy,Attack plan
-6651,on_or_off,On-side,82,128.0,30.5,4.88,4,95.3,Medium,Towhid Hridoy,Attack plan
-6651,over_or_around,Around,40,140.0,37.5,12.5,5,41.8,Low,Towhid Hridoy,Attack plan
-6651,over_or_around,Over,133,105.3,36.8,1.5,2,102.3,High,Towhid Hridoy,Attack plan
-6651,phase,Death,47,136.2,27.7,2.13,1,124.0,Low,Towhid Hridoy,Attack plan
-6651,phase,Middle,79,113.9,29.1,5.06,4,85.2,Medium,Towhid Hridoy,Attack plan
-6651,phase,PP,47,89.4,59.6,4.26,2,58.3,Low,Towhid Hridoy,Attack plan
-6651,bowler_group,Left-arm orthodox,31,119.4,38.7,12.9,4,14.5,Low,Towhid Hridoy,Attack plan
-6651,bowler_group,Leg spin,38,113.2,34.2,2.63,1,109.4,Low,Towhid Hridoy,Attack plan
-6651,bowler_group,Right-arm pace,64,114.1,34.4,1.56,1,107.1,Medium,Towhid Hridoy,Attack plan
-6396,pace_or_spin,Pace,212,202.8,27.4,5.19,11,151.8,High,Tim David,Attack plan
-6396,pace_or_spin,Spin,48,135.4,33.3,8.33,4,74.1,Low,Tim David,Attack plan
-6396,bowling_type,Left-arm medium-fast,24,141.7,37.5,8.33,2,76.3,Low,Tim David,Attack plan
-6396,bowling_type,Right-arm Fast,46,176.1,30.4,4.35,2,129.5,Low,Tim David,Attack plan
-6396,bowling_type,Right-arm Leg-Break,23,160.9,34.8,8.7,2,100.3,Low,Tim David,Attack plan
-6396,bowling_type,Right-arm fast-medium,24,183.3,29.2,8.33,2,130.9,Low,Tim David,Attack plan
-6396,bowling_type,Right-arm medium,37,216.2,13.5,0.0,0,202.2,Low,Tim David,Attack plan
-6396,bowling_type,Right-arm medium-fast,46,237.0,26.1,4.35,2,167.0,Low,Tim David,Attack plan
-6396,delivery_style,Full Toss,43,290.7,16.3,4.65,2,240.2,Low,Tim David,Attack plan
-6396,delivery_style,Off Cutter,30,210.0,30.0,3.33,1,163.2,Low,Tim David,Attack plan
-6396,delivery_style,Reverse Swing In,22,227.3,22.7,0.0,0,209.7,Low,Tim David,Attack plan
-6396,delivery_style,Seamed In,26,88.5,42.3,7.69,2,26.3,Low,Tim David,Attack plan
-6396,on_or_off,Off-side,132,161.4,32.6,6.06,8,113.1,High,Tim David,Attack plan
-6396,on_or_off,On-side,128,220.3,24.2,5.47,7,164.2,High,Tim David,Attack plan
-6396,over_or_around,Around,39,202.6,17.9,7.69,3,137.3,Low,Tim David,Attack plan
-6396,over_or_around,Over,221,188.2,30.3,5.43,12,139.7,High,Tim David,Attack plan
-6396,phase,Death,173,207.5,25.4,6.36,11,138.9,High,Tim David,Attack plan
-6396,phase,Middle,71,142.3,35.2,4.23,3,129.9,Medium,Tim David,Attack plan
-6396,bowler_group,Left-arm pace,59,196.6,33.9,8.47,5,129.5,Medium,Tim David,Attack plan
-6396,bowler_group,Leg spin,23,160.9,34.8,8.7,2,100.3,Low,Tim David,Attack plan
-6396,bowler_group,Right-arm pace,153,205.2,24.8,3.92,6,159.6,High,Tim David,Attack plan
+3916,pace_or_spin,Pace,131,155.7,35.9,6.87,9,98.0,High,Jitesh Sharma,Attack plan
+3916,pace_or_spin,Spin,54,174.1,27.8,5.56,3,136.2,Medium,Jitesh Sharma,Attack plan
+3916,bowling_type,Right-arm Fast,24,241.7,16.7,4.17,1,186.9,Low,Jitesh Sharma,Attack plan
+3916,bowling_type,Right-arm Leg-Break,27,137.0,33.3,7.41,2,79.9,Low,Jitesh Sharma,Attack plan
+3916,bowling_type,Right-arm fast-medium,27,111.1,51.9,7.41,2,57.1,Low,Jitesh Sharma,Attack plan
+3916,bowling_type,Right-arm medium,23,200.0,30.4,8.7,2,116.4,Low,Jitesh Sharma,Attack plan
+3916,bowling_type,Right-arm medium-fast,26,134.6,23.1,3.85,1,105.7,Low,Jitesh Sharma,Attack plan
+3916,delivery_style,Seamed In,31,96.8,41.9,9.68,3,17.3,Low,Jitesh Sharma,Attack plan
+3916,on_or_off,Off-side,112,157.1,36.6,5.36,6,111.8,Medium,Jitesh Sharma,Attack plan
+3916,on_or_off,On-side,73,167.1,28.8,8.22,6,103.5,Medium,Jitesh Sharma,Attack plan
+3916,over_or_around,Around,37,186.5,27.0,8.11,3,116.6,Low,Jitesh Sharma,Attack plan
+3916,over_or_around,Over,147,155.8,34.7,6.12,9,107.5,High,Jitesh Sharma,Attack plan
+3916,phase,Death,79,191.1,30.4,11.39,9,93.7,Medium,Jitesh Sharma,Attack plan
+3916,phase,Middle,95,149.5,30.5,2.11,2,142.1,Medium,Jitesh Sharma,Attack plan
+3916,bowler_group,Left-arm pace,31,112.9,51.6,9.68,3,32.1,Low,Jitesh Sharma,Attack plan
+3916,bowler_group,Leg spin,27,137.0,33.3,7.41,2,79.9,Low,Jitesh Sharma,Attack plan
+3916,bowler_group,Right-arm pace,100,169.0,31.0,6.0,6,118.5,Medium,Jitesh Sharma,Attack plan
+152,pace_or_spin,Pace,135,157.0,27.4,4.44,6,120.4,High,Ravindra Jadeja,Fix plan
+152,pace_or_spin,Spin,61,129.5,34.4,4.92,3,88.4,Medium,Ravindra Jadeja,Fix plan
+152,bowling_type,Right-arm Fast,34,155.9,29.4,5.88,2,107.3,Low,Ravindra Jadeja,Fix plan
+152,bowling_type,Right-arm Leg-Break,35,134.3,34.3,5.71,2,86.4,Low,Ravindra Jadeja,Fix plan
+152,bowling_type,Right-arm medium-fast,44,156.8,34.1,6.82,3,104.3,Low,Ravindra Jadeja,Fix plan
+152,delivery_style,Full Toss,21,219.0,0.0,0.0,0,207.9,Low,Ravindra Jadeja,Fix plan
+152,delivery_style,Googly,20,150.0,35.0,0.0,0,151.8,Low,Ravindra Jadeja,Fix plan
+152,delivery_style,Off Cutter,20,145.0,40.0,15.0,3,22.4,Low,Ravindra Jadeja,Fix plan
+152,delivery_style,Seamed Out,20,90.0,60.0,5.0,1,48.2,Low,Ravindra Jadeja,Fix plan
+152,on_or_off,Off-side,89,137.1,37.1,4.49,4,98.7,Medium,Ravindra Jadeja,Fix plan
+152,on_or_off,On-side,107,157.9,23.4,4.67,5,120.4,Medium,Ravindra Jadeja,Fix plan
+152,over_or_around,Around,49,173.5,20.4,8.16,4,106.2,Low,Ravindra Jadeja,Fix plan
+152,over_or_around,Over,147,140.1,32.7,3.4,5,111.9,High,Ravindra Jadeja,Fix plan
+152,phase,Death,109,159.6,26.6,6.42,7,106.7,Medium,Ravindra Jadeja,Fix plan
+152,phase,Middle,75,117.3,33.3,2.67,2,98.9,Medium,Ravindra Jadeja,Fix plan
+152,bowler_group,Left-arm pace,27,170.4,22.2,0.0,0,159.4,Low,Ravindra Jadeja,Fix plan
+152,bowler_group,Leg spin,35,134.3,34.3,5.71,2,86.4,Low,Ravindra Jadeja,Fix plan
+152,bowler_group,Right-arm pace,108,153.7,28.7,5.56,6,109.8,Medium,Ravindra Jadeja,Fix plan
+2436,pace_or_spin,Pace,129,169.0,30.2,6.2,8,152.8,High,Dasun Shanaka,Fix plan
+2436,pace_or_spin,Spin,90,112.2,40.0,5.56,5,74.1,Medium,Dasun Shanaka,Fix plan
+2436,bowling_type,Right-arm Fast,28,114.3,39.3,3.57,1,105.1,Low,Dasun Shanaka,Fix plan
+2436,bowling_type,Right-arm Leg-Break,29,131.0,31.0,0.0,0,163.5,Low,Dasun Shanaka,Fix plan
+2436,bowling_type,Right-arm fast-medium,28,217.9,25.0,3.57,1,215.2,Low,Dasun Shanaka,Fix plan
+2436,bowling_type,Right-arm offbreak,36,111.1,38.9,8.33,3,46.6,Low,Dasun Shanaka,Fix plan
+2436,bowling_type,Slow left-arm orthodox,25,92.0,52.0,8.0,2,25.9,Low,Dasun Shanaka,Fix plan
+2436,delivery_style,Off Break,21,71.4,42.9,9.52,2,0.0,Low,Dasun Shanaka,Fix plan
+2436,delivery_style,Off Cutter,23,134.8,26.1,8.7,2,77.6,Low,Dasun Shanaka,Fix plan
+2436,delivery_style,Orthodox,22,77.3,50.0,4.55,1,40.4,Low,Dasun Shanaka,Fix plan
+2436,delivery_style,Seamed In,23,169.6,43.5,8.7,2,122.2,Low,Dasun Shanaka,Fix plan
+2436,on_or_off,Off-side,101,127.7,43.6,5.94,6,96.8,Medium,Dasun Shanaka,Fix plan
+2436,on_or_off,On-side,118,161.0,26.3,5.93,7,135.1,Medium,Dasun Shanaka,Fix plan
+2436,over_or_around,Around,42,97.6,50.0,9.52,4,21.4,Low,Dasun Shanaka,Fix plan
+2436,over_or_around,Over,177,157.1,30.5,5.08,9,141.9,High,Dasun Shanaka,Fix plan
+2436,phase,Death,133,166.2,30.8,8.27,11,125.0,High,Dasun Shanaka,Fix plan
+2436,phase,Middle,85,115.3,38.8,2.35,2,109.4,Medium,Dasun Shanaka,Fix plan
+2436,bowler_group,Left-arm orthodox,25,92.0,52.0,8.0,2,25.9,Low,Dasun Shanaka,Fix plan
+2436,bowler_group,Left-arm pace,48,164.6,31.2,4.17,2,196.2,Low,Dasun Shanaka,Fix plan
+2436,bowler_group,Leg spin,29,131.0,31.0,0.0,0,163.5,Low,Dasun Shanaka,Fix plan
+2436,bowler_group,Off spin,36,111.1,38.9,8.33,3,46.6,Low,Dasun Shanaka,Fix plan
+2436,bowler_group,Right-arm pace,81,171.6,29.6,7.41,6,132.3,Medium,Dasun Shanaka,Fix plan
+3297,pace_or_spin,Pace,178,184.3,31.5,7.3,13,115.8,High,Shimron Hetmyer,Fix plan
+3297,pace_or_spin,Spin,64,148.4,32.8,7.81,5,89.8,Medium,Shimron Hetmyer,Fix plan
+3297,bowling_type,Left-arm medium-fast,50,172.0,32.0,6.0,3,121.1,Medium,Shimron Hetmyer,Fix plan
+3297,bowling_type,Right-arm Fast,37,194.6,32.4,2.7,1,147.7,Low,Shimron Hetmyer,Fix plan
+3297,bowling_type,Right-arm Leg-Break,26,138.5,38.5,15.38,4,11.2,Low,Shimron Hetmyer,Fix plan
+3297,bowling_type,Right-arm medium,21,200.0,33.3,4.76,1,154.5,Low,Shimron Hetmyer,Fix plan
+3297,bowling_type,Right-arm medium-fast,38,181.6,26.3,10.53,4,90.5,Low,Shimron Hetmyer,Fix plan
+3297,bowling_type,Right-arm offbreak,20,145.0,35.0,5.0,1,101.9,Low,Shimron Hetmyer,Fix plan
+3297,delivery_style,Full Toss,25,248.0,8.0,8.0,2,177.1,Low,Shimron Hetmyer,Fix plan
+3297,delivery_style,Seamed Out,24,141.7,45.8,12.5,3,36.1,Low,Shimron Hetmyer,Fix plan
+3297,on_or_off,Off-side,110,119.1,40.9,5.45,6,71.2,Medium,Shimron Hetmyer,Fix plan
+3297,on_or_off,On-side,132,221.2,24.2,9.09,12,141.9,High,Shimron Hetmyer,Fix plan
+3297,over_or_around,Around,42,140.5,35.7,2.38,1,122.1,Low,Shimron Hetmyer,Fix plan
+3297,over_or_around,Over,200,182.0,31.0,8.5,17,107.1,High,Shimron Hetmyer,Fix plan
+3297,phase,Death,147,187.1,31.3,10.88,16,88.5,High,Shimron Hetmyer,Fix plan
+3297,phase,Middle,74,143.2,33.8,2.7,2,129.9,Medium,Shimron Hetmyer,Fix plan
+3297,phase,PP,21,200.0,28.6,0.0,0,208.4,Low,Shimron Hetmyer,Fix plan
+3297,bowler_group,Left-arm pace,67,173.1,31.3,7.46,5,106.8,Medium,Shimron Hetmyer,Fix plan
+3297,bowler_group,Leg spin,26,138.5,38.5,15.38,4,11.2,Low,Shimron Hetmyer,Fix plan
+3297,bowler_group,Off spin,20,145.0,35.0,5.0,1,101.9,Low,Shimron Hetmyer,Fix plan
+3297,bowler_group,Right-arm pace,111,191.0,31.5,7.21,8,121.1,Medium,Shimron Hetmyer,Fix plan
 6423,pace_or_spin,Pace,143,139.2,41.3,6.99,10,75.4,High,Riyan Parag,Fix plan
 6423,pace_or_spin,Spin,97,107.2,45.4,5.15,5,62.6,Medium,Riyan Parag,Fix plan
 6423,bowling_type,Left-arm medium-fast,31,125.8,41.9,9.68,3,41.6,Low,Riyan Parag,Fix plan
@@ -454,3 +468,44 @@ player_id,dimension,value,balls,sr,dot_pct,dismissal_pct,dismissals,perf_index,c
 6423,bowler_group,Left-arm pace,41,131.7,41.5,9.76,4,45.0,Low,Riyan Parag,Fix plan
 6423,bowler_group,Leg spin,45,104.4,44.4,4.44,2,65.7,Low,Riyan Parag,Fix plan
 6423,bowler_group,Right-arm pace,102,142.2,41.2,5.88,6,88.4,Medium,Riyan Parag,Fix plan
+4409,pace_or_spin,Pace,94,147.9,26.6,6.38,6,91.4,Medium,Sam Curran,Fix plan
+4409,pace_or_spin,Spin,85,137.6,30.6,5.88,5,101.2,Medium,Sam Curran,Fix plan
+4409,bowling_type,Right-arm Fast,25,116.0,40.0,8.0,2,47.7,Low,Sam Curran,Fix plan
+4409,bowling_type,Right-arm Leg-Break,31,141.9,29.0,9.68,3,67.2,Low,Sam Curran,Fix plan
+4409,bowling_type,Right-arm medium-fast,31,171.0,25.8,3.23,1,129.6,Low,Sam Curran,Fix plan
+4409,bowling_type,Right-arm offbreak,26,130.8,38.5,3.85,1,118.5,Low,Sam Curran,Fix plan
+4409,bowling_type,Slow left-arm orthodox,22,168.2,13.6,4.55,1,149.4,Low,Sam Curran,Fix plan
+4409,on_or_off,Off-side,80,131.2,38.8,7.5,6,72.6,Medium,Sam Curran,Fix plan
+4409,on_or_off,On-side,99,152.5,20.2,5.05,5,113.8,Medium,Sam Curran,Fix plan
+4409,over_or_around,Around,54,164.8,22.2,1.85,1,169.1,Medium,Sam Curran,Fix plan
+4409,over_or_around,Over,125,133.6,31.2,8.0,10,67.4,High,Sam Curran,Fix plan
+4409,phase,Death,64,167.2,21.9,10.94,7,75.1,Medium,Sam Curran,Fix plan
+4409,phase,Middle,93,136.6,30.1,3.23,3,124.2,Medium,Sam Curran,Fix plan
+4409,phase,PP,22,100.0,40.9,4.55,1,54.9,Low,Sam Curran,Fix plan
+4409,bowler_group,Left-arm orthodox,22,168.2,13.6,4.55,1,149.4,Low,Sam Curran,Fix plan
+4409,bowler_group,Leg spin,31,141.9,29.0,9.68,3,67.2,Low,Sam Curran,Fix plan
+4409,bowler_group,Off spin,26,130.8,38.5,3.85,1,118.5,Low,Sam Curran,Fix plan
+4409,bowler_group,Right-arm pace,78,155.1,25.6,5.13,4,107.0,Medium,Sam Curran,Fix plan
+7260,pace_or_spin,Pace,153,164.7,29.4,5.88,9,104.5,High,Dhruv Jurel,Fix plan
+7260,pace_or_spin,Spin,109,121.1,33.9,0.0,0,120.9,Medium,Dhruv Jurel,Fix plan
+7260,bowling_type,Left-arm medium-fast,28,200.0,21.4,0.0,0,205.3,Low,Dhruv Jurel,Fix plan
+7260,bowling_type,Right-arm Fast,39,169.2,46.2,10.26,4,71.0,Low,Dhruv Jurel,Fix plan
+7260,bowling_type,Right-arm Leg-Break,44,134.1,36.4,0.0,0,133.3,Low,Dhruv Jurel,Fix plan
+7260,bowling_type,Right-arm medium,24,191.7,16.7,4.17,1,137.1,Low,Dhruv Jurel,Fix plan
+7260,bowling_type,Right-arm medium-fast,31,171.0,19.4,3.23,1,132.8,Low,Dhruv Jurel,Fix plan
+7260,bowling_type,Slow left-arm orthodox,36,94.4,36.1,0.0,0,98.8,Low,Dhruv Jurel,Fix plan
+7260,delivery_style,Leg Break,26,142.3,30.8,0.0,0,150.5,Low,Dhruv Jurel,Fix plan
+7260,delivery_style,Off Cutter,21,142.9,28.6,0.0,0,136.2,Low,Dhruv Jurel,Fix plan
+7260,delivery_style,Orthodox,27,92.6,40.7,0.0,0,99.0,Low,Dhruv Jurel,Fix plan
+7260,delivery_style,Seamed In,27,151.9,25.9,7.41,2,77.9,Low,Dhruv Jurel,Fix plan
+7260,on_or_off,Off-side,127,103.9,46.5,3.15,4,75.0,High,Dhruv Jurel,Fix plan
+7260,on_or_off,On-side,135,186.7,17.0,3.7,5,143.1,High,Dhruv Jurel,Fix plan
+7260,over_or_around,Around,46,108.7,32.6,2.17,1,91.5,Low,Dhruv Jurel,Fix plan
+7260,over_or_around,Over,216,154.6,31.0,3.7,8,114.7,High,Dhruv Jurel,Fix plan
+7260,phase,Death,108,187.0,21.3,6.48,7,119.3,Medium,Dhruv Jurel,Fix plan
+7260,phase,Middle,124,119.4,33.9,0.81,1,113.6,High,Dhruv Jurel,Fix plan
+7260,phase,PP,30,113.3,56.7,3.33,1,72.9,Low,Dhruv Jurel,Fix plan
+7260,bowler_group,Left-arm orthodox,36,94.4,36.1,0.0,0,98.8,Low,Dhruv Jurel,Fix plan
+7260,bowler_group,Left-arm pace,45,171.1,24.4,2.22,1,149.4,Low,Dhruv Jurel,Fix plan
+7260,bowler_group,Leg spin,44,134.1,36.4,0.0,0,133.3,Low,Dhruv Jurel,Fix plan
+7260,bowler_group,Right-arm pace,108,162.0,31.5,7.41,8,87.8,Medium,Dhruv Jurel,Fix plan

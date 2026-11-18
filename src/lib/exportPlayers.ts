@@ -3,9 +3,10 @@
  * entirely in the browser (the site is a static export, there is no server).
  */
 import type { ComparisonMetric, Kpis, PlayerProfile } from "./types";
+import { comparisonSvg, flowSvg, heatmapSvg, radarSvg, svgToPng } from "./exportCharts";
 
 export type ExportFormat = "docx" | "pdf" | "csv" | "json";
-export type ExportSection = "summary" | "comparison" | "radar" | "matchups" | "consistency" | "heatmap" | "moments";
+export type ExportSection = "summary" | "comparison" | "radar" | "matchups" | "consistency" | "heatmap" | "moments" | "flow";
 
 export const SECTIONS: { id: ExportSection; label: string; hint: string }[] = [
   { id: "summary", label: "Summary", hint: "Rating, 90% interval, rank, pressure balls, matches" },
@@ -15,6 +16,7 @@ export const SECTIONS: { id: ExportSection; label: string; hint: string }[] = [
   { id: "consistency", label: "Season record", hint: "Pressure innings and average match score per season" },
   { id: "heatmap", label: "Heatmap", hint: "Performance by opponent type x phase" },
   { id: "moments", label: "Signature moments", hint: "Three biggest pressure contributions" },
+  { id: "flow", label: "Method flow chart", hint: "Diagram of how the rating is built" },
 ];
 
 export const FORMATS: { id: ExportFormat; label: string; ext: string; hint: string }[] = [
@@ -32,7 +34,8 @@ export interface ExportMeta {
 
 const signed = (n: number, d = 1) => `${n > 0 ? "+" : n < 0 ? "-" : "±"}${Math.abs(n).toFixed(d)}`;
 
-function fmtMetric(m: ComparisonMetric, v: number) {
+function fmtMetric(m: ComparisonMetric, v: number | null) {
+  if (v === null) return "–";
   if (m.unit === "%") return `${v.toFixed(1)}%`;
   if (m.unit === "rpo") return v.toFixed(2);
   if (m.unit === "wpa") return `${signed(v, 2)} pts`;
@@ -40,12 +43,14 @@ function fmtMetric(m: ComparisonMetric, v: number) {
 }
 
 function metricChange(m: ComparisonMetric) {
+  if (m.normal === null || m.pressure === null) return "–";
   if (m.unit === "wpa") return `${signed(m.pressure - m.normal, 2)} pts`;
   if (!m.normal) return "–";
   return `${signed(((m.pressure - m.normal) / Math.abs(m.normal)) * 100)}%`;
 }
 
 function metricGood(m: ComparisonMetric) {
+  if (m.normal === null || m.pressure === null) return true;
   const d = m.pressure - m.normal;
   return m.better === "higher" ? d >= 0 : d <= 0;
 }
@@ -97,6 +102,8 @@ interface Block {
   head: string[];
   rows: string[][];
   tone?: (r: number, c: number) => "good" | "bad" | undefined;
+  /** Diagram drawn under the table (PDF: inline SVG, Word: PNG). */
+  chart?: { svg: string; w: number; h: number };
 }
 
 function blocks(p: PlayerProfile, sections: Set<ExportSection>): Block[] {
@@ -122,6 +129,7 @@ function blocks(p: PlayerProfile, sections: Set<ExportSection>): Block[] {
       head: ["Metric", "Normal", "Pressure", "Change"],
       rows: p.comparison.map((m) => [m.label, fmtMetric(m, m.normal), fmtMetric(m, m.pressure), metricChange(m)]),
       tone: (r, c) => (c === 3 ? (metricGood(p.comparison[r]) ? "good" : "bad") : undefined),
+      chart: comparisonSvg(p),
     });
   }
   if (sections.has("radar")) {
@@ -131,6 +139,7 @@ function blocks(p: PlayerProfile, sections: Set<ExportSection>): Block[] {
       head: ["Feature", "Score", "Peer average"],
       rows: p.radar.map((f) => [f.feature, String(f.score), String(f.peerAvg)]),
       tone: (r, c) => (c === 1 ? (p.radar[r].score >= p.radar[r].peerAvg ? "good" : "bad") : undefined),
+      chart: radarSvg(p),
     });
   }
   if (sections.has("matchups")) {
@@ -179,6 +188,7 @@ function blocks(p: PlayerProfile, sections: Set<ExportSection>): Block[] {
         if (!x || x.value === null || x.balls < h.minBalls) return undefined;
         return x.value >= 100 ? "good" : "bad";
       },
+      chart: heatmapSvg(p),
     });
   }
   if (sections.has("moments")) {
@@ -193,6 +203,15 @@ function blocks(p: PlayerProfile, sections: Set<ExportSection>): Block[] {
         m.description,
         `${signed(m.wpSwing)} pts`,
       ]),
+    });
+  }
+  if (sections.has("flow")) {
+    out.push({
+      title: "How the rating is built",
+      note: "The pipeline behind every Pressure Rating (details on the Method page).",
+      head: [],
+      rows: [],
+      chart: flowSvg(),
     });
   }
   return out;
@@ -214,7 +233,15 @@ function footerText(meta: ExportMeta) {
 async function exportDocx(profiles: PlayerProfile[], sections: Set<ExportSection>, meta: ExportMeta) {
   const d = await import("docx");
   const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, HeadingLevel, ShadingType,
-    AlignmentType, Footer, PageNumber, BorderStyle } = d;
+    AlignmentType, Footer, PageNumber, BorderStyle, ImageRun } = d;
+  const image = async (c: NonNullable<Block["chart"]>) => {
+    const w = 600;
+    const h = Math.round((c.h * w) / c.w);
+    return new Paragraph({
+      spacing: { before: 120, after: 120 },
+      children: [new ImageRun({ type: "png", data: await svgToPng(c.svg, c.w, c.h), transformation: { width: w, height: h } })],
+    });
+  };
   const PINK = "B23A62";
   const BLUE = "4A73A8";
   const border = { style: BorderStyle.SINGLE, size: 4, color: "D9CFC0" };
@@ -259,7 +286,7 @@ async function exportDocx(profiles: PlayerProfile[], sections: Set<ExportSection
     );
   }
 
-  profiles.forEach((p, i) => {
+  for (const [i, p] of profiles.entries()) {
     children.push(
       new Paragraph({
         heading: HeadingLevel.HEADING_1,
@@ -271,9 +298,10 @@ async function exportDocx(profiles: PlayerProfile[], sections: Set<ExportSection
     for (const b of blocks(p, sections)) {
       children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, spacing: { before: 240, after: 80 }, children: [new TextRun(b.title)] }));
       if (b.note) children.push(new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: b.note, italics: true, size: 18, color: "6B6258" })] }));
-      children.push(table(b));
+      if (b.head.length) children.push(table(b));
+      if (b.chart) children.push(await image(b.chart));
     }
-  });
+  }
 
   const doc = new Document({
     creator: "Pressure Lab",
@@ -316,7 +344,7 @@ export function reportHtml(profiles: PlayerProfile[], sections: Set<ExportSectio
     : "";
   const meta1 = `<p class="meta">${esc(footerText(meta))}</p>`;
   const body = profiles.map((p) => `<section class="player"><h1>${esc(p.name)}</h1><p class="sub">${esc(subtitle(p))}</p>${meta1}${blocks(p, sections)
-    .map((b) => `<h2>${esc(b.title)}</h2>${b.note ? `<p class="note">${esc(b.note)}</p>` : ""}${tableHtml(b)}`)
+    .map((b) => `<h2>${esc(b.title)}</h2>${b.note ? `<p class="note">${esc(b.note)}</p>` : ""}${b.head.length ? tableHtml(b) : ""}${b.chart ? `<div class="chart">${b.chart.svg}</div>` : ""}`)
     .join("")}</section>`).join("");
   return `<!doctype html><html><head><meta charset="utf-8"><title>${esc(fileBase(profiles))}</title><style>
   @page { size: A4; margin: 16mm 14mm; }
@@ -334,6 +362,8 @@ export function reportHtml(profiles: PlayerProfile[], sections: Set<ExportSectio
   section.player + section.player, section.cover + section.player { break-before: page; }
   .sub { margin-bottom: 2pt; }
   .meta { color: #8a8076; font-size: 8pt; margin: 0 0 8pt; }
+  .chart { margin: 8pt 0 4pt; break-inside: avoid; }
+  .chart svg { max-width: 100%; height: auto; }
   </style></head><body>${cover}${body}</body></html>`;
 }
 
@@ -394,8 +424,8 @@ export function profilesCsv(profiles: PlayerProfile[], sections: Set<ExportSecti
       put("Matches", p.matches);
     }
     if (sections.has("comparison")) for (const m of p.comparison) {
-      put(`${m.label} (normal)`, m.normal);
-      put(`${m.label} (pressure)`, m.pressure);
+      put(`${m.label} (normal)`, m.normal ?? "");
+      put(`${m.label} (pressure)`, m.pressure ?? "");
     }
     if (sections.has("radar")) for (const f of p.radar) put(`Feature: ${f.feature}`, f.score);
     if (sections.has("matchups")) for (const t of p.matchups) {
@@ -431,6 +461,7 @@ const SECTION_KEYS: Record<ExportSection, (keyof PlayerProfile)[]> = {
   consistency: ["consistency"],
   heatmap: ["heatmap"],
   moments: ["signatureMoments"],
+  flow: [],
 };
 
 export function profilesJson(profiles: PlayerProfile[], sections: Set<ExportSection>, meta: ExportMeta) {

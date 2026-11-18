@@ -63,11 +63,14 @@ BAT_COMPS = {  # name: (kind, layer)  kind: mean | rate
     "nrae_p": ("mean", None), "runs_ae_p": ("mean", None), "out_ae_p": ("mean", None), "wpa_p": ("mean", None),
     "nrae_n": ("mean", None), "consistency": ("rate", None), "rescue": ("mean", "F11"), "collapse": ("mean", "F14"),
     "matchup_ppdeath": ("mean", "F8"),
+    # normal-ball (non-pressure) counterparts: the prior centre of each pressure component (v3)
+    "runs_ae_n": ("mean", None), "out_ae_n": ("mean", None), "wpa_n": ("mean", None),
 }
 BOWL_COMPS = {
     "rsae_p": ("mean", None), "wae_p": ("mean", None), "dot_p": ("rate", None), "wpa_p": ("mean", None),
     "nrs_p": ("mean", None), "nrs_n": ("mean", None), "consistency": ("rate", None), "death_clamp": ("rate", "F7"),
     "pp_control": ("mean", "F8"), "control": ("mean", "F9"), "heist": ("mean", "F11"), "pair_breaker": ("mean", "F13"),
+    "rsae_n": ("mean", None), "wae_n": ("mean", None), "wpa_n": ("mean", None), "dot_n": ("rate", None),
 }
 TIER_VAL = {"Elite": 2, "Strong": 1, "Normal": 0}
 
@@ -178,8 +181,26 @@ def _control(b: pd.DataFrame) -> pd.DataFrame:
     return g
 
 
+def setting(cfg: dict, key: str, side: str, default):
+    """rating.<key> may be one value for both sides or {bat: ..., bowl: ...}."""
+    v = cfg["rating"].get(key, default)
+    return v.get(side, default) if isinstance(v, dict) else v
+
+
+def recency_weights(cfg: dict, b: pd.DataFrame, last_season: int | None = None, side: str = "bat") -> np.ndarray:
+    """v3: per-ball recency multiplier 0.5 ** (seasons before the latest season / half-life).
+    half_life <= 0 (or missing) = no decay. Set per side in config (rating.recency_half_life_seasons)."""
+    hl = setting(cfg, "recency_half_life_seasons", side, 0) or 0
+    if hl <= 0:
+        return np.ones(len(b))
+    s = b.season.astype(int).values
+    last = int(s.max()) if last_season is None else int(last_season)
+    return 0.5 ** (np.clip(last - s, 0, None) / hl)
+
+
 def player_match(cfg: dict, b: pd.DataFrame, o: Options, mask: np.ndarray | None = None,
-                 pflags: tuple[np.ndarray, np.ndarray] | None = None) -> dict[str, pd.DataFrame]:
+                 pflags: tuple[np.ndarray, np.ndarray] | None = None,
+                 ball_w: np.ndarray | None = None) -> dict[str, pd.DataFrame]:
     """Per (player, match) sums for every component, for one set of options.
 
     Pressure flags are always computed on ALL balls (the definition of a pressure ball is
@@ -187,6 +208,14 @@ def player_match(cfg: dict, b: pd.DataFrame, o: Options, mask: np.ndarray | None
     """
     fb, fw = pflags if pflags is not None else flags(cfg, b, o)
     mwb, mww = metric_weights(cfg, b, o)  # FIX 5: log1p(leverage x stakes) inside pressure metrics
+    # v3: recency weights per side (decay relative to the latest season in the balls being rated)
+    if ball_w is not None:
+        rwb = rww = np.asarray(ball_w, float)
+    else:
+        ls = int(b.season[np.asarray(mask, bool)].max()) if mask is not None and np.asarray(mask, bool).any() else None
+        rwb = recency_weights(cfg, b, ls, "bat")
+        rww = recency_weights(cfg, b, ls, "bowl")
+    mwb, mww = mwb * rwb, mww * rww
     v = _variant(o)
     keep = np.ones(len(b), bool)
     if o.league is not None:
@@ -198,6 +227,7 @@ def player_match(cfg: dict, b: pd.DataFrame, o: Options, mask: np.ndarray | None
         x = b[keep]
         fb, fw = fb[keep], fw[keep]
         mwb, mww = mwb[keep], mww[keep]
+        rwb, rww = rwb[keep], rww[keep]
     wb, ww = mwb, mww
     nrae, nrs = x[f"nrae{v}"].values, x[f"nrs{v}"].values
     fcd = x.faced.values
@@ -219,10 +249,13 @@ def player_match(cfg: dict, b: pd.DataFrame, o: Options, mask: np.ndarray | None
     add(A, "runs_ae_p", x[f"runs_ae{v}"].values, wb, pb)
     add(A, "out_ae_p", x[f"out_ae{v}"].values, wb, pb)
     add(A, "wpa_p", x.wpa_bat.values, wb, pb)
-    add(A, "nrae_n", nrae, 1.0, nb)
-    add(A, "rescue", x.wpa_bat.values, 1.0, x.rescue_ball.values)
-    add(A, "collapse", nrae, 1.0, (x.collapse_entry & x.faced).values)
-    add(A, "matchup_ppdeath", nrae, 1.0, x.ppdeath_elite.values)
+    add(A, "nrae_n", nrae, rwb, nb)
+    add(A, "runs_ae_n", x[f"runs_ae{v}"].values, rwb, nb)
+    add(A, "out_ae_n", x[f"out_ae{v}"].values, rwb, nb)
+    add(A, "wpa_n", x.wpa_bat.values, rwb, nb)
+    add(A, "rescue", x.wpa_bat.values, rwb, x.rescue_ball.values)
+    add(A, "collapse", nrae, rwb, (x.collapse_entry & x.faced).values)
+    add(A, "matchup_ppdeath", nrae, rwb, x.ppdeath_elite.values)
     PMb = A.groupby(["pid", "mid"]).sum()
 
     # ---------------- bowlers
@@ -231,13 +264,17 @@ def player_match(cfg: dict, b: pd.DataFrame, o: Options, mask: np.ndarray | None
     Bw["balls"] = x.legal.values.astype(int)
     add(Bw, "rsae_p", x[f"rsae{v}"].values, ww, fw)
     add(Bw, "wae_p", x[f"wae{v}"].values, ww, fw)
-    add(Bw, "dot_p", x.is_dot.values.astype(float), 1.0, fw & x.legal.values, sq=False)
+    add(Bw, "dot_p", x.is_dot.values.astype(float), rww, fw & x.legal.values, sq=False)
     add(Bw, "wpa_p", x.wpa_bowl.values, ww, fw)
     add(Bw, "nrs_p", nrs, ww, fw)
-    add(Bw, "nrs_n", nrs, 1.0, ~fw)
-    add(Bw, "heist", x.wpa_bowl.values, 1.0, x.heist_ball.values)
-    add(Bw, "pp_control", nrs, x.pp_sit_w.values, x.pp_ball.values)
-    add(Bw, "pair_breaker", x.pair_break_w.values, 1.0, x.legal.values)
+    add(Bw, "nrs_n", nrs, rww, ~fw)
+    add(Bw, "rsae_n", x[f"rsae{v}"].values, rww, ~fw)
+    add(Bw, "wae_n", x[f"wae{v}"].values, rww, ~fw)
+    add(Bw, "wpa_n", x.wpa_bowl.values, rww, ~fw)
+    add(Bw, "dot_n", x.is_dot.values.astype(float), rww, (~fw) & x.legal.values, sq=False)
+    add(Bw, "heist", x.wpa_bowl.values, rww, x.heist_ball.values)
+    add(Bw, "pp_control", nrs, x.pp_sit_w.values * rww, x.pp_ball.values)
+    add(Bw, "pair_breaker", x.pair_break_w.values, rww, x.legal.values)
     PMw = Bw.groupby(["pid", "mid"]).sum()
     dc = _death_clamp_overs(cfg, x)
     dcq = dc[dc.qual].groupby(["bowler_id", "match_id"]).agg(death_clamp_num=("clamp", "sum"), death_clamp_den=("qual", "sum"))

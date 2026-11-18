@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { Check, Download, FileJson, FileSpreadsheet, FileText, Loader2, Printer, Search, X } from "lucide-react";
 import type { PlayerProfile } from "@/lib/types";
 import { useData } from "@/lib/data";
@@ -118,8 +119,9 @@ export function ExportDialog({
     }
   }
 
-  return (
-    <div className="fixed inset-0 z-[60] flex items-end justify-center bg-ink/30 p-0 backdrop-blur-sm sm:items-center sm:p-4" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+  // portal to <body> so the blurred overlay covers the whole window (sidebar included), not just the page column
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-end justify-center bg-ink/30 p-0 backdrop-blur-md sm:items-center sm:p-4" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div
         ref={panelRef}
         role="dialog"
@@ -268,6 +270,7 @@ export function ExportDialog({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
